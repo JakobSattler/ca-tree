@@ -18,11 +18,11 @@ var CaTreeComponent = (function () {
         var _this = this;
         this.model = new ca_tree_model_1.CaTreeModel();
         this.treeService.getNodes().subscribe(function (data) {
-            console.log(data);
-            _this.model.resources.push(new ca_tree_node_model_1.CaTreeNodeModel(data.name, data.nr, data.children));
-            console.log(_this.model.resources);
+            console.log('data: ' + data);
+            _this.model.resources = data;
+            console.log('resources: ' + _this.model.resources);
             console.log(typeof _this.model.resources);
-            _this.parseData(data);
+            //this.parseData(data);
         });
     };
     CaTreeComponent.prototype.parseData = function (data) {

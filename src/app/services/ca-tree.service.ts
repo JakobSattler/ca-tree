@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {CaTreeNodeModel} from '../components/ca-tree-node/ca-tree-node-model';
+import {BasicTreeNode} from '../components/ca-tree-node/ca-tree-model';
 
 /**
  * Used to get data using HTTP and to (un)check nodes

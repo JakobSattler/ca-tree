@@ -16,6 +16,5 @@ export class CaTreeModel {
   resources: Array<BasicTreeNode>;
 
   constructor() {
-    this.resources = new Array<CaTreeNodeModel>();
   }
 }

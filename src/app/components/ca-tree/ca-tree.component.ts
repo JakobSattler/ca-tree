@@ -26,12 +26,12 @@ export class CaTreeComponent implements OnInit {
     this.model = new CaTreeModel();
 
     this.treeService.getNodes().subscribe(
-      (data: CaTreeNodeModel) => {
-        console.log(data);
-        this.model.resources.push(new CaTreeNodeModel(data.name, data.nr, data.children));
-        console.log(this.model.resources);
+      (data: BasicTreeNode[]) => {
+        console.log('data: ' + data);
+        this.model.resources = data;
+        console.log('resources: ' + this.model.resources);
         console.log(typeof this.model.resources);
-        this.parseData(data);
+        //this.parseData(data);
       }
     );
   }
