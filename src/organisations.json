@@ -1,0 +1,3780 @@
+{
+  "name": "Devline Universität Graz",
+  "nr": "37",
+  "children": [
+    {
+      "name": "Test-Faculty:PRJ2014_2T6",
+      "nr": "-201400206",
+      "children": [
+      ]
+    },
+    {
+      "name": "Test-Faculty:PRJ2014_2T2",
+      "nr": "-201400202",
+      "children": [
+      ]
+    },
+    {
+      "name": "Fakultät für Maschinenbau und Wirtschaftswissenschaften",
+      "nr": "21",
+      "children": [
+        {
+          "name": "Institut für Verbrennungskraftmaschinen und Thermodynamik",
+          "nr": "123",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Maschinenbau und Wirtschaftswissenschaften<br>Dekan",
+          "nr": "141",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Fertigungstechnik",
+          "nr": "648",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Werkstoffkunde und Schweißtechnik",
+          "nr": "2256",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Wärmetechnik",
+          "nr": "2267",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Hydraulische Strömungsmaschinen",
+          "nr": "2296",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Thermische Turbomaschinen und Maschinendynamik",
+          "nr": "2298",
+          "children": [
+            {
+              "name": "Institut für Thermische Turbomaschinen und Maschinendynamik<br>Arbeitsgruppe Optimierung von Turbomaschinen und CFD-Methoden",
+              "nr": "12985",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Thermische Turbomaschinen und Maschinendynamik<br>Arbeitsgruppe Messung in Turbomaschinen - laseroptische Messtechnik",
+              "nr": "12987",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Thermische Turbomaschinen und Maschinendynamik<br>Arbeitsgruppe Maschinendynamik - Akustik",
+              "nr": "12989",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Thermische Turbomaschinen und Maschinendynamik<br>Arbeitsgruppe Versuchsanlagen/Werkstätte",
+              "nr": "12991",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Strömungslehre und Wärmeübertragung",
+          "nr": "2300",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Maschinenbau und Wirtschaftswissenschaften<br>Dekanat",
+          "nr": "2415",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Festigkeitslehre",
+          "nr": "7925",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Technische Logistik",
+          "nr": "9189",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Maschinenelemente und Entwicklungsmethodik",
+          "nr": "9193",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Mechanik",
+          "nr": "9856",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Industriebetriebslehre und Innovationsforschung",
+          "nr": "11068",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Unternehmungsführung und Organisation",
+          "nr": "11070",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Betriebswirtschaftslehre und Betriebssoziologie",
+          "nr": "11072",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Maschinenbau- und Betriebsinformatik",
+          "nr": "13706",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Fahrzeugtechnik",
+          "nr": "14266",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Fahrzeugsicherheit",
+          "nr": "14268",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Werkzeugtechnik und spanlose Produktion",
+          "nr": "14270",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institute of Production Science and Management",
+          "nr": "14272",
+          "children": [
+          ]
+        },
+        {
+          "name": "Koordination FSI",
+          "nr": "21698",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Leichtbau",
+          "nr": "27068",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Architektur",
+      "nr": "38",
+      "children": [
+        {
+          "name": "Institut für Stadt- und Baugeschichte",
+          "nr": "223",
+          "children": [
+            {
+              "name": "Bauhaus, nananananana Batmaaaaan",
+              "nr": "29198",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Architekturtheorie, Kunst- und Kulturwissenschaften",
+          "nr": "569",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Architektur<br>Dekan",
+          "nr": "619",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Städtebau",
+          "nr": "677",
+          "children": [
+            {
+              "name": "asdasd",
+              "nr": "29200",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Gebäudelehre",
+          "nr": "679",
+          "children": [
+            {
+              "name": "Abteilung-I für sdfsdf asdfasdf",
+              "nr": "29202",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Architekturtechnologie",
+          "nr": "681",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Zeitgenössische Kunst",
+          "nr": "720",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Tragwerksentwurf",
+          "nr": "2165",
+          "children": [
+            {
+              "name": "Abteilung-I für Tragetaschen",
+              "nr": "29197",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Tragwerksentwurf<br>Tragkwerke",
+              "nr": "29280",
+              "children": [
+              ]
+            },
+            {
+              "name": "Abteilung-I für fqfwefr",
+              "nr": "30085",
+              "children": [
+              ]
+            },
+            {
+              "name": "Abteilung-I für asdfasdfasdf",
+              "nr": "30086",
+              "children": [
+              ]
+            },
+            {
+              "name": "Abteilung-I für 54546546546546546",
+              "nr": "30087",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Raumgestaltung",
+          "nr": "2195",
+          "children": [
+            {
+              "name": "Blumen",
+              "nr": "29203",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Architektur und Landschaft",
+          "nr": "2198",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Architektur<br>Dekanat",
+          "nr": "2410",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Wohnbau",
+          "nr": "14124",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Gebäude und Energie",
+          "nr": "14126",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Architektur und Medien",
+          "nr": "14128",
+          "children": [
+          ]
+        },
+        {
+          "name": "Modellbauwerkstatt",
+          "nr": "24295",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Meloniologie",
+          "nr": "29082",
+          "children": [
+            {
+              "name": "Institut für Meloniologie<br>Arbeitsgruppe für Menschen die Mel heißen",
+              "nr": "29083",
+              "children": [
+              ]
+            },
+            {
+              "name": "Abteilung-I für Melonen",
+              "nr": "29196",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Einrichtung für Biomedizin",
+          "nr": "29151",
+          "children": [
+          ]
+        },
+        {
+          "name": "Darstellungskünste",
+          "nr": "29981",
+          "children": [
+          ]
+        },
+        {
+          "name": "Einrichtung für sdrgsdfg",
+          "nr": "30084",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Technische Mathematik und Technische Physik",
+      "nr": "202",
+      "children": [
+        {
+          "name": "Fakultät für Technische Mathematik und Technische Physik<br>Dekan",
+          "nr": "955",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Statistik",
+          "nr": "2371",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Geometrie",
+          "nr": "2374",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Experimentalphysik",
+          "nr": "2378",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Festkörperphysik",
+          "nr": "2380",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Theoretische Physik - Computational Physics",
+          "nr": "2382",
+          "children": [
+            {
+              "name": "Institut für Theoretische Physik - Computational Physics<br>Arbeitsgruppe Plasmaphysik",
+              "nr": "8317",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Theoretische Physik - Computational Physics<br>Arbeitsgruppe Vielteilchenphysik",
+              "nr": "11572",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Materialphysik",
+          "nr": "2385",
+          "children": [
+            {
+              "name": "Institut für Materialphysik<br>Arbeitsgruppe Strahlenphysik",
+              "nr": "11787",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Materialphysik<br>Arbeitsgruppe Materialphysik",
+              "nr": "12526",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Fakultät für Technische Mathematik und Technische Physik<br>Dekanat",
+          "nr": "2422",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Elektronenmikroskopie und Feinstrukturforschung",
+          "nr": "3390",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Analysis und Computational Number Theory (Math A)",
+          "nr": "7305",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Optimierung und Diskrete Mathematik (Math B)",
+          "nr": "7307",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Mathematische Strukturtheorie (Math C)",
+          "nr": "7309",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Numerische Mathematik (Math D)",
+          "nr": "7311",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Ingenieurgeodäsie und Messsysteme",
+          "nr": "12925",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Navigation und Satellitengeodäsie",
+          "nr": "12927",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Geoinformation",
+          "nr": "13067",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Fernerkundung und Photogrammetrie",
+          "nr": "13071",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Elektrotechnik und Informationstechnik",
+      "nr": "514",
+      "children": [
+        {
+          "name": "Fakultät für Elektrotechnik und Informationstechnik<br>Dekan",
+          "nr": "1681",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Elektrische Antriebstechnik und Maschinen",
+          "nr": "2318",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Grundlagen und Theorie der Elektrotechnik",
+          "nr": "2322",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Elektrische Meßtechnik und Meßsignalverarbeitung",
+          "nr": "2324",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Elektronik",
+          "nr": "2327",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Kommunikationsnetze und Satellitenkommunikation",
+          "nr": "2329",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Regelungs- und Automatisierungstechnik",
+          "nr": "2331",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Human-Computer Interfaces",
+          "nr": "2335",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Technische Informatik",
+          "nr": "2337",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Elektrotechnik und Informationstechnik<br>Dekanat",
+          "nr": "2417",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Genomik und Bioinformatik",
+          "nr": "2911",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Health Care Engineering mit Europaprüfstelle für Medizinprodukte",
+          "nr": "2913",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Medizintechnik",
+          "nr": "2915",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Elektrische Anlagen",
+          "nr": "11625",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Hochspannungstechnik und Systemmanagement",
+          "nr": "12071",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Elektrizitätswirtschaft und Energieinnovation",
+          "nr": "12073",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Breitbandkommunikation",
+          "nr": "14321",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Signalverarbeitung und Sprachkommunikation",
+          "nr": "14323",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Biomechanik",
+          "nr": "21901",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Bauingenieurwissenschaften",
+      "nr": "953",
+      "children": [
+        {
+          "name": "Institut für Baustatik",
+          "nr": "1178",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Betonbau",
+          "nr": "1186",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Stahlbau und Flächentragwerke",
+          "nr": "1190",
+          "children": [
+            {
+              "name": "Eisen",
+              "nr": "29204",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Straßen- und Verkehrswesen",
+          "nr": "1192",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Wasserbau und Wasserwirtschaft",
+          "nr": "1226",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Eisenbahnwesen und Verkehrswirtschaft",
+          "nr": "1228",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Siedlungswasserwirtschaft und Landschaftswasserbau",
+          "nr": "1231",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Bodenmechanik und Grundbau",
+          "nr": "1247",
+          "children": [
+            {
+              "name": "Institut für Bodenmechanik und Grundbau<br>Arbeitsgruppe Numerische Geotechnik",
+              "nr": "9665",
+              "children": [
+              ]
+            },
+            {
+              "name": "teppich",
+              "nr": "29195",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Hochbau und Bauphysik",
+          "nr": "1263",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Bauingenieurwissenschaften<br>Dekan",
+          "nr": "1754",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Felsmechanik und Tunnelbau",
+          "nr": "2216",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Baubetrieb und Bauwirtschaft",
+          "nr": "2230",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Testorganisation 2 für Projekt 2013_188",
+          "nr": "2232",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Materialprüfung und Baustofftechnologie mit angeschlossener TVFA für Festigkeits- und Materialprüfung",
+          "nr": "2265",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Angewandte Geowissenschaften",
+          "nr": "2387",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Bauingenieurwissenschaften<br>Dekanat",
+          "nr": "2413",
+          "children": [
+          ]
+        },
+        {
+          "name": "Labor für Konstruktiven Ingenieurbau (LKI)",
+          "nr": "3746",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Holzbau und Holztechnologie",
+          "nr": "14160",
+          "children": [
+            {
+              "name": "Pinocchio",
+              "nr": "29201",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Testorganisation 1 für Projekt 2013_188",
+          "nr": "14189",
+          "children": [
+          ]
+        },
+        {
+          "name": "WWW_Link Test Link",
+          "nr": "30654",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vertretungen der TU Graz - Angehörigen Juhu Juhu Juhu Juhu Juhu  Juhu Juhu Juhu",
+      "nr": "5682",
+      "children": [
+        {
+          "name": "Arbeitskreis für Gleichbehandlungsfragen",
+          "nr": "3552",
+          "children": [
+            {
+              "name": "Büro des Arbeitskreises für Gleichbehandlungsfragen",
+              "nr": "15914",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hochschülerinnen- und Hochschülerschaft an der TU Graz",
+          "nr": "5686",
+          "children": [
+            {
+              "name": "Referat für interne Organisation",
+              "nr": "7145",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für EDV",
+              "nr": "7149",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für Frauenpolitik",
+              "nr": "7153",
+              "children": [
+              ]
+            },
+            {
+              "name": "copyshop der OEH Ges.m.b.H.",
+              "nr": "7157",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für Informations- und Öffentlichkeitsarbeit",
+              "nr": "7161",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für Internationales",
+              "nr": "7163",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für Gesellschaftspolitik",
+              "nr": "7167",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für Sozialpolitik",
+              "nr": "7173",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für Studienberatung",
+              "nr": "7177",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für Bildungspolitik",
+              "nr": "7179",
+              "children": [
+              ]
+            },
+            {
+              "name": "LesBiSchwule Referat",
+              "nr": "7297",
+              "children": [
+              ]
+            },
+            {
+              "name": "Hochschülerinnen- und Hochschülerschaft an der TU Graz<br>Universitätsvertretung",
+              "nr": "8247",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultätsvertretung an der Fakultät für Architektur",
+              "nr": "8249",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultätsvertretung an der Fakultät für Bauingenieurwissenschaften",
+              "nr": "8251",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultätsvertretung an der Fakultät für Maschinenbau und Wirtschaftswissenschaften",
+              "nr": "8253",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultätsvertretung an der Fakultät für Elektrotechnik und Informationstechnik",
+              "nr": "8255",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Bauingenieurwissenschaften",
+              "nr": "8259",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Vermessung und Geoinformation",
+              "nr": "8263",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Maschinenbau und Wirtschaftswissenschaften",
+              "nr": "8265",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Verfahrenstechnik",
+              "nr": "8269",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Elektrotechnik",
+              "nr": "8271",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Telematik",
+              "nr": "8273",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Technische Chemie",
+              "nr": "8275",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Technische Mathematik",
+              "nr": "8277",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Technische Physik",
+              "nr": "8279",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für die Doktoratsstudien",
+              "nr": "8285",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Informatik und Softwareentwicklung",
+              "nr": "17566",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultätsvertretung an der Fakultät für Technische Mathematik und Technische Physik",
+              "nr": "19313",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultätsvertretung an der Fakultät für Technische Chemie, Verfahrenstechnik und Biotechnologie",
+              "nr": "19318",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultätsvertretung an der Fakultät für Informatik",
+              "nr": "19320",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Architektur",
+              "nr": "19324",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Elektrotechnik-Toningenieur",
+              "nr": "19332",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für das Lehramtsstudium Darstellende Geometrie",
+              "nr": "19338",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für wirtschaftliche Angelegenheiten (Wirtschaftsreferat)",
+              "nr": "19347",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studienvertretung für Biomedical Engineering",
+              "nr": "23993",
+              "children": [
+              ]
+            },
+            {
+              "name": "Referat für Veranstaltungen",
+              "nr": "27207",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Betriebsrat für das allgemeine Universitätspersonal",
+          "nr": "5692",
+          "children": [
+            {
+              "name": "Büro des Betriebsrates für das allgemeine Universitätspersonal",
+              "nr": "15911",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Betriebsrat für das wissenschaftliche und künstlerische Universitätspersonal und Dienststellenausschuss für die Universitätslehrer",
+          "nr": "5700",
+          "children": [
+            {
+              "name": "Büro des Betriebsrats für das wissenschaftliche und künstlerische Universitätspersonal und Dienststellenausschusses für die Universitätslehrer",
+              "nr": "15906",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vertrauensperson der Behinderten",
+          "nr": "11215",
+          "children": [
+          ]
+        },
+        {
+          "name": "Jugendvertrauensrat",
+          "nr": "17687",
+          "children": [
+          ]
+        },
+        {
+          "name": "Schiedskommission der TU Graz",
+          "nr": "19749",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Devline Universität  Graz<br>Alumni",
+      "nr": "12765",
+      "children": [
+        {
+          "name": "alumniTUGraz 1887",
+          "nr": "12770",
+          "children": [
+          ]
+        },
+        {
+          "name": "Telematik Ingenieur Verband (TIV)",
+          "nr": "12772",
+          "children": [
+          ]
+        },
+        {
+          "name": "Wirtschaftsingenieurverband (WING)",
+          "nr": "12774",
+          "children": [
+          ]
+        },
+        {
+          "name": "Verein der Absolventen der Elektrotechnik und Informationstechnik (ELITE)",
+          "nr": "12776",
+          "children": [
+          ]
+        },
+        {
+          "name": "Verein der Verfahrenstechniker an der TUG",
+          "nr": "12780",
+          "children": [
+          ]
+        },
+        {
+          "name": "Akademischer Papieringenieurverein (APV)",
+          "nr": "13591",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Technische Chemie, Verfahrenstechnik und Biotechnologie",
+      "nr": "14248",
+      "children": [
+        {
+          "name": "Institut für Papier-, Zellstoff- und Fasertechnik",
+          "nr": "2274",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Thermische Verfahrenstechnik und Umwelttechnik",
+          "nr": "2302",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Umweltbiotechnologie",
+          "nr": "2389",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Physikalische und Theoretische Chemie",
+          "nr": "2391",
+          "children": [
+            {
+              "name": "Institut für Physikalische und Theoretische Chemie<br>Arbeitsgruppe Molekülstruktur und Reaktivität",
+              "nr": "18452",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Physikalische und Theoretische Chemie<br>Arbeitsgruppe Spektroskopie und chemische Kinetik",
+              "nr": "18454",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Chemische Technologie Anorganischer Stoffe",
+          "nr": "2395",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Chemische Technologie Organischer Stoffe",
+          "nr": "2397",
+          "children": [
+            {
+              "name": "Institut für Chemische Technologie Organischer Stoffe<br>Arbeitsgruppe Organische Funktionsmaterialien",
+              "nr": "10045",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Chemische Technologie Organischer Stoffe<br>Arbeitsgruppe Photochemie an Polymeren",
+              "nr": "10066",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Chemische Technologie Organischer Stoffe<br>Arbeitsgruppe Neue Dünnschicht-Technologien und angewandte Massenspektrometrie",
+              "nr": "10068",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Organische Chemie",
+          "nr": "2399",
+          "children": [
+            {
+              "name": "Institut für Organische Chemie<br>Arbeitsgruppe Biokatalyse",
+              "nr": "10766",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Organische Chemie<br>Arbeitsgruppe Glykochemie und Glykotechnologie",
+              "nr": "10791",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Organische Chemie<br>Arbeitsgruppe Organische Synthese und Chemische Biologie",
+              "nr": "24577",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Biotechnologie und Bioprozesstechnikkk",
+          "nr": "2401",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Analytische Chemie und Radiochemie",
+          "nr": "2403",
+          "children": [
+            {
+              "name": "Institut für Analytische Chemie und Radiochemie<br>Arbeitsgruppe Spurenanalytik",
+              "nr": "18447",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Analytische Chemie und Radiochemie<br>Arbeitsgruppe Sensorik",
+              "nr": "18449",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Anorganische Chemie",
+          "nr": "2807",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Grundlagen der Verfahrenstechnik und Anlagentechnik",
+          "nr": "9185",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Mechanische Verfahrenstechnik",
+          "nr": "9187",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Lebensmittelchemie und -technologie",
+          "nr": "12106",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Biochemie",
+          "nr": "12110",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Prozesstechnik",
+          "nr": "13866",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Technische Chemie, Verfahrenstechnik und Biotechnologie<br>Dekan",
+          "nr": "14438",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Technische Chemie, Verfahrenstechnik und Biotechnologie<br>Dekanat",
+          "nr": "14440",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Molekulare Biotechnologie",
+          "nr": "14446",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Chemische Technologie von Materialien",
+          "nr": "27237",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Informatik",
+      "nr": "14250",
+      "children": [
+        {
+          "name": "Institut für Angewandte Informationsverarbeitung und Kommunikationstechnologie",
+          "nr": "983",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Informationssysteme und Computer Medien",
+          "nr": "2367",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Grundlagen der Informationsverarbeitung",
+          "nr": "2369",
+          "children": [
+            {
+              "name": "Institut für Grundlagen der Informationsverarbeitung<br>Arbeitsgruppe für Neuronale Informationsverarbeitung und Maschinelles Lernen",
+              "nr": "7847",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Grundlagen der Informationsverarbeitung<br>Arbeitsgruppe für Rechnerische Geometrie",
+              "nr": "7868",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Maschinelles Sehen und Darstellen",
+          "nr": "2376",
+          "children": [
+            {
+              "name": "Institut für Maschinelles Sehen und Darstellen<br>Arbeitsgruppe 3D Objekt Rekonstruktion",
+              "nr": "18462",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Maschinelles Sehen und Darstellen<br>Arbeitsgruppe Computer Vision",
+              "nr": "18464",
+              "children": [
+              ]
+            },
+            {
+              "name": "Institut für Maschinelles Sehen und Darstellen<br>Arbeitsgruppe Computergrafik und Interaktive Systeme",
+              "nr": "18466",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Institut für Softwaretechnologie",
+          "nr": "13586",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Wissensmanagement",
+          "nr": "14378",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Informatik<br>Dekan",
+          "nr": "14418",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Informatik<br>Dekanat",
+          "nr": "14420",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Semantische Datenanalyse/Knowledge Discovery",
+          "nr": "19428",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Computer Graphik und Wissensvisualisierung",
+          "nr": "19430",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Stuttgart",
+          "nr": "30695",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Informatik<br>Prüfungsausschuss",
+          "nr": "30897",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Informatik<br>Zulassungsausschuss",
+          "nr": "30917",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät für Informatik<br>Auswahlkommission",
+          "nr": "30937",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Studium & Lehre",
+      "nr": "15231",
+      "children": [
+        {
+          "name": "Externe betreuende Einrichtungen",
+          "nr": "16929",
+          "children": [
+            {
+              "name": "Institut für Elektronische Musik und Akustik der Universität für Musik und darstellende Kunst Graz",
+              "nr": "13006",
+              "children": [
+              ]
+            },
+            {
+              "name": "Vorstudienlehrgang",
+              "nr": "17448",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Studiendekane",
+          "nr": "16941",
+          "children": [
+            {
+              "name": "Studiendekan für die Studienrichtung Architektur",
+              "nr": "15302",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Bauingenieurwissenschaften",
+              "nr": "15305",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Wirtschaftsingenieurwesen - Bauwesen",
+              "nr": "15308",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Maschinenbau",
+              "nr": "15311",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Verfahrenstechnik",
+              "nr": "15314",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Elektrotechnik",
+              "nr": "15318",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Elektrotechnik - Toningenieurwesen",
+              "nr": "15321",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Technische Chemie",
+              "nr": "15324",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Technische Physik",
+              "nr": "15327",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Technische Mathematik",
+              "nr": "15330",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Vermessung und Geoinformation",
+              "nr": "15333",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Telematik",
+              "nr": "15336",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Informatikmanagement",
+              "nr": "15339",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Darstellende Geometrie (Lehramt)",
+              "nr": "15345",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Wirtschaftsingenieurwesen - Maschinenbau",
+              "nr": "15351",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Physik (Lehramt)",
+              "nr": "15451",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Erdwissenschaften",
+              "nr": "15494",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Biomedical Engineering",
+              "nr": "20859",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Softwareentwicklung-Wirtschaft",
+              "nr": "23104",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Chemie, Technische Chemie und chemische Technologien",
+              "nr": "24367",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Molekulare und technische Biowissenschaften",
+              "nr": "24374",
+              "children": [
+              ]
+            },
+            {
+              "name": "Studiendekan für die Studienrichtung Masterstudium Geo-Spatial Technologies",
+              "nr": "27084",
+              "children": [
+              ]
+            },
+            {
+              "name": "schrtiashdf",
+              "nr": "29183",
+              "children": [
+              ]
+            },
+            {
+              "name": "WWW_LINK",
+              "nr": "29595",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Weitere Informationen",
+          "nr": "17939",
+          "children": [
+          ]
+        },
+        {
+          "name": "Studienkommissionen",
+          "nr": "19704",
+          "children": [
+            {
+              "name": "AG Studienkommission für die Studienrichtung Architektur",
+              "nr": "19706",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Maschinenbau",
+              "nr": "19712",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Wirtschaftsingenieurwesen - Maschinenbau",
+              "nr": "19714",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Elektrotechnik",
+              "nr": "19716",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Telematik",
+              "nr": "19718",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Elektrotechnik-Toningenieur",
+              "nr": "19721",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Technische Mathematik",
+              "nr": "19723",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Vermessung und Geoinformation",
+              "nr": "19727",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Darstellende Geometrie (Lehramt)",
+              "nr": "19731",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Verfahrenstechnik",
+              "nr": "19735",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Bauingenieurwissenschaften",
+              "nr": "24398",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Chemie und Chemische Technologien",
+              "nr": "24410",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Molekulare und Technische Biowissenschaften",
+              "nr": "24415",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Biomedical Engineering",
+              "nr": "24420",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Advanced Material Science",
+              "nr": "24426",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Erdwissenschaften",
+              "nr": "24431",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Geo-Spatial Technology",
+              "nr": "24435",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Informatik, Softwareentwicklung & Informatik Lehramt",
+              "nr": "24440",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Technische Pysik & Lehramt Physik",
+              "nr": "24444",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommission für die Studienrichtung Nanophysics",
+              "nr": "26928",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Leitung eines Universitätslehrganges",
+          "nr": "22776",
+          "children": [
+            {
+              "name": "Leitung eines Universitätslehrganges Architectural Computing and Media Technology",
+              "nr": "22779",
+              "children": [
+              ]
+            },
+            {
+              "name": "Leitung eines Universitätslehrganges Molekulares Bioengineering",
+              "nr": "22780",
+              "children": [
+              ]
+            },
+            {
+              "name": "Leitung eines Universitätslehrganges Nanotechnology und Nanoanalytik",
+              "nr": "22781",
+              "children": [
+              ]
+            },
+            {
+              "name": "Leitung eines Universitätslehrganges Paper & Pulp Technology",
+              "nr": "22782",
+              "children": [
+              ]
+            },
+            {
+              "name": "Leitung eines Universitätslehrganges Space Sciences",
+              "nr": "22783",
+              "children": [
+              ]
+            },
+            {
+              "name": "Leitung eines Universitätslehrganges Traffic Accident Research",
+              "nr": "22784",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Doctoral Schools",
+          "nr": "24756",
+          "children": [
+            {
+              "name": "Doctoral School Architektur",
+              "nr": "24757",
+              "children": [
+                {
+                  "name": "Studiendekan für Architektur",
+                  "nr": "24856",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Bauingenieurwissenschaften",
+              "nr": "24758",
+              "children": [
+                {
+                  "name": "Studiendekan für  Bauingenieurwesen",
+                  "nr": "24857",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Maschinenbau",
+              "nr": "24826",
+              "children": [
+                {
+                  "name": "Studiendekan für Maschinenbau",
+                  "nr": "24858",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Techno-Ökonomie",
+              "nr": "24832",
+              "children": [
+                {
+                  "name": "Studiendekan für  Wirtschaftsingenieurwesen - Maschinenbau",
+                  "nr": "24942",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Elektrotechnik - Biomedizinische Technik",
+              "nr": "24833",
+              "children": [
+                {
+                  "name": "Studiendekan für  Elektrotechnik",
+                  "nr": "24947",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Studiendekan für  Biomedical Engineering",
+                  "nr": "24949",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Informations- und Kommunikationstechnik",
+              "nr": "24834",
+              "children": [
+                {
+                  "name": "Studiendekan für Elektrotechnik",
+                  "nr": "24960",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Studiendekan für  Elektrotechnik - Toningenieurwesen",
+                  "nr": "24961",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Studiendekan für Telematik",
+                  "nr": "24962",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Physik",
+              "nr": "24835",
+              "children": [
+                {
+                  "name": "Studiendekan für Technische Physik",
+                  "nr": "24872",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Mathematik und Wissenschaftliches Rechnen",
+              "nr": "24844",
+              "children": [
+                {
+                  "name": "Studiendekan für Technische Mathematik",
+                  "nr": "24873",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Geodäsie",
+              "nr": "24845",
+              "children": [
+                {
+                  "name": "Studiendekan für Vermessung und Geoinformation",
+                  "nr": "24875",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Chemie",
+              "nr": "24846",
+              "children": [
+                {
+                  "name": "Studiendekan für Chemie, Technische Chemie und chemische Technologien",
+                  "nr": "24874",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Molekulare Biowissenschaften und Biotechnologie",
+              "nr": "24847",
+              "children": [
+                {
+                  "name": "Studiendekan für Molekulare und technische Biowissenschaften",
+                  "nr": "24963",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Verfahrenstechnik",
+              "nr": "24848",
+              "children": [
+                {
+                  "name": "Studiendekan für Verfahrenstechnik",
+                  "nr": "24964",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Doctoral School Informatik",
+              "nr": "24849",
+              "children": [
+                {
+                  "name": "Studiendekan für Informatikmanagement",
+                  "nr": "24965",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vizerektor für Lehre und Studien",
+          "nr": "27093",
+          "children": [
+          ]
+        },
+        {
+          "name": "Internationale Beziehungen und Mobilitätsprogramme",
+          "nr": "27097",
+          "children": [
+          ]
+        },
+        {
+          "name": "Life Long Learning - ich will so bleiben wie ich bin",
+          "nr": "27098",
+          "children": [
+          ]
+        },
+        {
+          "name": "Sprachen, Schlüsselkompetenzen und Interne Weiterbildung",
+          "nr": "27105",
+          "children": [
+          ]
+        },
+        {
+          "name": "Studienservice und Prüfungsangelegenheiten",
+          "nr": "27109",
+          "children": [
+          ]
+        },
+        {
+          "name": "Einrichtung für Test Org 07.04. - inf",
+          "nr": "30376",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Initiative M",
+      "nr": "16069",
+      "children": [
+        {
+          "name": "TUG racing",
+          "nr": "16086",
+          "children": [
+          ]
+        },
+        {
+          "name": "Robo Cup",
+          "nr": "16088",
+          "children": [
+          ]
+        },
+        {
+          "name": "Forum Technik und Gesellschaft (TUG Squared)",
+          "nr": "16092",
+          "children": [
+          ]
+        },
+        {
+          "name": "Orchester",
+          "nr": "16146",
+          "children": [
+          ]
+        },
+        {
+          "name": "IAESTE",
+          "nr": "16152",
+          "children": [
+          ]
+        },
+        {
+          "name": "e2i",
+          "nr": "16154",
+          "children": [
+          ]
+        },
+        {
+          "name": "Lasernetzwerk",
+          "nr": "18427",
+          "children": [
+          ]
+        },
+        {
+          "name": "WINGnet",
+          "nr": "21334",
+          "children": [
+          ]
+        },
+        {
+          "name": "Alpenverein, Akademische Sektion Graz",
+          "nr": "21756",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Beteiligungen",
+      "nr": "16095",
+      "children": [
+        {
+          "name": "Kompetenzzentren",
+          "nr": "14950",
+          "children": [
+            {
+              "name": "AB - Angewandte Biokatalyse Kompetenzzentrum GmbH test",
+              "nr": "13249",
+              "children": [
+              ]
+            },
+            {
+              "name": "ABC - Austrian Bioenergy Centre GmbH",
+              "nr": "13251",
+              "children": [
+              ]
+            },
+            {
+              "name": "ACC - Akustikkompetenzzentrum Gesellschaft für Akustikforschung mbH",
+              "nr": "13254",
+              "children": [
+              ]
+            },
+            {
+              "name": "ECHEM - Kompetenzzentrum für angewandte Elektrochemie GmbH",
+              "nr": "13256",
+              "children": [
+              ]
+            },
+            {
+              "name": "Know Center - Kompetenzzentrum für wissensbasierte Anwendungen und Systeme Forschungs- und Entwicklungsgesellschaft m.b.H.",
+              "nr": "13258",
+              "children": [
+              ]
+            },
+            {
+              "name": "LEC - Kompetenzzentrum für umweltfreundliche Stationärmotoren Gesellschaft m.b.H.",
+              "nr": "13261",
+              "children": [
+              ]
+            },
+            {
+              "name": "MCL - Werkstoff-Kompetenzzentrum-Leoben Forschungsgesellschaft m.b.H.",
+              "nr": "13264",
+              "children": [
+              ]
+            },
+            {
+              "name": "PCCL - Polymer Competence Center Leoben GmbH",
+              "nr": "13266",
+              "children": [
+              ]
+            },
+            {
+              "name": "VIF - Kompetenzzentrum - Das virtuelle Fahrzeug Forschungsgesellschaft mbH",
+              "nr": "13272",
+              "children": [
+              ]
+            },
+            {
+              "name": "VRVis - Zentrum für Virtual Reality und Visualisierung Forschungs-GmbH",
+              "nr": "13274",
+              "children": [
+              ]
+            },
+            {
+              "name": "VSC - Vehicle Safety Center Forschungs- und Entwicklungs GmbH",
+              "nr": "13276",
+              "children": [
+              ]
+            },
+            {
+              "name": "Kompetenzzentrum holz.bau.forschungs.gmbh",
+              "nr": "13786",
+              "children": [
+              ]
+            },
+            {
+              "name": "Advanced Computer Vision",
+              "nr": "18787",
+              "children": [
+              ]
+            },
+            {
+              "name": "Centre of Competence (K-ind) \"holz.bau.forschungs.gmbh\"",
+              "nr": "18789",
+              "children": [
+              ]
+            },
+            {
+              "name": "Centre of Competence (K-plus) \"ftw Forschungszentrum Telekommunikation Wien\"",
+              "nr": "18791",
+              "children": [
+              ]
+            },
+            {
+              "name": "Competence Network \"Water Resources and Their Management (Water Pool)\"",
+              "nr": "18793",
+              "children": [
+              ]
+            },
+            {
+              "name": "KnetMET - Industrial network for Metallurgical and Environmental Process Development",
+              "nr": "18795",
+              "children": [
+              ]
+            },
+            {
+              "name": "Network of Competence (K-net) \"Internal Combustion Engines of the Future\"",
+              "nr": "18797",
+              "children": [
+              ]
+            },
+            {
+              "name": "SBA - Secure Business Austria",
+              "nr": "20357",
+              "children": [
+              ]
+            },
+            {
+              "name": "COAST - Competence Network for Advanced Speech Technologies",
+              "nr": "23550",
+              "children": [
+              ]
+            },
+            {
+              "name": "Research Center Pharmaceutical Engineering GmbH",
+              "nr": "27770",
+              "children": [
+              ]
+            },
+            {
+              "name": "Softnet Austria - Competence Network",
+              "nr": "27866",
+              "children": [
+              ]
+            },
+            {
+              "name": "asldkfjasödlfkjasdölfkj",
+              "nr": "29597",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vereine",
+          "nr": "16097",
+          "children": [
+            {
+              "name": "APS",
+              "nr": "16101",
+              "children": [
+              ]
+            },
+            {
+              "name": "A-SIT",
+              "nr": "20353",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "andere Gesellschaften",
+          "nr": "18701",
+          "children": [
+            {
+              "name": "Science Park Graz GmbH",
+              "nr": "13268",
+              "children": [
+              ]
+            },
+            {
+              "name": "HyCentA Research GmbH",
+              "nr": "18711",
+              "children": [
+              ]
+            },
+            {
+              "name": "Kooperation IFZ - Interuniversitäres Forschungszentrum für Technik, Arbeit und Kultur",
+              "nr": "18725",
+              "children": [
+              ]
+            },
+            {
+              "name": "Versuchsanstalt für Hochspannungstechnik Graz GmbH",
+              "nr": "19128",
+              "children": [
+              ]
+            },
+            {
+              "name": "SIC - Secure Information and Communication Technologies",
+              "nr": "20355",
+              "children": [
+              ]
+            },
+            {
+              "name": "BIOS Bioenergiesysteme GmbH",
+              "nr": "20453",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsholding TU Graz GmbH",
+              "nr": "22661",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Kooperationen",
+          "nr": "18721",
+          "children": [
+            {
+              "name": "NAWI Graz Dekanat",
+              "nr": "27458",
+              "children": [
+              ]
+            },
+            {
+              "name": "Kontakt",
+              "nr": "29262",
+              "children": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Leitung",
+      "nr": "16110",
+      "children": [
+        {
+          "name": "Rektorat1",
+          "nr": "13966",
+          "children": [
+            {
+              "name": "testbp",
+              "nr": "29285",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Senat",
+          "nr": "14580",
+          "children": [
+            {
+              "name": "Büro des Senates",
+              "nr": "14871",
+              "children": [
+              ]
+            },
+            {
+              "name": "Ombudsstelle für Studierende",
+              "nr": "14873",
+              "children": [
+              ]
+            },
+            {
+              "name": "Curricula-Kommission des Senats für Bachelor-, Master- und Diplomstudien",
+              "nr": "19773",
+              "children": [
+              ]
+            },
+            {
+              "name": "Curricula-Kommission des Senats für Doktoratsstudien und Lehrgänge",
+              "nr": "19786",
+              "children": [
+              ]
+            },
+            {
+              "name": "AG Studienkommissionen",
+              "nr": "23418",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Rektor",
+          "nr": "14599",
+          "children": [
+            {
+              "name": "Büro des Rektorates €",
+              "nr": "1299",
+              "children": [
+                {
+                  "name": "Assistenz des Rektors",
+                  "nr": "26521",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Berichtswesen, Statistik, Evaluierung",
+                  "nr": "26522",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Öffentlichkeits-/Medienarbeit und interne Kommunikation",
+                  "nr": "26523",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Recht und Zentrale Services",
+              "nr": "2660",
+              "children": [
+                {
+                  "name": "Büro des Amtes der TU Graz",
+                  "nr": "3423",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Rechtsabteilung",
+                  "nr": "3425",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Zentrale Registratur",
+                  "nr": "16317",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Büroservice",
+              "nr": "3463",
+              "children": [
+                {
+                  "name": "Druck- und Kopierzentrum",
+                  "nr": "3465",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Leitung und zentrale Beschaffung",
+                  "nr": "25533",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Büromaterial",
+                  "nr": "25534",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Frauenförderung und Aufgaben der Gleichstellung",
+              "nr": "14729",
+              "children": [
+                {
+                  "name": "Flexible Kinderbetreuung",
+                  "nr": "20204",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Kinderkrippe",
+                  "nr": "20206",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Amt der TU Graz",
+              "nr": "14731",
+              "children": [
+              ]
+            },
+            {
+              "name": "Commission for Scientific Integrity and Ethics",
+              "nr": "14810",
+              "children": [
+              ]
+            },
+            {
+              "name": "Internationale und Strategische Partnerschaften",
+              "nr": "19196",
+              "children": [
+              ]
+            },
+            {
+              "name": "Interne Revision und Auditierung",
+              "nr": "20813",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forum Technik & Gesellschaft und Alumni-Beziehungen",
+              "nr": "25339",
+              "children": [
+              ]
+            },
+            {
+              "name": "Qualitätswesen",
+              "nr": "25372",
+              "children": [
+                {
+                  "name": "testbp 2",
+                  "nr": "29286",
+                  "children": [
+                    {
+                      "name": "Referat für asdkjfh",
+                      "nr": "30089",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "Referat für kennungtest",
+                      "nr": "30112",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Strategie und Organisationsentwicklung",
+              "nr": "25397",
+              "children": [
+              ]
+            },
+            {
+              "name": "internet explorer 7 tests",
+              "nr": "30052",
+              "children": [
+              ]
+            },
+            {
+              "name": "Test TOMIF",
+              "nr": "30554",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vizerektor für Lehre und Studien",
+          "nr": "14705",
+          "children": [
+            {
+              "name": "Studienservice und Prüfungsangelegenheiten",
+              "nr": "3484",
+              "children": [
+                {
+                  "name": "Abteilung 12",
+                  "nr": "30857",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Abteilung 22",
+                  "nr": "30858",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Internationale Beziehungen und Mobilitätsprogramme",
+              "nr": "3490",
+              "children": [
+              ]
+            },
+            {
+              "name": "Sprachen, Schlüsselkompetenzen und Interne Weiterbildung",
+              "nr": "14815",
+              "children": [
+              ]
+            },
+            {
+              "name": "Life Long Learning",
+              "nr": "19190",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vizerektor für Forschung und Technologie",
+          "nr": "14707",
+          "children": [
+            {
+              "name": "Technologietransfer",
+              "nr": "3405",
+              "children": [
+              ]
+            },
+            {
+              "name": "Technologieverwertung",
+              "nr": "14812",
+              "children": [
+              ]
+            },
+            {
+              "name": "Büro für Forschung und Technologie",
+              "nr": "19211",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vizerektor für Finanzen und Personal",
+          "nr": "14709",
+          "children": [
+            {
+              "name": "Personalabteilung",
+              "nr": "3459",
+              "children": [
+              ]
+            },
+            {
+              "name": "Personal-/Kompetenzentwicklung",
+              "nr": "14861",
+              "children": [
+              ]
+            },
+            {
+              "name": "Finanzen, Rechnungswesen, Controlling",
+              "nr": "25471",
+              "children": [
+                {
+                  "name": "Finanzen, Rechnungswesen",
+                  "nr": "3486",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Controlling",
+                  "nr": "14859",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vizerektor für Infrastruktur und IKT",
+          "nr": "14711",
+          "children": [
+            {
+              "name": "Universitätsbibliothek",
+              "nr": "1296",
+              "children": [
+                {
+                  "name": "Verwaltung",
+                  "nr": "1416",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Benützung",
+                  "nr": "1418",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Zeitschriften",
+                  "nr": "1420",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Monographien/Serien",
+                  "nr": "1422",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Fachbibliotheken",
+                  "nr": "1424",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Zentraler Informatikdienst (ZID)",
+              "nr": "2453",
+              "children": [
+                {
+                  "name": "Communication & Security",
+                  "nr": "2455",
+                  "children": [
+                    {
+                      "name": "Telefonzentrale",
+                      "nr": "3461",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Computing & Application Services",
+                  "nr": "2459",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Information Design & Media",
+                  "nr": "2468",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Business Development",
+                  "nr": "4147",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Vernetztes Lernen",
+                  "nr": "20753",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Gebäude und Technik",
+              "nr": "3474",
+              "children": [
+                {
+                  "name": "Bautechnik und Objektbetreuung",
+                  "nr": "3480",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Arbeitsmedizin, Arbeitssicherheit und Brandschutz",
+                  "nr": "12605",
+                  "children": [
+                    {
+                      "name": "Referat für test",
+                      "nr": "30032",
+                      "children": [
+                        {
+                          "name": "unter test",
+                          "nr": "30039",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Leitung und Administration",
+                  "nr": "17957",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Raummanagement und Raumausstattung",
+                  "nr": "17963",
+                  "children": [
+                    {
+                      "name": "Möbellager",
+                      "nr": "16227",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Elektrotechnik",
+                  "nr": "17970",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Haustechnik und Leittechnik",
+                  "nr": "17972",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Archiv und Dokumentation",
+              "nr": "5564",
+              "children": [
+              ]
+            },
+            {
+              "name": "Abteilung BOFH",
+              "nr": "30530",
+              "children": [
+              ]
+            },
+            {
+              "name": "Abteilung BOFH2",
+              "nr": "30532",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Prä HubsiKomm",
+          "nr": "30837",
+          "children": [
+            {
+              "name": "Abteilung test",
+              "nr": "30877",
+              "children": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Initiative M",
+      "nr": "16148",
+      "children": [
+      ]
+    },
+    {
+      "name": "Akaflieg",
+      "nr": "16150",
+      "children": [
+      ]
+    },
+    {
+      "name": "comtec",
+      "nr": "16156",
+      "children": [
+      ]
+    },
+    {
+      "name": "Forschung",
+      "nr": "16210",
+      "children": [
+        {
+          "name": "F&E Gebiete und Projekte",
+          "nr": "16212",
+          "children": [
+          ]
+        },
+        {
+          "name": "Forschungsschwerpunkte",
+          "nr": "16232",
+          "children": [
+            {
+              "name": "Forschungsschwerpunkt: Smart Systems for a Mobile Society",
+              "nr": "16236",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Algorithmen und Mathematische Modellierung",
+              "nr": "16238",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Advanced Materials Science",
+              "nr": "16242",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Technische Biowissenschaften",
+              "nr": "16244",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Verfahrens- und Umwelttechnik",
+              "nr": "16246",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Energiesysteme und Anlagentechnik",
+              "nr": "16248",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Fahrzeugtechnik, -antriebe und Fahrzeugsicherheit",
+              "nr": "16250",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Integrierte Gebäudeentwicklung (IGE)",
+              "nr": "16252",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Fortschrittliche Bautechnologie und Innovative Geotechnik",
+              "nr": "16254",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Design Science in Architecture",
+              "nr": "16256",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsschwerpunkt: Sichere verteilte intelligente Multimedia-Prozesse und -Strukturen für die e-University",
+              "nr": "17726",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Aktuelles",
+          "nr": "16707",
+          "children": [
+          ]
+        },
+        {
+          "name": "Kontakt",
+          "nr": "17546",
+          "children": [
+          ]
+        },
+        {
+          "name": "Veröffentlichungen",
+          "nr": "18666",
+          "children": [
+          ]
+        },
+        {
+          "name": "Vizerektor für Forschung und Technologie",
+          "nr": "18675",
+          "children": [
+          ]
+        },
+        {
+          "name": "Kompetenzzentren",
+          "nr": "18718",
+          "children": [
+            {
+              "name": "Seppinator",
+              "nr": "29305",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Abschlussarbeiten",
+          "nr": "18767",
+          "children": [
+          ]
+        },
+        {
+          "name": "F&Tee Haus",
+          "nr": "19221",
+          "children": [
+            {
+              "name": "WWW_Link Büro für Forschung und Technologie",
+              "nr": "19222",
+              "children": [
+              ]
+            },
+            {
+              "name": "Technologietransfer",
+              "nr": "19227",
+              "children": [
+              ]
+            },
+            {
+              "name": "Technologieverwertung",
+              "nr": "19229",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forum Technik und Gesellschaft (TUG Squared)",
+              "nr": "19235",
+              "children": [
+              ]
+            },
+            {
+              "name": "alumni TUGraz 1887",
+              "nr": "19811",
+              "children": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Serviceeinrichtungen55",
+      "nr": "16512",
+      "children": [
+        {
+          "name": "Büro des Rektorates",
+          "nr": "16513",
+          "children": [
+            {
+              "name": "TestTest1234",
+              "nr": "29596",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Zentrale Registratur",
+          "nr": "16515",
+          "children": [
+          ]
+        },
+        {
+          "name": "Rechtsabteilung",
+          "nr": "16517",
+          "children": [
+          ]
+        },
+        {
+          "name": "Büroservice",
+          "nr": "16519",
+          "children": [
+          ]
+        },
+        {
+          "name": "Archiv und Dokumentation",
+          "nr": "16521",
+          "children": [
+          ]
+        },
+        {
+          "name": "Druck- und Kopierzentrum",
+          "nr": "16523",
+          "children": [
+          ]
+        },
+        {
+          "name": "Sprachen, Schlüsselkompetenzen und Interne Weiterbildung",
+          "nr": "16525",
+          "children": [
+          ]
+        },
+        {
+          "name": "Internationale Beziehungen und Mobilitätsprogramme",
+          "nr": "16527",
+          "children": [
+          ]
+        },
+        {
+          "name": "Studienservice und Prüfungsangelegenheiten",
+          "nr": "16530",
+          "children": [
+          ]
+        },
+        {
+          "name": "Commission for Scientific Integrity and Ethics",
+          "nr": "16534",
+          "children": [
+          ]
+        },
+        {
+          "name": "Personalabteilung",
+          "nr": "16538",
+          "children": [
+          ]
+        },
+        {
+          "name": "Finanzen, Rechnungswesen",
+          "nr": "16540",
+          "children": [
+          ]
+        },
+        {
+          "name": "Controlling",
+          "nr": "16542",
+          "children": [
+          ]
+        },
+        {
+          "name": "Personal-/Kompetenzentwicklung",
+          "nr": "16544",
+          "children": [
+          ]
+        },
+        {
+          "name": "Zentraler Informatikdienst (ZID)",
+          "nr": "16549",
+          "children": [
+          ]
+        },
+        {
+          "name": "Universitätsbibliothek",
+          "nr": "16551",
+          "children": [
+          ]
+        },
+        {
+          "name": "Gebäude und Technik",
+          "nr": "16553",
+          "children": [
+          ]
+        },
+        {
+          "name": "Frauenförderung und Aufgaben der Gleichstellung",
+          "nr": "16567",
+          "children": [
+          ]
+        },
+        {
+          "name": "Amt der TU Graz",
+          "nr": "16573",
+          "children": [
+          ]
+        },
+        {
+          "name": "Server für Studierende",
+          "nr": "16579",
+          "children": [
+            {
+              "name": "WWW-Server der Studierenden",
+              "nr": "16580",
+              "children": [
+              ]
+            },
+            {
+              "name": "Mailserver der Studierenden",
+              "nr": "16582",
+              "children": [
+              ]
+            },
+            {
+              "name": "Hochschülerschaft an der TU Graz",
+              "nr": "16584",
+              "children": [
+              ]
+            },
+            {
+              "name": "Der Virtuelle Campus Graz",
+              "nr": "16586",
+              "children": [
+              ]
+            },
+            {
+              "name": "Zeichensäle",
+              "nr": "16588",
+              "children": [
+                {
+                  "name": "Bauzeichensäle",
+                  "nr": "16592",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Maschinenbauzeichensaal",
+                  "nr": "16594",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Dynamobauzeichensaal",
+                  "nr": "16596",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "Hochspannungszeichensaal",
+                  "nr": "16598",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "xarch (experimenteller Architekturserver)",
+                  "nr": "16600",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Server im akademischen Bereich",
+          "nr": "16863",
+          "children": [
+            {
+              "name": "Akademisches Portal Österreich",
+              "nr": "16865",
+              "children": [
+              ]
+            },
+            {
+              "name": "Uni-Wegweiser",
+              "nr": "16867",
+              "children": [
+              ]
+            },
+            {
+              "name": "Austrian Academic Computer Network (ACOnet)",
+              "nr": "16872",
+              "children": [
+              ]
+            },
+            {
+              "name": "Rektorenkonferenz",
+              "nr": "16874",
+              "children": [
+              ]
+            },
+            {
+              "name": "Universitäten weltweit",
+              "nr": "16876",
+              "children": [
+                {
+                  "name": "sepp",
+                  "nr": "29304",
+                  "children": [
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Österreichischer Akademischer Austauschdienst",
+              "nr": "16880",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fonds zur Förderung der Wissenschaftlichen Forschung (FWF)",
+              "nr": "16885",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forschungsförderungsfond für die gewerbliche Wirtschaft (FFF)",
+              "nr": "16887",
+              "children": [
+              ]
+            },
+            {
+              "name": "Kulturelles Informationssystem AEIOU",
+              "nr": "16891",
+              "children": [
+              ]
+            },
+            {
+              "name": "Behördenführer",
+              "nr": "16894",
+              "children": [
+              ]
+            },
+            {
+              "name": "Wissenschaftskalender",
+              "nr": "16896",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "USI - Universitäts-Sportinstitut",
+          "nr": "18887",
+          "children": [
+          ]
+        },
+        {
+          "name": "F&Tee Haus",
+          "nr": "19256",
+          "children": [
+            {
+              "name": "Büro für Forschung und Technologie",
+              "nr": "19257",
+              "children": [
+              ]
+            },
+            {
+              "name": "Technologietransfer",
+              "nr": "19259",
+              "children": [
+              ]
+            },
+            {
+              "name": "Technologieverwertung",
+              "nr": "19261",
+              "children": [
+              ]
+            },
+            {
+              "name": "Forum Technik und Gesellschaft (TUG Squared)",
+              "nr": "19264",
+              "children": [
+              ]
+            },
+            {
+              "name": "alumni TUGraz 1887",
+              "nr": "19808",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Life Long Learning",
+          "nr": "20054",
+          "children": [
+          ]
+        },
+        {
+          "name": "Büro für Forschung und Technologie",
+          "nr": "20593",
+          "children": [
+          ]
+        },
+        {
+          "name": "Technologietransfer",
+          "nr": "20595",
+          "children": [
+          ]
+        },
+        {
+          "name": "Technologieverwertung",
+          "nr": "20597",
+          "children": [
+          ]
+        },
+        {
+          "name": "copyshop der OEH Ges.m.b.H.",
+          "nr": "20973",
+          "children": [
+          ]
+        },
+        {
+          "name": "WWW_Link tztztztztztz",
+          "nr": "29598",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Center of Biomedical Engineering",
+      "nr": "21614",
+      "children": [
+        {
+          "name": "Fakultät für Center of Biomedical Engineering<br>Dekan",
+          "nr": "30040",
+          "children": [
+          ]
+        },
+        {
+          "name": "Einrichtung für so schnell kanns gehen3",
+          "nr": "30043",
+          "children": [
+          ]
+        },
+        {
+          "name": "Einrichtung für asdfasdfasdf",
+          "nr": "30044",
+          "children": [
+          ]
+        },
+        {
+          "name": "Einrichtung für asdfdffffffffffffffffffffff",
+          "nr": "30045",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aktuelles",
+      "nr": "29303",
+      "children": [
+      ]
+    },
+    {
+      "name": "Studienangebot",
+      "nr": "29430",
+      "children": [
+        {
+          "name": "Studienrichtungen",
+          "nr": "29567",
+          "children": [
+            {
+              "name": "Studium Humanmedizin",
+              "nr": "29661",
+              "children": [
+                {
+                  "name": "1. Abschnitt",
+                  "nr": "29663",
+                  "children": [
+                    {
+                      "name": "Blocks",
+                      "nr": "29666",
+                      "children": [
+                        {
+                          "name": "Block 01 - Gesunde und kranke Menschen",
+                          "nr": "29674",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "Block 02 - Der menschliche Körper",
+                          "nr": "29675",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "Block 03 - Vom Molekül zu Zelle",
+                          "nr": "29676",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "Block 04 - Funktionssysteme und Biologische Regulation",
+                          "nr": "29680",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "Block 05 - Genetik, molekulare und zelluläre Kommunikation",
+                          "nr": "29681",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "Block 06 - Der Mensch in Umwelt, Familie und Gesellschaft",
+                          "nr": "29682",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Lines",
+                      "nr": "29667",
+                      "children": [
+                        {
+                          "name": "SEM01 - Berufsfelderkundung",
+                          "nr": "29677",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "SEM01 - Erste Hilfe",
+                          "nr": "29678",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "SEM02 - Physikalische Gesundenuntersuchung",
+                          "nr": "29679",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "2. Abschnitt",
+                  "nr": "29664",
+                  "children": [
+                    {
+                      "name": "Blocks",
+                      "nr": "29668",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "Lines",
+                      "nr": "29670",
+                      "children": [
+                      ]
+                    },
+                    {
+                      "name": "Spezielle Studienmodule",
+                      "nr": "29671",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "3. Abschnitt",
+                  "nr": "29665",
+                  "children": [
+                    {
+                      "name": "Tertiale",
+                      "nr": "29672",
+                      "children": [
+                        {
+                          "name": "Tertial 01 - Innere Medizin",
+                          "nr": "29895",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "Tertial 02 - Notfall & Intensivmedizin",
+                          "nr": "29908",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Lines",
+                      "nr": "29673",
+                      "children": [
+                        {
+                          "name": "SJ05 - Integrierte LVs aus Klinischen Diagnosewissenschaften",
+                          "nr": "29909",
+                          "children": [
+                          ]
+                        },
+                        {
+                          "name": "SJ05 - Allgemeinmedizin",
+                          "nr": "29910",
+                          "children": [
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Studium Zahnmedizin",
+              "nr": "29662",
+              "children": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Devline Universität  Graz<br>V.S.O.T.",
+      "nr": "30056",
+      "children": [
+        {
+          "name": "Aktuelles",
+          "nr": "30057",
+          "children": [
+            {
+              "name": "TYP_B",
+              "nr": "30248",
+              "children": [
+                {
+                  "name": "TYP_B_1_1",
+                  "nr": "30245",
+                  "children": [
+                  ]
+                },
+                {
+                  "name": "TYP_A_1",
+                  "nr": "30249",
+                  "children": [
+                    {
+                      "name": "TYP_A_1_1",
+                      "nr": "30250",
+                      "children": [
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "TYP_A_1",
+                  "nr": "30277",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "V.S.O.T. <br>Alumni",
+          "nr": "30058",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BHVD",
+      "nr": "30238",
+      "children": [
+        {
+          "name": "Test Test",
+          "nr": "30239",
+          "children": [
+            {
+              "name": "TYP_B",
+              "nr": "30240",
+              "children": [
+                {
+                  "name": "TYP_A_1",
+                  "nr": "30241",
+                  "children": [
+                    {
+                      "name": "TYP_A_1_1",
+                      "nr": "30247",
+                      "children": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "TYP_B",
+              "nr": "30243",
+              "children": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Test Armin VO",
+      "nr": "30514",
+      "children": [
+      ]
+    },
+    {
+      "name": "Aktuelles",
+      "nr": "30521",
+      "children": [
+      ]
+    },
+    {
+      "name": "Test Armin zB1",
+      "nr": "30574",
+      "children": [
+        {
+          "name": "Abteilung TestA3",
+          "nr": "30575",
+          "children": [
+          ]
+        },
+        {
+          "name": "Abteilung TestA1",
+          "nr": "30577",
+          "children": [
+            {
+              "name": "Abteilung TestA2",
+              "nr": "30578",
+              "children": [
+                {
+                  "name": "Abteilung TestA3",
+                  "nr": "30579",
+                  "children": [
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Abteilung TestA2",
+          "nr": "30697",
+          "children": [
+          ]
+        },
+        {
+          "name": "Abteilung ABC test",
+          "nr": "30715",
+          "children": [
+          ]
+        },
+        {
+          "name": "Abteilung Test",
+          "nr": "30716",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gentoos Org",
+      "nr": "30614",
+      "children": [
+        {
+          "name": "Kommision",
+          "nr": "30616",
+          "children": [
+          ]
+        },
+        {
+          "name": "Kollegial",
+          "nr": "30617",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FunkUnitTests",
+      "nr": "30634",
+      "children": [
+        {
+          "name": "UnterFunkUnitTests",
+          "nr": "30635",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für SPO Test",
+      "nr": "30758",
+      "children": [
+        {
+          "name": "Institut für Zahnmedizin",
+          "nr": "30798",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Humanmedizin",
+          "nr": "30799",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Köln",
+          "nr": "30800",
+          "children": [
+          ]
+        },
+        {
+          "name": "Institut für Kunst Uni",
+          "nr": "30801",
+          "children": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Julias TestOrganisation",
+      "nr": "30817",
+      "children": [
+      ]
+    },
+    {
+      "name": "Abteilung-I für test",
+      "nr": "30957",
+      "children": [
+      ]
+    },
+    {
+      "name": "Alpen Adria Universität",
+      "nr": "30977",
+      "children": [
+      ]
+    },
+    {
+      "name": "Bewerbungsmanagement",
+      "nr": "30978",
+      "children": [
+        {
+          "name": "Abteilung A",
+          "nr": "30979",
+          "children": [
+          ]
+        },
+        {
+          "name": "Abteilung B",
+          "nr": "30980",
+          "children": [
+          ]
+        },
+        {
+          "name": "Fakultät A",
+          "nr": "30981",
+          "children": [
+            {
+              "name": "Fakultät A<br>Auswahlkommission",
+              "nr": "30983",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultät A<br>Zulassungsausschuss",
+              "nr": "30984",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultät A<br>Prüfungsausschuss",
+              "nr": "30985",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Fakultät B",
+          "nr": "30982",
+          "children": [
+            {
+              "name": "Fakultät B<br>Auswahlkommission",
+              "nr": "30986",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultät B<br>Zulassungsausschuss",
+              "nr": "30987",
+              "children": [
+              ]
+            },
+            {
+              "name": "Fakultät B<br>Prüfungsausschuss",
+              "nr": "30988",
+              "children": [
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fakultät für Michl",
+      "nr": "31009",
+      "children": [
+        {
+          "name": "Institut für Sinn des Lebens",
+          "nr": "31010",
+          "children": [
+          ]
+        }
+      ]
+    }
+  ]
+}

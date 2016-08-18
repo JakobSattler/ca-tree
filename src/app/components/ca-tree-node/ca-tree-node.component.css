@@ -1,0 +1,21 @@
+span, div {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nodeText {
+  text-decoration: inherit;
+  font-color: black;
+  color: black;
+  font-weight: normal;
+}
+
+.nodeText:hover {
+  cursor: default;
+}
+
+.nodeTextInput {
+  height: 100%;
+}

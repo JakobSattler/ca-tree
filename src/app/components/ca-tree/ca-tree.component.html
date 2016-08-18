@@ -1,0 +1,5 @@
+<h1>Tree component</h1>
+<hr>
+<template [ngIf]="model.resources">
+  <co-tree-node *ngFor="let res of model.resources" (nodeSelected)="onNodeSelected($event)"  [node]="res" [level]="0"></co-tree-node>
+</template>
