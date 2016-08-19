@@ -16,7 +16,7 @@ var CaTreeService = (function () {
         this.http = http;
     }
     CaTreeService.prototype.getNodes = function () {
-        return this.http.get('./organisations.json').map(function (res) { return res.json(); });
+        return this.http.get('./organisations_flat.json').map(function (res) { return res.json(); });
     };
     /**
      * Calls checkChildren() and checkParents() using the given node

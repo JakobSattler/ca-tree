@@ -1,5 +1,11 @@
 <h1>Tree component</h1>
 <hr>
 <template [ngIf]="model.resources">
-  <co-tree-node (nodeSelected)="onNodeSelected($event)"  [node]="model.resources" [level]="0"></co-tree-node>
+    <p>asdf</p>
+    <co-tree-node *ngFor="let res of model.resources | nodefilter: 'parentNr' : ''"
+                  (nodeSelected)="onNodeSelected($event)"
+                  [node]="res"
+                  [level]="0"
+                  [model]="model">
+    </co-tree-node>
 </template>

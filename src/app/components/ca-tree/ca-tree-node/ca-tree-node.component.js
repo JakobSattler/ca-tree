@@ -6,8 +6,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var ca_tree_service_1 = require('../../services/ca-tree.service');
 var ca_tree_node_model_1 = require('./ca-tree-node-model');
+var ca_tree_service_1 = require('../../../services/ca-tree.service');
+var ca_tree_model_1 = require('./ca-tree-model');
 //
 //export class TreeNode {
 //  name: String;
@@ -45,13 +46,14 @@ var CaTreeNodeComponent = (function () {
         }
     };
     CaTreeNodeComponent.prototype.extend = function () {
-        this.extended = !this.extended;
+        this.node.extended = !this.node.extended;
     };
     CaTreeNodeComponent.prototype.getPadding = function () {
         return this.paddingPerLevel * this.level + 'px';
     };
     CaTreeNodeComponent.prototype.onNodeSelected = function () {
         this.nodeSelected.emit(this.node);
+        console.log("selected");
     };
     CaTreeNodeComponent.prototype.changePic = function () {
         if (!(this.classString = prompt("Change Pic", "change pic here"))) {
@@ -65,7 +67,6 @@ var CaTreeNodeComponent = (function () {
     CaTreeNodeComponent.prototype.addNode = function () {
         var node = new ca_tree_node_model_1.CaTreeNodeModel("test", 1283934, null);
         console.log(node);
-        this.node.children.push(node);
     };
     CaTreeNodeComponent.prototype.onKeyDown = function (event) {
         //handle text change if source of event is nodeTextInput-element
@@ -81,10 +82,10 @@ var CaTreeNodeComponent = (function () {
         this.changing = false;
     };
     CaTreeNodeComponent.prototype.deleteNode = function () {
-        if (this.node.children.length > 0) {
-            alert("Delete");
-        }
     };
+    __decorate([
+        core_1.Input()
+    ], CaTreeNodeComponent.prototype, "model");
     __decorate([
         core_1.Input()
     ], CaTreeNodeComponent.prototype, "level");
@@ -110,7 +111,8 @@ var CaTreeNodeComponent = (function () {
             templateUrl: 'ca-tree-node.component.html',
             styleUrls: ['ca-tree-node.component.css'],
             directives: [CaTreeNodeComponent],
-            providers: [ca_tree_service_1.CaTreeService]
+            providers: [ca_tree_service_1.CaTreeService],
+            pipes: [ca_tree_model_1.NodeFilter]
         })
     ], CaTreeNodeComponent);
     return CaTreeNodeComponent;
