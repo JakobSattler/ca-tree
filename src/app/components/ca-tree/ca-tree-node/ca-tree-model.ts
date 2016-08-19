@@ -8,7 +8,7 @@ export interface BasicTreeNode {
   extended: boolean;
 }
 
-export interface SelectableTreeNode extends BasicTreeNode{
+export interface SelectableTreeNode extends BasicTreeNode {
   selected: boolean;
   childSelected: boolean;
 }
@@ -20,6 +20,7 @@ export interface CheckboxTreeNode extends BasicTreeNode {
 
 export class CaTreeModel {
   resources: Array<SelectableTreeNode>;
+  resourcesArray: Array<BasicTreeNode>;
 
   constructor() {
   }
@@ -30,6 +31,14 @@ export class CaTreeModel {
 
   isNodeLeaf(node: BasicTreeNode): boolean {
     return this.resources.filter(res => res.parentNr === node.nr).length === 0;
+  }
+
+  deleteNode(node: BasicTreeNode)
+  {
+    let delIndex:number;
+
+    delIndex = this.resources.indexOf(this.resources.filter(res => res.nr === node.nr)[0]);
+    this.resources.splice(delIndex,1);
   }
 }
 

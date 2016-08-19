@@ -89,7 +89,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   changePic(): void {
     let newPic = prompt("Change Pic", "");
     console.log(newPic);
-    if(newPic){
+    if (newPic) {
       this.classString = newPic;
     }
   }
@@ -100,15 +100,14 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   addNode(): void {
 
-   let node: BasicTreeNode = {
-     name: "Neuer Child",
-     nr: this.node.nr,
-    parentNr: this.node.parentNr,
-    extended : false
-     };
+    let node: BasicTreeNode = {
+      name: "Neuer Child",
+      nr: this.node.nr,
+      parentNr: this.node.parentNr,
+      extended: false
+    };
 
-   }
-
+  }
 
 
   onKeyDown(event): void {
@@ -127,8 +126,8 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
     this.changing = false;
   }
 
-  deleteNode(): void {
-
+  deleteNodeCaller(): void {
+   this.model.deleteNode(this.node);
   }
 
 }

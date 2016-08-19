@@ -89,7 +89,8 @@ var CaTreeNodeComponent = (function () {
         this.node.name = this.nodeTextInput.nativeElement.value;
         this.changing = false;
     };
-    CaTreeNodeComponent.prototype.deleteNode = function () {
+    CaTreeNodeComponent.prototype.deleteNodeCaller = function () {
+        this.model.deleteNode(this.node);
     };
     __decorate([
         core_1.Input()

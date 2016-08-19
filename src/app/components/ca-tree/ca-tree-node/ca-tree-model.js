@@ -16,6 +16,11 @@ var CaTreeModel = (function () {
     CaTreeModel.prototype.isNodeLeaf = function (node) {
         return this.resources.filter(function (res) { return res.parentNr === node.nr; }).length === 0;
     };
+    CaTreeModel.prototype.deleteNode = function (node) {
+        var delIndex;
+        delIndex = this.resources.indexOf(this.resources.filter(function (res) { return res.nr === node.nr; })[0]);
+        this.resources.splice(delIndex, 1);
+    };
     return CaTreeModel;
 }());
 exports.CaTreeModel = CaTreeModel;
