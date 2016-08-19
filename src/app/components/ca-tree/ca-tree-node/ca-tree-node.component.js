@@ -71,10 +71,11 @@ var CaTreeNodeComponent = (function () {
     CaTreeNodeComponent.prototype.addNode = function () {
         var node = {
             name: "Neuer Child",
-            nr: this.node.nr,
-            parentNr: this.node.parentNr,
+            nr: this.model.getNewID(),
+            parentNr: this.node.nr,
             extended: false
         };
+        this.model.addResource(node);
     };
     CaTreeNodeComponent.prototype.onKeyDown = function (event) {
         //handle text change if source of event is nodeTextInput-element

@@ -3,7 +3,7 @@ import {
   Inject, forwardRef
 } from '@angular/core';
 import {CaTreeService} from '../../../services/ca-tree.service';
-import {BasicTreeNode, CaTreeModel, NodeFilter} from './ca-tree-model';
+import {BasicTreeNode, CaTreeModel, NodeFilter, SelectableTreeNode} from './ca-tree-model';
 import {CaTreeComponent} from '../ca-tree.component';
 
 //
@@ -100,12 +100,14 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   addNode(): void {
 
-   let node: BasicTreeNode = {
-     name: "Neuer Child",
-     nr: this.node.nr,
-    parentNr: this.node.parentNr,
-    extended : false
+   let node = {
+     name : "Neuer Child",
+     nr: this.model.getNewID(),
+    parentNr: this.node.nr,
+     extended: false
      };
+
+    this.model.addResource(node);
 
    }
 

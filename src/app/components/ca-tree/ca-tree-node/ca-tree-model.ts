@@ -13,11 +13,6 @@ export interface SelectableTreeNode extends BasicTreeNode{
   childSelected: boolean;
 }
 
-export interface CheckboxTreeNode extends BasicTreeNode {
-  selected: boolean;
-  childSelected: boolean;
-}
-
 export class CaTreeModel {
   resources: Array<SelectableTreeNode>;
 
@@ -30,6 +25,18 @@ export class CaTreeModel {
 
   isNodeLeaf(node: BasicTreeNode): boolean {
     return this.resources.filter(res => res.parentNr === node.nr).length === 0;
+  }
+
+  getNewID(): number
+  {
+    var max = Math.max.apply(Math, this.resources.map(function (res) {
+      return res.nr;
+    }));
+    return max+1;
+  }
+
+  public addResource(res: SelectableTreeNode ){
+    this.resources.push(res);
   }
 }
 
@@ -45,4 +52,6 @@ export class NodeFilter {
     }
     return items.filter(it => it[field] === value);
   }
+
+
 }
