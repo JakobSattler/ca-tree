@@ -100,14 +100,18 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   addNode(): void {
 
-   let node: BasicTreeNode = {
-     name: "Neuer Child",
-     nr: this.node.nr,
-    parentNr: this.node.parentNr,
-    extended : false
-     };
+    let node = {
+      name : "Neuer Child",
+      nr: this.model.getNewID(),
+      parentNr: this.node.nr,
+      extended: false,
+      selected: false,
+      childSelected: false
+    };
 
-   }
+    this.model.addResource(node);
+
+  }
 
 
 
@@ -128,7 +132,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   }
 
   deleteNode(): void {
-
+    this.model.deleteNode(this.node);
   }
 
 }

@@ -33,8 +33,8 @@
             aria-expanded="false">
       </span>&nbsp;&nbsp;&nbsp;&nbsp;
       <ul class="dropdown-menu">
-        <li>
-          <a (click)="deleteNodeCaller()">Eintrag löschen</a>
+        <li (click)="deleteNode()">
+          <a>Eintrag löschen</a>
         </li>
         <li (click)="editNode()">
           <a>Eintrag ändern</a>
@@ -42,7 +42,7 @@
         <li (click)="addNode()">
           <a>Eintrag hinzufügen</a>
         </li>
-        <li>
+        <li (click)="changePic()">
           <a>Symbol ändern</a>
         </li>
       </ul>

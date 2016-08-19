@@ -21,6 +21,15 @@ var CaTreeModel = (function () {
         delIndex = this.resources.indexOf(this.resources.filter(function (res) { return res.nr === node.nr; })[0]);
         this.resources.splice(delIndex, 1);
     };
+    CaTreeModel.prototype.addResource = function (res) {
+        this.resources.push(res);
+    };
+    CaTreeModel.prototype.getNewID = function () {
+        var max = Math.max.apply(Math, this.resources.map(function (res) {
+            return res.nr;
+        }));
+        return max + 1;
+    };
     return CaTreeModel;
 }());
 exports.CaTreeModel = CaTreeModel;

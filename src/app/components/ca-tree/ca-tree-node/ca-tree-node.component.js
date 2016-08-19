@@ -73,7 +73,9 @@ var CaTreeNodeComponent = (function () {
             name: "Neuer Child",
             nr: this.model.getNewID(),
             parentNr: this.node.nr,
-            extended: false
+            extended: false,
+            selected: false,
+            childSelected: false
         };
         this.model.addResource(node);
     };
@@ -90,7 +92,7 @@ var CaTreeNodeComponent = (function () {
         this.node.name = this.nodeTextInput.nativeElement.value;
         this.changing = false;
     };
-    CaTreeNodeComponent.prototype.deleteNodeCaller = function () {
+    CaTreeNodeComponent.prototype.deleteNode = function () {
         this.model.deleteNode(this.node);
     };
     __decorate([
