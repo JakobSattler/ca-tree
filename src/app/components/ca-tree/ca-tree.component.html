@@ -3,7 +3,7 @@
 <template [ngIf]="model.resources">
     <p>asdf</p>
     <co-tree-node *ngFor="let res of model.resources | nodefilter: 'parentNr' : ''"
-                  (nodeSelected)="onNodeSelected($event)"
+                  (nodeSelected)="_onNodeSelected($event)"
                   [node]="res"
                   [level]="0"
                   [model]="model">
