@@ -50,7 +50,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   classString: String = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
 
   @Output()
-  nodeSelected = new EventEmitter();
+  nodeSelected: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
 
   @ViewChild('nodeTextInput')
   nodeTextInput: ElementRef;
@@ -86,7 +86,6 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   }
 
   changePic(): void {
-
     if (!(this.classString = prompt('Change Pic', 'change pic here'))) {
       this.classString = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
     }

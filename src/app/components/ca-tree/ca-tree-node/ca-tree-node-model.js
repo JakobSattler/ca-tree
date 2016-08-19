@@ -11,9 +11,6 @@ var CaTreeNodeModel = (function () {
             this.children.push(new CaTreeNodeModel(c.name, c.nr, c.children));
         }
     }
-    CaTreeNodeModel.fromJSONArray = function (array) {
-        return array.map(function (obj) { return new CaTreeNodeModel(obj['name'], obj['nr'], obj['children']); });
-    };
     return CaTreeNodeModel;
 }());
 exports.CaTreeNodeModel = CaTreeNodeModel;

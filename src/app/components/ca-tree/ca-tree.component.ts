@@ -32,12 +32,7 @@ export class CaTreeComponent implements OnInit {
     );
   }
 
-  //onNodeSelected(selectedNode: CaTreeNodeModel) {
-  //  if (selectedNode.selected) {
-  //    this.treeService.nodeUnselected(selectedNode, this.model.resources);
-  //  } else if (!selectedNode.selected) {
-  //    this.treeService.nodeSelected(selectedNode, this.model.resources);
-  //  }
-  //}
+  onNodeSelected(selectedNode: CaTreeNodeModel) {
+  }
 
 }

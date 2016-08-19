@@ -26,8 +26,4 @@ export class CaTreeNodeModel {
       this.children.push(new CaTreeNodeModel(c.name, c.nr, c.children));
     }
   }
-
-  static fromJSONArray(array: Array<Object>):CaTreeNodeModel[]{
-    return array.map(obj => new CaTreeNodeModel(obj['name'], obj['nr'], obj['children']));
-  }
 }

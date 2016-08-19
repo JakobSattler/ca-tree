@@ -87,7 +87,7 @@ var CaTreeService = (function () {
         for (var _i = 0, _a = node.children; _i < _a.length; _i++) {
             var n = _a[_i];
             n.childSelected = this.checkParents(n);
-            if (n == this.selectedNode) {
+            if (n === this.selectedNode) {
                 return true;
             }
         }
@@ -100,7 +100,7 @@ var CaTreeService = (function () {
     CaTreeService.prototype.uncheckParents = function (node) {
         for (var _i = 0, _a = node.children; _i < _a.length; _i++) {
             var n = _a[_i];
-            if (n == this.selectedNode) {
+            if (n === this.selectedNode) {
                 node.childSelected = false;
             }
             this.uncheckParents(n);

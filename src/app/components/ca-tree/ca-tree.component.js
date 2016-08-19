@@ -20,6 +20,8 @@ var CaTreeComponent = (function () {
             _this.model.resources = data;
         });
     };
+    CaTreeComponent.prototype.onNodeSelected = function (selectedNode) {
+    };
     CaTreeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

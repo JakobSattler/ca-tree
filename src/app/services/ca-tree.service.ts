@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {CaTreeNodeModel} from '../components/ca-tree/ca-tree-node/ca-tree-node-model';
-import {BasicTreeNode} from '../components/ca-tree/ca-tree-node/ca-tree-model';
+import {MapSignature} from 'rxjs/operator/map';
 
 /**
  * Used to get data using HTTP and to (un)check nodes
@@ -16,7 +16,7 @@ export class CaTreeService {
   constructor(private http: Http) {
   }
 
-  getNodes() {
+  getNodes(): Observable<any> {
     return this.http.get('./organisations_flat.json').map(res => res.json());
   }
 
@@ -26,7 +26,7 @@ export class CaTreeService {
    * @param selectedNode The selected node
    * @param rootNode
    */
-  nodeSelected(selectedNode: CaTreeNodeModel, rootNode: CaTreeNodeModel) {
+  nodeSelected(selectedNode: CaTreeNodeModel, rootNode: CaTreeNodeModel): void {
     if (selectedNode.children.length > 0) {
       selectedNode.childSelected = true;
     }
@@ -45,7 +45,7 @@ export class CaTreeService {
    * @param selectedNode The selected node
    * @param rootNode
    */
-  nodeUnselected(selectedNode: CaTreeNodeModel, rootNode: CaTreeNodeModel) {
+  nodeUnselected(selectedNode: CaTreeNodeModel, rootNode: CaTreeNodeModel): void {
     if (selectedNode.children.length > 0) {
       selectedNode.childSelected = false;
     }
@@ -60,7 +60,7 @@ export class CaTreeService {
    *
    * @param node The selected node
    */
-  checkChildren(node: any) {
+  checkChildren(node: any): void {
     node.selected = !node.selected;
     console.log(node.name);
     for (let n of node.children) {
@@ -68,7 +68,7 @@ export class CaTreeService {
     }
   }
 
-  checkChildrenIt(node: any) {
+  checkChildrenIt(node: any): void {
     if (node == null) {
       return;
     }
@@ -90,10 +90,10 @@ export class CaTreeService {
    *
    * @param node Should be rootNode
    */
-  checkParents(node: any) {
+  checkParents(node: any): boolean {
     for (let n of node.children) {
       n.childSelected = this.checkParents(n);
-      if (n == this.selectedNode) {
+      if (n === this.selectedNode) {
         return true;
       }
     }
@@ -104,9 +104,9 @@ export class CaTreeService {
    *
    * @param node Should be rootNode
    */
-  uncheckParents(node: any) {
+  uncheckParents(node: any): void {
     for (let n of node.children) {
-      if (n == this.selectedNode) {
+      if (n === this.selectedNode) {
         node.childSelected = false;
       }
       this.uncheckParents(n);
