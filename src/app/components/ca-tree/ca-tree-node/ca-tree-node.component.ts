@@ -33,6 +33,7 @@ import {CaTreeComponent} from '../ca-tree.component';
   directives: [CaTreeNodeComponent],
   providers: [CaTreeService],
   pipes: [NodeFilter]
+
 })
 export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
@@ -86,10 +87,11 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   }
 
   changePic(): void {
-    if (!(this.classString = prompt('Change Pic', 'change pic here'))) {
-      this.classString = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
+    let newPic = prompt("Change Pic", "");
+    console.log(newPic);
+    if(newPic){
+      this.classString = newPic;
     }
-    ;
   }
 
   editNode(): void {
@@ -97,7 +99,17 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   }
 
   addNode(): void {
-  }
+
+   let node: BasicTreeNode = {
+     name: "Neuer Child",
+     nr: this.node.nr,
+    parentNr: this.node.parentNr,
+    extended : false
+     };
+
+   }
+
+
 
   onKeyDown(event): void {
     //handle text change if source of event is nodeTextInput-element
