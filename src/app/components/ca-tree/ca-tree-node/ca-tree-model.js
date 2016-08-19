@@ -26,7 +26,7 @@ var NodeFilter = (function () {
         if (!items) {
             return [];
         }
-        return items.filter(function (it) { return it[field] == value; });
+        return items.filter(function (it) { return it[field] === value; });
     };
     NodeFilter = __decorate([
         core_1.Pipe({

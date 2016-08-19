@@ -38,6 +38,6 @@ export class NodeFilter {
     if (!items) {
       return [];
     }
-    return items.filter(it => it[field] == value);
+    return items.filter(it => it[field] === value);
   }
 }
