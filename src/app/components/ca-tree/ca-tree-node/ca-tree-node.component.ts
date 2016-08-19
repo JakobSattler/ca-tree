@@ -1,5 +1,4 @@
 import {Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewChecked} from '@angular/core';
-import {CaTreeNodeModel} from './ca-tree-node-model';
 import {CaTreeService} from '../../../services/ca-tree.service';
 import {BasicTreeNode, CaTreeModel, NodeFilter} from './ca-tree-model';
 
@@ -97,8 +96,6 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   }
 
   addNode(): void {
-    let node: CaTreeNodeModel = new CaTreeNodeModel('test', 1283934, null);
-    console.log(node);
   }
 
   onKeyDown(event): void {

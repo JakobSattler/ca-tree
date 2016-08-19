@@ -1,15 +1,14 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
-import {CaTreeNodeModel} from '../components/ca-tree/ca-tree-node/ca-tree-node-model';
-import {MapSignature} from 'rxjs/operator/map';
+import {Observable} from 'rxjs';
 
 /**
  * Used to get data using HTTP and to (un)check nodes
  */
 @Injectable()
 export class CaTreeService {
-  selectedNode: CaTreeNodeModel;
+  selectedNode: String;
 
   //nodeChange: Subject<CaTreeNode> = new Subject<CaTreeNode>();
 
@@ -26,15 +25,15 @@ export class CaTreeService {
    * @param selectedNode The selected node
    * @param rootNode
    */
-  nodeSelected(selectedNode: CaTreeNodeModel, rootNode: CaTreeNodeModel): void {
-    if (selectedNode.children.length > 0) {
-      selectedNode.childSelected = true;
-    }
-    console.log(selectedNode);
-    this.checkChildren(selectedNode);
-    this.selectedNode = selectedNode;
-
-    this.checkParents(rootNode);
+  nodeSelected(): void {
+    //if (selectedNode.children.length > 0) {
+    //  selectedNode.childSelected = true;
+    //}
+    //console.log(selectedNode);
+    //this.checkChildren(selectedNode);
+    //this.selectedNode = selectedNode;
+    //
+    //this.checkParents(rootNode);
 
     //this.checkChildrenIt(rootNode);
   }
@@ -45,14 +44,14 @@ export class CaTreeService {
    * @param selectedNode The selected node
    * @param rootNode
    */
-  nodeUnselected(selectedNode: CaTreeNodeModel, rootNode: CaTreeNodeModel): void {
-    if (selectedNode.children.length > 0) {
-      selectedNode.childSelected = false;
-    }
-    console.log(selectedNode);
-    this.checkChildren(selectedNode);
-    this.selectedNode = selectedNode;
-    this.uncheckParents(rootNode);
+  nodeUnselected(): void {
+    //if (selectedNode.children.length > 0) {
+    //  selectedNode.childSelected = false;
+    //}
+    //console.log(selectedNode);
+    //this.checkChildren(selectedNode);
+    //this.selectedNode = selectedNode;
+    //this.uncheckParents(rootNode);
   }
 
   /**
@@ -72,17 +71,17 @@ export class CaTreeService {
     if (node == null) {
       return;
     }
-    let nodes: CaTreeNodeModel[] = [];
-    nodes.push(node);
-
-    while (nodes.length > 0) {
-      node = nodes[nodes.length - 1];
-      nodes.splice(nodes.length - 1, 1);
-      console.log(node.name);
-      for (let n of node.children) {
-        nodes.push(n);
-      }
-    }
+   //let nodes: CaTreeNodeModel[] = [];
+   // nodes.push(node);
+   //
+   // while (nodes.length > 0) {
+   //   node = nodes[nodes.length - 1];
+   //   nodes.splice(nodes.length - 1, 1);
+   //   console.log(node.name);
+   //   for (let n of node.children) {
+   //     nodes.push(n);
+   //   }
+   // }
   }
 
   /**

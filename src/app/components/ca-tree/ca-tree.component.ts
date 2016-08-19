@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {CaTreeService} from '../../services/ca-tree.service';
 import {CaTreeNodeComponent} from './ca-tree-node/ca-tree-node.component';
 import {CaTreeModel, BasicTreeNode, NodeFilter} from './ca-tree-node/ca-tree-model';
-import {CaTreeNodeModel} from './ca-tree-node/ca-tree-node-model';
 
 @Component({
   moduleId: module.id,
@@ -32,7 +31,7 @@ export class CaTreeComponent implements OnInit {
     );
   }
 
-  onNodeSelected(selectedNode: CaTreeNodeModel) {
+  onNodeSelected(selectedNode: BasicTreeNode) {
   }
 
 }

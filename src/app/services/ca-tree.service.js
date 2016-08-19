@@ -24,14 +24,15 @@ var CaTreeService = (function () {
      * @param selectedNode The selected node
      * @param rootNode
      */
-    CaTreeService.prototype.nodeSelected = function (selectedNode, rootNode) {
-        if (selectedNode.children.length > 0) {
-            selectedNode.childSelected = true;
-        }
-        console.log(selectedNode);
-        this.checkChildren(selectedNode);
-        this.selectedNode = selectedNode;
-        this.checkParents(rootNode);
+    CaTreeService.prototype.nodeSelected = function () {
+        //if (selectedNode.children.length > 0) {
+        //  selectedNode.childSelected = true;
+        //}
+        //console.log(selectedNode);
+        //this.checkChildren(selectedNode);
+        //this.selectedNode = selectedNode;
+        //
+        //this.checkParents(rootNode);
         //this.checkChildrenIt(rootNode);
     };
     /**
@@ -40,14 +41,14 @@ var CaTreeService = (function () {
      * @param selectedNode The selected node
      * @param rootNode
      */
-    CaTreeService.prototype.nodeUnselected = function (selectedNode, rootNode) {
-        if (selectedNode.children.length > 0) {
-            selectedNode.childSelected = false;
-        }
-        console.log(selectedNode);
-        this.checkChildren(selectedNode);
-        this.selectedNode = selectedNode;
-        this.uncheckParents(rootNode);
+    CaTreeService.prototype.nodeUnselected = function () {
+        //if (selectedNode.children.length > 0) {
+        //  selectedNode.childSelected = false;
+        //}
+        //console.log(selectedNode);
+        //this.checkChildren(selectedNode);
+        //this.selectedNode = selectedNode;
+        //this.uncheckParents(rootNode);
     };
     /**
      * Check (if unchecked) or uncheck (if checked) all children of the given node
@@ -66,17 +67,17 @@ var CaTreeService = (function () {
         if (node == null) {
             return;
         }
-        var nodes = [];
-        nodes.push(node);
-        while (nodes.length > 0) {
-            node = nodes[nodes.length - 1];
-            nodes.splice(nodes.length - 1, 1);
-            console.log(node.name);
-            for (var _i = 0, _a = node.children; _i < _a.length; _i++) {
-                var n = _a[_i];
-                nodes.push(n);
-            }
-        }
+        //let nodes: CaTreeNodeModel[] = [];
+        // nodes.push(node);
+        //
+        // while (nodes.length > 0) {
+        //   node = nodes[nodes.length - 1];
+        //   nodes.splice(nodes.length - 1, 1);
+        //   console.log(node.name);
+        //   for (let n of node.children) {
+        //     nodes.push(n);
+        //   }
+        // }
     };
     /**
      * Check all parents of the variable "selectedNode"

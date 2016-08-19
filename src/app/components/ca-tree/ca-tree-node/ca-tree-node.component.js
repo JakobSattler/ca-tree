@@ -6,7 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var ca_tree_node_model_1 = require('./ca-tree-node-model');
 var ca_tree_service_1 = require('../../../services/ca-tree.service');
 var ca_tree_model_1 = require('./ca-tree-model');
 //
@@ -65,8 +64,6 @@ var CaTreeNodeComponent = (function () {
         this.changing = true;
     };
     CaTreeNodeComponent.prototype.addNode = function () {
-        var node = new ca_tree_node_model_1.CaTreeNodeModel('test', 1283934, null);
-        console.log(node);
     };
     CaTreeNodeComponent.prototype.onKeyDown = function (event) {
         //handle text change if source of event is nodeTextInput-element
