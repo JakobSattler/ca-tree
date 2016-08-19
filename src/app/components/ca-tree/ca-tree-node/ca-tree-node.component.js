@@ -52,7 +52,6 @@ var CaTreeNodeComponent = (function () {
     };
     CaTreeNodeComponent.prototype.onNodeSelected = function () {
         this.nodeSelected.emit(this.node);
-        console.log('selected');
     };
     CaTreeNodeComponent.prototype.changePic = function () {
         if (!(this.classString = prompt('Change Pic', 'change pic here'))) {

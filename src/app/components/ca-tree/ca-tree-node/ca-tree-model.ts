@@ -8,13 +8,18 @@ export interface BasicTreeNode {
   extended: boolean;
 }
 
+export interface SelectableTreeNode extends BasicTreeNode{
+  selected: boolean;
+  childSelected: boolean;
+}
+
 export interface CheckboxTreeNode extends BasicTreeNode {
   selected: boolean;
   childSelected: boolean;
 }
 
 export class CaTreeModel {
-  resources: Array<BasicTreeNode>;
+  resources: Array<SelectableTreeNode>;
 
   constructor() {
   }

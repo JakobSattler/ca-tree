@@ -19,19 +19,23 @@ import {CaTreeModel, BasicTreeNode, NodeFilter} from './ca-tree-node/ca-tree-mod
 export class CaTreeComponent implements OnInit {
   model: CaTreeModel;
 
-  constructor(private treeService: CaTreeService) {
+  constructor(private caTreeService: CaTreeService) {
   }
 
   ngOnInit() {
     this.model = new CaTreeModel();
-    this.treeService.getNodes().subscribe(
-      (data: BasicTreeNode[]) => {
+    this.caTreeService.getNodes().subscribe(
+      (data: any) => {
         this.model.resources = data;
       }
     );
   }
 
-  onNodeSelected(selectedNode: BasicTreeNode) {
+  onNodeSelected(selectedNode: BasicTreeNode): void {
+    let children = this.model.resources.filter(res => res.parentNr === selectedNode.nr);
+    for (let child of children) {
+      child.selected = true;
+    }
   }
 
 }

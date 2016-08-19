@@ -81,7 +81,6 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   onNodeSelected(): void {
     this.nodeSelected.emit(this.node);
-    console.log('selected');
   }
 
   changePic(): void {

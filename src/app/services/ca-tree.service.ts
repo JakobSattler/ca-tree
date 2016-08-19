@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs';
+import {BasicTreeNode} from '../components/ca-tree/ca-tree-node/ca-tree-model';
 
 /**
  * Used to get data using HTTP and to (un)check nodes
@@ -25,17 +26,8 @@ export class CaTreeService {
    * @param selectedNode The selected node
    * @param rootNode
    */
-  nodeSelected(): void {
-    //if (selectedNode.children.length > 0) {
-    //  selectedNode.childSelected = true;
-    //}
-    //console.log(selectedNode);
-    //this.checkChildren(selectedNode);
-    //this.selectedNode = selectedNode;
-    //
-    //this.checkParents(rootNode);
+  nodeSelected(node: BasicTreeNode): void {
 
-    //this.checkChildrenIt(rootNode);
   }
 
   /**

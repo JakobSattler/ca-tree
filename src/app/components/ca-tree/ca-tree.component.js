@@ -10,17 +10,22 @@ var ca_tree_service_1 = require('../../services/ca-tree.service');
 var ca_tree_node_component_1 = require('./ca-tree-node/ca-tree-node.component');
 var ca_tree_model_1 = require('./ca-tree-node/ca-tree-model');
 var CaTreeComponent = (function () {
-    function CaTreeComponent(treeService) {
-        this.treeService = treeService;
+    function CaTreeComponent(caTreeService) {
+        this.caTreeService = caTreeService;
     }
     CaTreeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.model = new ca_tree_model_1.CaTreeModel();
-        this.treeService.getNodes().subscribe(function (data) {
+        this.caTreeService.getNodes().subscribe(function (data) {
             _this.model.resources = data;
         });
     };
     CaTreeComponent.prototype.onNodeSelected = function (selectedNode) {
+        var children = this.model.resources.filter(function (res) { return res.parentNr === selectedNode.nr; });
+        for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
+            var child = children_1[_i];
+            child.selected = true;
+        }
     };
     CaTreeComponent = __decorate([
         core_1.Component({

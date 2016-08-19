@@ -24,16 +24,7 @@ var CaTreeService = (function () {
      * @param selectedNode The selected node
      * @param rootNode
      */
-    CaTreeService.prototype.nodeSelected = function () {
-        //if (selectedNode.children.length > 0) {
-        //  selectedNode.childSelected = true;
-        //}
-        //console.log(selectedNode);
-        //this.checkChildren(selectedNode);
-        //this.selectedNode = selectedNode;
-        //
-        //this.checkParents(rootNode);
-        //this.checkChildrenIt(rootNode);
+    CaTreeService.prototype.nodeSelected = function (node) {
     };
     /**
      * Calls uncheckChildren() and uncheckParents() using the given node
