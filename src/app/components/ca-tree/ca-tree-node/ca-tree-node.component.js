@@ -54,15 +54,22 @@ var CaTreeNodeComponent = (function () {
         this.nodeSelected.emit(this.node);
     };
     CaTreeNodeComponent.prototype.changePic = function () {
-        if (!(this.classString = prompt('Change Pic', 'change pic here'))) {
-            this.classString = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
+        var newPic = prompt("Change Pic", "");
+        console.log(newPic);
+        if (newPic) {
+            this.classString = newPic;
         }
-        ;
     };
     CaTreeNodeComponent.prototype.editNode = function () {
         this.changing = true;
     };
     CaTreeNodeComponent.prototype.addNode = function () {
+        var node = {
+            name: "Neuer Child",
+            nr: this.node.nr,
+            parentNr: this.node.parentNr,
+            extended: false
+        };
     };
     CaTreeNodeComponent.prototype.onKeyDown = function (event) {
         //handle text change if source of event is nodeTextInput-element
