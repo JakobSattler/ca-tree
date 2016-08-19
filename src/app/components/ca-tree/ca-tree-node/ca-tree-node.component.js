@@ -53,10 +53,10 @@ var CaTreeNodeComponent = (function () {
     };
     CaTreeNodeComponent.prototype.onNodeSelected = function () {
         this.nodeSelected.emit(this.node);
-        console.log("selected");
+        console.log('selected');
     };
     CaTreeNodeComponent.prototype.changePic = function () {
-        if (!(this.classString = prompt("Change Pic", "change pic here"))) {
+        if (!(this.classString = prompt('Change Pic', 'change pic here'))) {
             this.classString = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
         }
         ;
@@ -65,13 +65,13 @@ var CaTreeNodeComponent = (function () {
         this.changing = true;
     };
     CaTreeNodeComponent.prototype.addNode = function () {
-        var node = new ca_tree_node_model_1.CaTreeNodeModel("test", 1283934, null);
+        var node = new ca_tree_node_model_1.CaTreeNodeModel('test', 1283934, null);
         console.log(node);
     };
     CaTreeNodeComponent.prototype.onKeyDown = function (event) {
         //handle text change if source of event is nodeTextInput-element
-        if (event.srcElement == this.nodeTextInput.nativeElement) {
-            if (event.keyCode == 13) {
+        if (event.srcElement === this.nodeTextInput.nativeElement) {
+            if (event.keyCode === 13) {
                 this.saveNodeChange();
             }
         }

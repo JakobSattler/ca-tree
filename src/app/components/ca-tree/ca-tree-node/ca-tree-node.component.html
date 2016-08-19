@@ -12,12 +12,14 @@
              [(ngModel)]="node.childSelected">
     </span>
     <span (click)="changePicWithMouse()"
-          class={{classString}}></span>
+          class={{classString}}>
+    </span>
       <a *ngIf="!changing"
          href="#"
          [innerHTML]="node.name"
          onclick="return false"
-         class="nodeText" #nodeText></a>
+         class="nodeText" #nodeText>
+      </a>
       <input type="text"
              [hidden]="!changing"
              class="nodeTextInput"
@@ -25,14 +27,24 @@
              (keydown)="onKeyDown($event)"
              (blur)="saveNodeChange()" #nodeTextInput/>
     <div class="btn-group">
-      <span class="glyphicon glyphicon-triangle-bottom dropdown-toogle" data-toggle="dropdown" aria-haspopup="true"
+      <span class="glyphicon glyphicon-triangle-bottom dropdown-toogle"
+            data-toggle="dropdown"
+            aria-haspopup="true"
             aria-expanded="false">
       </span>&nbsp;&nbsp;&nbsp;&nbsp;
       <ul class="dropdown-menu">
-        <li><a href="#">Eintrag löschen</a></li>
-        <li (click)="editNode()"><a>Eintrag ändern</a></li>
-        <li (click)="addNode()"><a>Eintrag hinzufügen</a></li>
-        <li><a>Symbol ändern</a></li>
+        <li>
+          <a href="#">Eintrag löschen</a>
+        </li>
+        <li (click)="editNode()">
+          <a>Eintrag ändern</a>
+        </li>
+        <li (click)="addNode()">
+          <a>Eintrag hinzufügen</a>
+        </li>
+        <li>
+          <a>Symbol ändern</a>
+        </li>
       </ul>
     </div>
   </span>

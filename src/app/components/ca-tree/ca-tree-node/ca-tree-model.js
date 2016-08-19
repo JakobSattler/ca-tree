@@ -14,7 +14,7 @@ var CaTreeModel = (function () {
         return !(!node.parentNr);
     };
     CaTreeModel.prototype.isNodeLeaf = function (node) {
-        return this.resources.filter(function (res) { return res.parentNr == node.nr; }).length == 0;
+        return this.resources.filter(function (res) { return res.parentNr === node.nr; }).length === 0;
     };
     return CaTreeModel;
 }());
@@ -23,8 +23,9 @@ var NodeFilter = (function () {
     function NodeFilter() {
     }
     NodeFilter.prototype.transform = function (items, field, value) {
-        if (!items)
+        if (!items) {
             return [];
+        }
         return items.filter(function (it) { return it[field] == value; });
     };
     NodeFilter = __decorate([

@@ -61,64 +61,64 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   constructor(private treeService: CaTreeService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.changing = false;
     this.extended = false;
   }
 
-  ngAfterViewChecked() {
+  ngAfterViewChecked(): void {
     if (this.changing) {
       this.nodeTextInput.nativeElement.focus();
     }
   }
 
-  extend() {
+  extend(): void {
     this.node.extended = !this.node.extended;
   }
 
-  getPadding() {
+  getPadding(): String {
     return this.paddingPerLevel * this.level + 'px';
   }
 
-  onNodeSelected() {
+  onNodeSelected(): void {
     this.nodeSelected.emit(this.node);
-    console.log("selected");
+    console.log('selected');
   }
 
-  changePic() {
+  changePic(): void {
 
-    if (!(this.classString = prompt("Change Pic", "change pic here"))) {
+    if (!(this.classString = prompt('Change Pic', 'change pic here'))) {
       this.classString = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
     }
     ;
   }
 
-  editNode() {
+  editNode(): void {
     this.changing = true;
   }
 
-  addNode() {
-    let node: CaTreeNodeModel = new CaTreeNodeModel("test", 1283934, null);
+  addNode(): void {
+    let node: CaTreeNodeModel = new CaTreeNodeModel('test', 1283934, null);
     console.log(node);
   }
 
-  onKeyDown(event) {
+  onKeyDown(event): void {
     //handle text change if source of event is nodeTextInput-element
-    if (event.srcElement == this.nodeTextInput.nativeElement) {
-      if (event.keyCode == 13) {
+    if (event.srcElement === this.nodeTextInput.nativeElement) {
+      if (event.keyCode === 13) {
         this.saveNodeChange();
       }
     }
 
   }
 
-  saveNodeChange() {
+  saveNodeChange(): void {
     this.nodeTextInput.nativeElement.blur();
     this.node.name = this.nodeTextInput.nativeElement.value;
     this.changing = false;
   }
 
-  deleteNode() {
+  deleteNode(): void {
 
   }
 

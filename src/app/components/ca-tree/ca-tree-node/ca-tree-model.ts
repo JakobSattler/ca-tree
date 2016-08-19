@@ -1,5 +1,4 @@
 import 'rxjs/add/operator/map';
-import {CaTreeNodeModel} from './ca-tree-node-model';
 import {Injectable, Pipe} from '@angular/core';
 
 export interface BasicTreeNode {
@@ -20,13 +19,12 @@ export class CaTreeModel {
   constructor() {
   }
 
-
   hasParent(node: BasicTreeNode): boolean {
     return !(!node.parentNr);
   }
 
   isNodeLeaf(node: BasicTreeNode): boolean {
-    return this.resources.filter(res => res.parentNr == node.nr).length == 0;
+    return this.resources.filter(res => res.parentNr === node.nr).length === 0;
   }
 }
 
@@ -36,8 +34,10 @@ export class CaTreeModel {
 })
 @Injectable()
 export class NodeFilter {
-  transform(items: any[], field : string, value : string): any[] {
-    if (!items) return [];
+  transform(items: any[], field: string, value: string): any[] {
+    if (!items) {
+      return [];
+    }
     return items.filter(it => it[field] == value);
   }
 }
