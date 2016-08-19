@@ -54,6 +54,7 @@
   <co-tree-node *ngFor="let res of model.resources | nodefilter : 'parentNr' : node.nr"
                 [node]="res"
                 [level]="level + 1"
-                [model]="model">
+                [model]="model"
+                (nodeSelected)="_caTreeComponent._onNodeSelected($event)">
   </co-tree-node>
 </template>

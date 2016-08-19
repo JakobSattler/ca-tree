@@ -1,6 +1,10 @@
-import {Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewChecked} from '@angular/core';
+import {
+  Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, AfterViewChecked,
+  Inject, forwardRef
+} from '@angular/core';
 import {CaTreeService} from '../../../services/ca-tree.service';
 import {BasicTreeNode, CaTreeModel, NodeFilter} from './ca-tree-model';
+import {CaTreeComponent} from '../ca-tree.component';
 
 //
 //export class TreeNode {
@@ -54,10 +58,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   @ViewChild('nodeTextInput')
   nodeTextInput: ElementRef;
 
-  @ViewChild('nodeText')
-  nodeText: ElementRef;
-
-  constructor(private treeService: CaTreeService) {
+  constructor(@Inject(forwardRef(() => CaTreeComponent)) private _caTreeComponent: CaTreeComponent) {
   }
 
   ngOnInit(): void {
@@ -81,6 +82,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   onNodeSelected(): void {
     this.nodeSelected.emit(this.node);
+    console.log('selected ' + this.node.name);
   }
 
   changePic(): void {
