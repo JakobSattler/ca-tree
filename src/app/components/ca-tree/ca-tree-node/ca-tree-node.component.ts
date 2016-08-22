@@ -51,7 +51,8 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   node: BasicTreeNode;
 
   @Input()
-  classString: String = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
+  classStringClose: String = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
+  classStringOpen: String = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
 
   @Output()
   nodeSelected: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
@@ -87,12 +88,17 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   }
 
   changePic(): void {
-    let newPic = prompt("Change Pic", "");
+    let newPic = prompt("Change Pic for Open", "");
     console.log(newPic);
-    if(newPic){
-      this.classString = newPic;
+    if(newPic) {
+      this.classStringOpen = newPic;
     }
-  }
+      newPic = prompt("Change Pic for Close", "");
+      console.log(newPic);
+      if(newPic){
+        this.classStringClose = newPic;
+      }
+    }
 
   editNode(): void {
     this.changing = true;

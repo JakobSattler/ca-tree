@@ -36,8 +36,8 @@ var CaTreeNodeComponent = (function () {
         this.extended = false;
         this.paddingPerLevel = 10;
         this.changing = false;
+        this.classStringClose = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
         this.classStringOpen = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
-        this.classStringClose = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
         this.nodeSelected = new core_1.EventEmitter();
     }
     CaTreeNodeComponent.prototype.ngOnInit = function () {
@@ -64,11 +64,11 @@ var CaTreeNodeComponent = (function () {
         console.log(newPic);
         if (newPic) {
             this.classStringOpen = newPic;
-            newPic = prompt("Change Pic for Close", "");
-            console.log(newPic);
-            if (newPic) {
-                this.classStringClose = newPic;
-            }
+        }
+        newPic = prompt("Change Pic for Close", "");
+        console.log(newPic);
+        if (newPic) {
+            this.classStringClose = newPic;
         }
     };
     CaTreeNodeComponent.prototype.editNode = function () {
@@ -98,7 +98,31 @@ var CaTreeNodeComponent = (function () {
         this.node.name = this.nodeTextInput.nativeElement.value;
         this.changing = false;
     };
-    CaTreeNodeComponent.prototype.deleteNode = function () {
+    CaTreeNodeComponent.prototype.deleteNode = function (node) {
+        var _this = this;
+        if (node === null) {
+            return;
+        }
+        //Pre-order through node-numbers
+        var nrs = new Array();
+        nrs.push(node.nr);
+        var nr;
+        var _loop_1 = function() {
+            nr = nrs.pop();
+            var children = this_1.model.resources.filter(function (res) { return res.parentNr === nr; });
+            children.forEach(function (child, index) {
+                var deleteIndex = children.indexOf(child);
+                _this.model.resources.splice(deleteIndex, 1);
+                nrs.push(child.nr);
+            });
+            var deleteIndex = children.indexOf(this_1.model.resources.filter(function (res) { return res.nr === nr; })[0]);
+            this_1.model.resources.splice(deleteIndex, 1);
+        };
+        var this_1 = this;
+        while (nrs.length > 0) {
+            _loop_1();
+        }
+        console.log(this.model.resources);
     };
     __decorate([
         core_1.Input()
@@ -111,7 +135,7 @@ var CaTreeNodeComponent = (function () {
     ], CaTreeNodeComponent.prototype, "node");
     __decorate([
         core_1.Input()
-    ], CaTreeNodeComponent.prototype, "classStringOpen");
+    ], CaTreeNodeComponent.prototype, "classStringClose");
     __decorate([
         core_1.Output()
     ], CaTreeNodeComponent.prototype, "nodeSelected");
