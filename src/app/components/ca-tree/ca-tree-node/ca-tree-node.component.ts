@@ -110,7 +110,6 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
     };
 
     this.model.addResource(node);
-
   }
 
 

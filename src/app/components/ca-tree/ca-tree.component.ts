@@ -70,7 +70,7 @@ export class CaTreeComponent implements OnInit {
       //console.log('parent: {name: ' + parentNode.name + ', id: ' + parentNode.nr + '}');
       if (node.selected && !parentNode.childSelected) {
         parentNode.childSelected = true;
-      } else if (!node.selected && this.model.resources.filter(res => res.nr === parentNr && res.selected).length === 0) {
+      } else if (!node.selected && !(this._areChildrenSelected(parentNode))) {
         parentNode.childSelected = false;
       }
       //parentNode.childSelected = !parentNode.childSelected;
@@ -90,14 +90,13 @@ export class CaTreeComponent implements OnInit {
       node = nodes.pop();
 
       let children = this.model.resources.filter(res => res.parentNr === node.nr);
-      children.forEach((child, index) => {
+      for (let child of children) {
         if (child.selected) {
           return true;
         }
         nodes.push(child);
-      });
+      }
     }
     return false;
-
   }
 }
