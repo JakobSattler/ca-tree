@@ -139,7 +139,7 @@ var CaTreeNodeComponent = (function () {
         core_1.Output()
     ], CaTreeNodeComponent.prototype, "nodeSelected");
     __decorate([
-        core_1.Input()
+        core_1.Output()
     ], CaTreeNodeComponent.prototype, "nodeExtended");
     __decorate([
         core_1.ViewChild('nodeTextInput')

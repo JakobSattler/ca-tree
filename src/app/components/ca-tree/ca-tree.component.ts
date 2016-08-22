@@ -14,8 +14,7 @@ import {CaTreeModel, BasicTreeNode, NodeFilter, SelectableTreeNode} from './ca-t
       padding-left: 10px;
     }
   `],
-  pipes: [NodeFilter],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  pipes: [NodeFilter]
 })
 export class CaTreeComponent implements OnInit {
   model: CaTreeModel;
@@ -33,8 +32,12 @@ export class CaTreeComponent implements OnInit {
   }
 
   public onNodeSelected(node: SelectableTreeNode): void {
+    node.selected = !node.selected;
     this.model.checkChildren(node);
   }
 
-
+  public onNodeExtended(node: SelectableTreeNode): void {
+    //console.log("extended");
+    this.model.checkChildren(node);
+  }
 }

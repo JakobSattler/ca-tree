@@ -3,6 +3,7 @@
 <template [ngIf]="model.resources">
     <co-tree-node *ngFor="let res of model.resources | nodefilter: 'parentNr' : ''"
                   (nodeSelected)="onNodeSelected($event)"
+                  (nodeExtended)="onNodeExtended($event)"
                   [node]="res"
                   [level]="0"
                   [model]="model">

@@ -56,7 +56,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   @Output()
   nodeSelected: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
 
-  @Input()
+  @Output()
   nodeExtended: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
 
   @ViewChild('nodeTextInput')

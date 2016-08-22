@@ -42,7 +42,7 @@ var CaTreeModel = (function () {
     };
     CaTreeModel.prototype.checkChildren = function (node) {
         var _this = this;
-        var showedNodes = this.resources.filter(function (res) { return res.extended || _this.getNode(res.parentNr).extended; });
+        var showedNodes = this.resources.filter(function (res) { return res.extended || (_this.getNode(res.parentNr) != null && _this.getNode(res.parentNr).extended); });
         var selected = node.selected;
         //Pre-order through node-numbers
         var nrs = new Array();
@@ -50,7 +50,7 @@ var CaTreeModel = (function () {
         var nr;
         while (nrs.length > 0) {
             nr = nrs.pop();
-            this.getNode(nr).selected = !selected;
+            this.getNode(nr).selected = selected;
             this.checkParents(this.getNode(nr), showedNodes);
             var children = showedNodes.filter(function (res) { return res.parentNr === nr; });
             for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
@@ -62,15 +62,21 @@ var CaTreeModel = (function () {
     CaTreeModel.prototype.checkParents = function (node, showedNodes) {
         var parentNr = node.nr;
         node.childSelected = !node.childSelected;
+        console.log(parentNr);
         while (parentNr) {
-            var parentNode = showedNodes.filter(function (res) { return res.nr === parentNr; })[0];
-            if (node.selected && !parentNode.childSelected) {
-                parentNode.childSelected = true;
+            var parentNode = this.getNode(parentNr);
+            if (parentNode != null) {
+                if (node.selected && !parentNode.childSelected) {
+                    parentNode.childSelected = true;
+                }
+                else if (!node.selected && !(this.areChildrenSelected(parentNode, showedNodes))) {
+                    parentNode.childSelected = false;
+                }
+                parentNr = parentNode.parentNr;
             }
-            else if (!node.selected && !(this.areChildrenSelected(parentNode, showedNodes))) {
-                parentNode.childSelected = false;
+            else {
+                parentNr = null;
             }
-            parentNr = parentNode.parentNr;
         }
     };
     CaTreeModel.prototype.areChildrenSelected = function (node, showedNodes) {
