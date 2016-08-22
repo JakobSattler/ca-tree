@@ -92,8 +92,31 @@ var CaTreeNodeComponent = (function () {
         this.node.name = this.nodeTextInput.nativeElement.value;
         this.changing = false;
     };
-    CaTreeNodeComponent.prototype.deleteNode = function () {
-        this.model.deleteNode(this.node);
+    CaTreeNodeComponent.prototype.deleteNode = function (node) {
+        var _this = this;
+        if (node === null) {
+            return;
+        }
+        //Pre-order through node-numbers
+        var nrs = new Array();
+        nrs.push(node.nr);
+        var nr;
+        var _loop_1 = function() {
+            nr = nrs.pop();
+            var children = this_1.model.resources.filter(function (res) { return res.parentNr === nr; });
+            children.forEach(function (child, index) {
+                var deleteIndex = children.indexOf(child);
+                _this.model.resources.splice(deleteIndex, 1);
+                nrs.push(child.nr);
+            });
+            var deleteIndex = children.indexOf(this_1.model.resources.filter(function (res) { return res.nr === nr; })[0]);
+            this_1.model.resources.splice(deleteIndex, 1);
+        };
+        var this_1 = this;
+        while (nrs.length > 0) {
+            _loop_1();
+        }
+        console.log(this.model.resources);
     };
     __decorate([
         core_1.Input()

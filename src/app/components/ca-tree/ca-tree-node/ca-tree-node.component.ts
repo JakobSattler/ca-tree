@@ -130,8 +130,28 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
     this.changing = false;
   }
 
-  deleteNode(): void {
-    this.model.deleteNode(this.node);
+  deleteNode(node: BasicTreeNode): void {
+    if (node === null) {
+      return;
+    }
+    //Pre-order through node-numbers
+    let nrs: Array<number> = new Array<number>();
+    nrs.push(node.nr);
+
+    let nr;
+    while (nrs.length > 0) {
+      nr = nrs.pop();
+
+      let children = this.model.resources.filter(res => res.parentNr === nr);
+      children.forEach((child, index) => {
+        let deleteIndex = children.indexOf(child);
+        this.model.resources.splice(deleteIndex, 1);
+        nrs.push(child.nr);
+      });
+      let deleteIndex = children.indexOf(this.model.resources.filter(res => res.nr === nr)[0]);
+      this.model.resources.splice(deleteIndex, 1);
+    }
+    console.log(this.model.resources);
   }
 
 }
