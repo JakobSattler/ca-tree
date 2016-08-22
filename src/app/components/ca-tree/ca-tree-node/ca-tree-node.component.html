@@ -56,6 +56,7 @@
                 [node]="res"
                 [level]="level + 1"
                 [model]="model"
-                (nodeSelected)="_caTreeComponent.onNodeSelected($event)">
+                (nodeSelected)="_caTreeComponent.onNodeSelected($event)"
+                (nodeExtended)="_caTreeComponent.onNodeExtended($event)">
   </co-tree-node>
 </template>

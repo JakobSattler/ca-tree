@@ -55,7 +55,7 @@ export class CaTreeModel {
   }
 
   public checkChildren(node: SelectableTreeNode): void {
-    let showedNodes = this.resources.filter(res => res.extended || this.getNode(res.parentNr).extended);
+    let showedNodes = this.resources.filter(res => res.extended || (this.getNode(res.parentNr) != null && this.getNode(res.parentNr).extended));
     let selected: boolean = node.selected;
 
     //Pre-order through node-numbers
@@ -66,7 +66,7 @@ export class CaTreeModel {
     while (nrs.length > 0) {
       nr = nrs.pop();
 
-      (this.getNode(nr) as SelectableTreeNode).selected = !selected;
+      (this.getNode(nr) as SelectableTreeNode).selected = selected;
       this.checkParents(this.getNode(nr) as SelectableTreeNode, showedNodes);
       let children = showedNodes.filter(res => res.parentNr === nr);
       for (let child of children) {
@@ -79,14 +79,20 @@ export class CaTreeModel {
     let parentNr = node.nr;
 
     node.childSelected = !node.childSelected;
+    console.log(parentNr);
     while (parentNr) {
-      let parentNode: SelectableTreeNode = showedNodes.filter(res => res.nr === parentNr)[0];
-      if (node.selected && !parentNode.childSelected) {
-        parentNode.childSelected = true;
-      } else if (!node.selected && !(this.areChildrenSelected(parentNode, showedNodes))) {
-        parentNode.childSelected = false;
+      let parentNode: SelectableTreeNode = this.getNode(parentNr) as SelectableTreeNode;
+      if (parentNode != null) {
+        if (node.selected && !parentNode.childSelected) {
+          parentNode.childSelected = true;
+        } else if (!node.selected && !(this.areChildrenSelected(parentNode, showedNodes))) {
+          parentNode.childSelected = false;
+        }
+        parentNr = parentNode.parentNr;
       }
-      parentNr = parentNode.parentNr;
+      else{
+        parentNr = null;
+      }
     }
   }
 

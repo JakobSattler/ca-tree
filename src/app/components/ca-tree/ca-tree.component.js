@@ -21,6 +21,11 @@ var CaTreeComponent = (function () {
         });
     };
     CaTreeComponent.prototype.onNodeSelected = function (node) {
+        node.selected = !node.selected;
+        this.model.checkChildren(node);
+    };
+    CaTreeComponent.prototype.onNodeExtended = function (node) {
+        //console.log("extended");
         this.model.checkChildren(node);
     };
     CaTreeComponent = __decorate([
