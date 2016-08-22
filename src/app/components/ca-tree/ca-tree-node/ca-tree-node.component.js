@@ -33,6 +33,7 @@ var ca_tree_component_1 = require('../ca-tree.component');
 var CaTreeNodeComponent = (function () {
     function CaTreeNodeComponent(_caTreeComponent) {
         this._caTreeComponent = _caTreeComponent;
+        this.extended = false;
         this.paddingPerLevel = 10;
         this.changing = false;
         this.classStringClose = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
@@ -42,6 +43,7 @@ var CaTreeNodeComponent = (function () {
     }
     CaTreeNodeComponent.prototype.ngOnInit = function () {
         this.changing = false;
+        this.extended = false;
     };
     CaTreeNodeComponent.prototype.ngAfterViewChecked = function () {
         if (this.changing) {
