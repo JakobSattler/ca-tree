@@ -38,22 +38,48 @@ var CaTreeComponent = (function () {
             nr = nrs.pop();
             var children = this.model.resources.filter(function (res) { return res.parentNr === nr; });
             children.forEach(function (child, index) {
+                child.selected = !selected;
                 // Check parents for each child
                 _this._checkParents(child);
-                // If the first parent (node) gets selected, select each child
-                child.selected = !selected;
                 nrs.push(child.nr);
             });
         }
     };
     CaTreeComponent.prototype._checkParents = function (node) {
-        console.log('checking parents for node: {name: ' + node.name + ', id: ' + node.nr + '}');
+        //console.log('checking parents for node: {name: ' + node.name + ', id: ' + node.nr + '}');
         var parentNr = node.parentNr;
+        node.childSelected = !node.childSelected;
         while (parentNr) {
             var parentNode = this.model.resources.filter(function (res) { return res.nr === parentNr; })[0];
-            parentNode.childSelected = !parentNode.childSelected;
+            //console.log('parent: {name: ' + parentNode.name + ', id: ' + parentNode.nr + '}');
+            if (node.selected && !parentNode.childSelected) {
+                parentNode.childSelected = true;
+            }
+            else if (!node.selected && this.model.resources.filter(function (res) { return res.nr === parentNr && res.selected; }).length === 0) {
+                parentNode.childSelected = false;
+            }
+            //parentNode.childSelected = !parentNode.childSelected;
             parentNr = parentNode.parentNr;
         }
+    };
+    CaTreeComponent.prototype._areChildrenSelected = function (node) {
+        if (node === null) {
+            return;
+        }
+        //Pre-order through node-numbers
+        var nodes = new Array();
+        nodes.push(node);
+        while (nodes.length > 0) {
+            node = nodes.pop();
+            var children = this.model.resources.filter(function (res) { return res.parentNr === node.nr; });
+            children.forEach(function (child, index) {
+                if (child.selected) {
+                    return true;
+                }
+                nodes.push(child);
+            });
+        }
+        return false;
     };
     CaTreeComponent = __decorate([
         core_1.Component({

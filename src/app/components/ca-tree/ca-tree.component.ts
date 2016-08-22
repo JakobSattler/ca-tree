@@ -52,23 +52,52 @@ export class CaTreeComponent implements OnInit {
 
       let children = this.model.resources.filter(res => res.parentNr === nr);
       children.forEach((child, index) => {
+        child.selected = !selected;
         // Check parents for each child
         this._checkParents(child);
-        // If the first parent (node) gets selected, select each child
-        child.selected = !selected;
         nrs.push(child.nr);
       });
     }
   }
 
   private _checkParents(node: SelectableTreeNode): void {
-    console.log('checking parents for node: {name: ' + node.name + ', id: ' + node.nr + '}')
+    //console.log('checking parents for node: {name: ' + node.name + ', id: ' + node.nr + '}');
     let parentNr = node.parentNr;
 
+    node.childSelected = !node.childSelected;
     while (parentNr) {
       let parentNode: SelectableTreeNode = this.model.resources.filter(res => res.nr === parentNr)[0];
-      parentNode.childSelected = !parentNode.childSelected;
+      //console.log('parent: {name: ' + parentNode.name + ', id: ' + parentNode.nr + '}');
+      if (node.selected && !parentNode.childSelected) {
+        parentNode.childSelected = true;
+      } else if (!node.selected && this.model.resources.filter(res => res.nr === parentNr && res.selected).length === 0) {
+        parentNode.childSelected = false;
+      }
+      //parentNode.childSelected = !parentNode.childSelected;
       parentNr = parentNode.parentNr;
     }
+  }
+
+  private _areChildrenSelected(node: SelectableTreeNode): boolean {
+    if (node === null) {
+      return;
+    }
+    //Pre-order through node-numbers
+    let nodes: Array<SelectableTreeNode> = new Array<SelectableTreeNode>();
+    nodes.push(node);
+
+    while (nodes.length > 0) {
+      node = nodes.pop();
+
+      let children = this.model.resources.filter(res => res.parentNr === node.nr);
+      children.forEach((child, index) => {
+        if (child.selected) {
+          return true;
+        }
+        nodes.push(child);
+      });
+    }
+    return false;
+
   }
 }
