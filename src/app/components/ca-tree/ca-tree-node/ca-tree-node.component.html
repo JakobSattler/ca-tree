@@ -11,9 +11,10 @@
       <input type="checkbox"
              [(ngModel)]="node.childSelected">
     </span>
-    <span (click)="changePicWithMouse()">
-      <img src={{classString}} width="20" height="20">
-    </span>
+    <span>
+      <img *ngIf="node.extended" src={{classStringOpen}} width='20' height='20'>
+      <img *ngIf="!node.extended" src={{classStringClose}} width='20' height='20'>
+     </span>
       <a *ngIf="!changing"
          href="#"
          [innerHTML]="node.name"

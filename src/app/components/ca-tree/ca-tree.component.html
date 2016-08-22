@@ -1,7 +1,6 @@
-<h1>Tree component</h1>
+<a href="#"><img src="https://campusonline.tugraz.at/wp-content/themes/mystique/images/co/campusonline.png"></a>
 <hr>
 <template [ngIf]="model.resources">
-    <p>asdf</p>
     <co-tree-node *ngFor="let res of model.resources | nodefilter: 'parentNr' : ''"
                   (nodeSelected)="_onNodeSelected($event)"
                   [node]="res"
