@@ -35,7 +35,8 @@ var CaTreeNodeComponent = (function () {
         this._caTreeComponent = _caTreeComponent;
         this.paddingPerLevel = 10;
         this.changing = false;
-        this.classString = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
+        this.classStringClose = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
+        this.classStringOpen = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
         this.nodeSelected = new core_1.EventEmitter();
         this.nodeExtended = new core_1.EventEmitter();
     }
@@ -59,10 +60,15 @@ var CaTreeNodeComponent = (function () {
         console.log('selected ' + this.node.name);
     };
     CaTreeNodeComponent.prototype.changePic = function () {
-        var newPic = prompt("Change Pic", "");
+        var newPic = prompt("Change Pic for Open", "");
         console.log(newPic);
         if (newPic) {
-            this.classString = newPic;
+            this.classStringOpen = newPic;
+        }
+        newPic = prompt("Change Pic for Close", "");
+        console.log(newPic);
+        if (newPic) {
+            this.classStringClose = newPic;
         }
     };
     CaTreeNodeComponent.prototype.editNode = function () {
@@ -128,7 +134,7 @@ var CaTreeNodeComponent = (function () {
     ], CaTreeNodeComponent.prototype, "node");
     __decorate([
         core_1.Input()
-    ], CaTreeNodeComponent.prototype, "classString");
+    ], CaTreeNodeComponent.prototype, "classStringClose");
     __decorate([
         core_1.Output()
     ], CaTreeNodeComponent.prototype, "nodeSelected");

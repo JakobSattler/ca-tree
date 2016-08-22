@@ -3,7 +3,7 @@ import {
   Inject, forwardRef
 } from '@angular/core';
 import {CaTreeService} from '../../../services/ca-tree.service';
-import {BasicTreeNode, CaTreeModel, NodeFilter, SelectableTreeNode} from './ca-tree-model';
+import {BasicTreeNode, CaTreeModel, NodeFilter} from './ca-tree-model';
 import {CaTreeComponent} from '../ca-tree.component';
 
 //
@@ -37,6 +37,7 @@ import {CaTreeComponent} from '../ca-tree.component';
 })
 export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
+  extended: boolean = false;
   paddingPerLevel: number = 10;
   changing: boolean = false;
 
@@ -50,7 +51,8 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   node: BasicTreeNode;
 
   @Input()
-  classString: String = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
+  classStringClose: String = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
+  classStringOpen: String = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
 
   @Output()
   nodeSelected: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
@@ -66,6 +68,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   ngOnInit(): void {
     this.changing = false;
+    this.extended = false;
   }
 
   ngAfterViewChecked(): void {
@@ -89,12 +92,17 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   }
 
   changePic(): void {
-    let newPic = prompt("Change Pic", "");
+    let newPic = prompt("Change Pic for Open", "");
     console.log(newPic);
-    if (newPic) {
-      this.classString = newPic;
+    if(newPic) {
+      this.classStringOpen = newPic;
     }
-  }
+      newPic = prompt("Change Pic for Close", "");
+      console.log(newPic);
+      if(newPic){
+        this.classStringClose = newPic;
+      }
+    }
 
   editNode(): void {
     this.changing = true;
@@ -114,6 +122,8 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
     this.model.addNode(node);
   }
 
+
+
   onKeyDown(event): void {
     //handle text change if source of event is nodeTextInput-element
     if (event.srcElement === this.nodeTextInput.nativeElement) {
@@ -121,6 +131,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
         this.saveNodeChange();
       }
     }
+
   }
 
   saveNodeChange(): void {
