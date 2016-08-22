@@ -14,8 +14,8 @@ import {CaTreeModel, BasicTreeNode, NodeFilter, SelectableTreeNode} from './ca-t
       padding-left: 10px;
     }
   `],
-  pipes: [NodeFilter],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  pipes: [NodeFilter]
+
 })
 export class CaTreeComponent implements OnInit {
   model: CaTreeModel;

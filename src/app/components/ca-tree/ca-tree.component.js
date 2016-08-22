@@ -31,8 +31,7 @@ var CaTreeComponent = (function () {
             directives: [ca_tree_node_component_1.CaTreeNodeComponent],
             providers: [ca_tree_service_1.CaTreeService],
             styles: ["\n    div {\n      padding-left: 10px;\n    }\n  "],
-            pipes: [ca_tree_model_1.NodeFilter],
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush
+            pipes: [ca_tree_model_1.NodeFilter]
         })
     ], CaTreeComponent);
     return CaTreeComponent;
