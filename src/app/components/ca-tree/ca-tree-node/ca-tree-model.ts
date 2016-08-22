@@ -35,21 +35,18 @@ export class CaTreeModel {
   deleteNode(node: BasicTreeNode) {
     let delIndex: number;
     delIndex = this.resources.indexOf(this.resources.filter(res => res.nr === node.nr)[0]);
-    this.resources.splice(delIndex,1);
+    this.resources.splice(delIndex, 1);
   }
 
-  addResource(res: SelectableTreeNode)
-  {
+  addResource(res: SelectableTreeNode) {
     this.resources.push(res);
   }
 
-
-  getNewID(): number
-  {
+  getNewID(): number {
     var max = Math.max.apply(Math, this.resources.map(function (res) {
       return res.nr;
     }));
-    return max+1;
+    return max + 1;
   }
 }
 

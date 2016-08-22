@@ -55,7 +55,7 @@ var CaTreeComponent = (function () {
             if (node.selected && !parentNode.childSelected) {
                 parentNode.childSelected = true;
             }
-            else if (!node.selected && this.model.resources.filter(function (res) { return res.nr === parentNr && res.selected; }).length === 0) {
+            else if (!node.selected && !(this._areChildrenSelected(parentNode))) {
                 parentNode.childSelected = false;
             }
             //parentNode.childSelected = !parentNode.childSelected;
@@ -72,12 +72,13 @@ var CaTreeComponent = (function () {
         while (nodes.length > 0) {
             node = nodes.pop();
             var children = this.model.resources.filter(function (res) { return res.parentNr === node.nr; });
-            children.forEach(function (child, index) {
+            for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
+                var child = children_1[_i];
                 if (child.selected) {
                     return true;
                 }
                 nodes.push(child);
-            });
+            }
         }
         return false;
     };

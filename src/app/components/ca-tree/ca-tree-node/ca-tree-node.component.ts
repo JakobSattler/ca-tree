@@ -3,7 +3,7 @@ import {
   Inject, forwardRef
 } from '@angular/core';
 import {CaTreeService} from '../../../services/ca-tree.service';
-import {BasicTreeNode, CaTreeModel, NodeFilter, SelectableTreeNode} from './ca-tree-model';
+import {BasicTreeNode, CaTreeModel, NodeFilter} from './ca-tree-model';
 import {CaTreeComponent} from '../ca-tree.component';
 
 //
@@ -51,9 +51,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   node: BasicTreeNode;
 
   @Input()
-  classStringOpen: String = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
-  classStringClose: String = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
-
+  classString: String = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
 
   @Output()
   nodeSelected: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
@@ -89,18 +87,12 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   }
 
   changePic(): void {
-    let newPic = prompt("Change Pic for Open", "");
+    let newPic = prompt("Change Pic", "");
     console.log(newPic);
     if(newPic){
-      this.classStringOpen = newPic;
-      newPic = prompt("Change Pic for Close", "");
-      console.log(newPic);
-      if(newPic){
-        this.classStringClose = newPic;
-
-
+      this.classString = newPic;
     }
-  }}
+  }
 
   editNode(): void {
     this.changing = true;
@@ -108,18 +100,17 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   addNode(): void {
 
-   let node = {
-     name : "Neuer Child",
-     nr: this.model.getNewID(),
-    parentNr: this.node.nr,
-     extended: false,
-     selected: false,
-     childSelected: false
-     };
+    let node = {
+      name : "Neuer Child",
+      nr: this.model.getNewID(),
+      parentNr: this.node.nr,
+      extended: false,
+      selected: false,
+      childSelected: false
+    };
 
     this.model.addResource(node);
-
-   }
+  }
 
 
 
@@ -139,8 +130,28 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
     this.changing = false;
   }
 
-  deleteNode(): void {
+  deleteNode(node: BasicTreeNode): void {
+    if (node === null) {
+      return;
+    }
+    //Pre-order through node-numbers
+    let nrs: Array<number> = new Array<number>();
+    nrs.push(node.nr);
 
+    let nr;
+    while (nrs.length > 0) {
+      nr = nrs.pop();
+
+      let children = this.model.resources.filter(res => res.parentNr === nr);
+      children.forEach((child, index) => {
+        let deleteIndex = children.indexOf(child);
+        this.model.resources.splice(deleteIndex, 1);
+        nrs.push(child.nr);
+      });
+      let deleteIndex = children.indexOf(this.model.resources.filter(res => res.nr === nr)[0]);
+      this.model.resources.splice(deleteIndex, 1);
+    }
+    console.log(this.model.resources);
   }
 
 }
