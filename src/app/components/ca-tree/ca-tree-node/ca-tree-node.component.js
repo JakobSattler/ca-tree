@@ -33,15 +33,14 @@ var ca_tree_component_1 = require('../ca-tree.component');
 var CaTreeNodeComponent = (function () {
     function CaTreeNodeComponent(_caTreeComponent) {
         this._caTreeComponent = _caTreeComponent;
-        this.extended = false;
         this.paddingPerLevel = 10;
         this.changing = false;
         this.classString = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
         this.nodeSelected = new core_1.EventEmitter();
+        this.nodeExtended = new core_1.EventEmitter();
     }
     CaTreeNodeComponent.prototype.ngOnInit = function () {
         this.changing = false;
-        this.extended = false;
     };
     CaTreeNodeComponent.prototype.ngAfterViewChecked = function () {
         if (this.changing) {
@@ -50,6 +49,7 @@ var CaTreeNodeComponent = (function () {
     };
     CaTreeNodeComponent.prototype.extend = function () {
         this.node.extended = !this.node.extended;
+        this.nodeExtended.emit(this.node);
     };
     CaTreeNodeComponent.prototype.getPadding = function () {
         return this.paddingPerLevel * this.level + 'px';
@@ -77,7 +77,7 @@ var CaTreeNodeComponent = (function () {
             selected: false,
             childSelected: false
         };
-        this.model.addResource(node);
+        this.model.addNode(node);
     };
     CaTreeNodeComponent.prototype.onKeyDown = function (event) {
         //handle text change if source of event is nodeTextInput-element
@@ -109,8 +109,7 @@ var CaTreeNodeComponent = (function () {
                 _this.model.resources.splice(deleteIndex, 1);
                 nrs.push(child.nr);
             });
-            var deleteIndex = children.indexOf(this_1.model.resources.filter(function (res) { return res.nr === nr; })[0]);
-            this_1.model.resources.splice(deleteIndex, 1);
+            this_1.model.removeNode(nr);
         };
         var this_1 = this;
         while (nrs.length > 0) {
@@ -133,6 +132,9 @@ var CaTreeNodeComponent = (function () {
     __decorate([
         core_1.Output()
     ], CaTreeNodeComponent.prototype, "nodeSelected");
+    __decorate([
+        core_1.Input()
+    ], CaTreeNodeComponent.prototype, "nodeExtended");
     __decorate([
         core_1.ViewChild('nodeTextInput')
     ], CaTreeNodeComponent.prototype, "nodeTextInput");

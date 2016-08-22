@@ -10,8 +10,18 @@ var core_1 = require('@angular/core');
 var CaTreeModel = (function () {
     function CaTreeModel() {
     }
-    CaTreeModel.prototype.hasParent = function (node) {
-        return !(!node.parentNr);
+    CaTreeModel.prototype.getNode = function (nr) {
+        var result = this.resources.filter(function (res) { return res.nr === nr; });
+        if (result.length === 1) {
+            return result[0];
+        }
+        else {
+            return null;
+        }
+    };
+    CaTreeModel.prototype.removeNode = function (nr) {
+        var deleteIndex = this.resources.indexOf(this.getNode(nr));
+        this.resources.splice(deleteIndex, 1);
     };
     CaTreeModel.prototype.isNodeLeaf = function (node) {
         return this.resources.filter(function (res) { return res.parentNr === node.nr; }).length === 0;
@@ -21,7 +31,7 @@ var CaTreeModel = (function () {
         delIndex = this.resources.indexOf(this.resources.filter(function (res) { return res.nr === node.nr; })[0]);
         this.resources.splice(delIndex, 1);
     };
-    CaTreeModel.prototype.addResource = function (res) {
+    CaTreeModel.prototype.addNode = function (res) {
         this.resources.push(res);
     };
     CaTreeModel.prototype.getNewID = function () {
@@ -29,6 +39,59 @@ var CaTreeModel = (function () {
             return res.nr;
         }));
         return max + 1;
+    };
+    CaTreeModel.prototype.checkChildren = function (node) {
+        var _this = this;
+        var showedNodes = this.resources.filter(function (res) { return res.extended || _this.getNode(res.parentNr).extended; });
+        var selected = node.selected;
+        //Pre-order through node-numbers
+        var nrs = new Array();
+        nrs.push(node.nr);
+        var nr;
+        while (nrs.length > 0) {
+            nr = nrs.pop();
+            this.getNode(nr).selected = !selected;
+            this.checkParents(this.getNode(nr), showedNodes);
+            var children = showedNodes.filter(function (res) { return res.parentNr === nr; });
+            for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
+                var child = children_1[_i];
+                nrs.push(child.nr);
+            }
+        }
+    };
+    CaTreeModel.prototype.checkParents = function (node, showedNodes) {
+        var parentNr = node.nr;
+        node.childSelected = !node.childSelected;
+        while (parentNr) {
+            var parentNode = showedNodes.filter(function (res) { return res.nr === parentNr; })[0];
+            if (node.selected && !parentNode.childSelected) {
+                parentNode.childSelected = true;
+            }
+            else if (!node.selected && !(this.areChildrenSelected(parentNode, showedNodes))) {
+                parentNode.childSelected = false;
+            }
+            parentNr = parentNode.parentNr;
+        }
+    };
+    CaTreeModel.prototype.areChildrenSelected = function (node, showedNodes) {
+        if (node === null) {
+            return;
+        }
+        //Pre-order through node-numbers
+        var nodes = new Array();
+        nodes.push(node);
+        while (nodes.length > 0) {
+            node = nodes.pop();
+            var children = showedNodes.filter(function (res) { return res.parentNr === node.nr; });
+            for (var _i = 0, children_2 = children; _i < children_2.length; _i++) {
+                var child = children_2[_i];
+                if (child.selected) {
+                    return true;
+                }
+                nodes.push(child);
+            }
+        }
+        return false;
     };
     return CaTreeModel;
 }());

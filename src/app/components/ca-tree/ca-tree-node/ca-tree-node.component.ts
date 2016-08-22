@@ -3,7 +3,7 @@ import {
   Inject, forwardRef
 } from '@angular/core';
 import {CaTreeService} from '../../../services/ca-tree.service';
-import {BasicTreeNode, CaTreeModel, NodeFilter} from './ca-tree-model';
+import {BasicTreeNode, CaTreeModel, NodeFilter, SelectableTreeNode} from './ca-tree-model';
 import {CaTreeComponent} from '../ca-tree.component';
 
 //
@@ -37,7 +37,6 @@ import {CaTreeComponent} from '../ca-tree.component';
 })
 export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
-  extended: boolean = false;
   paddingPerLevel: number = 10;
   changing: boolean = false;
 
@@ -56,6 +55,9 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   @Output()
   nodeSelected: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
 
+  @Input()
+  nodeExtended: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
+
   @ViewChild('nodeTextInput')
   nodeTextInput: ElementRef;
 
@@ -64,7 +66,6 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   ngOnInit(): void {
     this.changing = false;
-    this.extended = false;
   }
 
   ngAfterViewChecked(): void {
@@ -75,6 +76,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   extend(): void {
     this.node.extended = !this.node.extended;
+    this.nodeExtended.emit(this.node);
   }
 
   getPadding(): String {
@@ -89,7 +91,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   changePic(): void {
     let newPic = prompt("Change Pic", "");
     console.log(newPic);
-    if(newPic){
+    if (newPic) {
       this.classString = newPic;
     }
   }
@@ -101,7 +103,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   addNode(): void {
 
     let node = {
-      name : "Neuer Child",
+      name: "Neuer Child",
       nr: this.model.getNewID(),
       parentNr: this.node.nr,
       extended: false,
@@ -109,10 +111,8 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
       childSelected: false
     };
 
-    this.model.addResource(node);
+    this.model.addNode(node);
   }
-
-
 
   onKeyDown(event): void {
     //handle text change if source of event is nodeTextInput-element
@@ -121,7 +121,6 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
         this.saveNodeChange();
       }
     }
-
   }
 
   saveNodeChange(): void {
@@ -148,8 +147,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
         this.model.resources.splice(deleteIndex, 1);
         nrs.push(child.nr);
       });
-      let deleteIndex = children.indexOf(this.model.resources.filter(res => res.nr === nr)[0]);
-      this.model.resources.splice(deleteIndex, 1);
+      this.model.removeNode(nr);
     }
     console.log(this.model.resources);
   }

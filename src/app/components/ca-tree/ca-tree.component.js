@@ -20,67 +20,8 @@ var CaTreeComponent = (function () {
             _this.model.resources = data;
         });
     };
-    CaTreeComponent.prototype._onNodeSelected = function (node) {
-        this._checkChildren(node);
-    };
-    CaTreeComponent.prototype._checkChildren = function (node) {
-        var _this = this;
-        if (node === null) {
-            return;
-        }
-        this._checkParents(node);
-        var selected = node.selected;
-        //Pre-order through node-numbers
-        var nrs = new Array();
-        nrs.push(node.nr);
-        var nr;
-        while (nrs.length > 0) {
-            nr = nrs.pop();
-            var children = this.model.resources.filter(function (res) { return res.parentNr === nr; });
-            children.forEach(function (child, index) {
-                child.selected = !selected;
-                // Check parents for each child
-                _this._checkParents(child);
-                nrs.push(child.nr);
-            });
-        }
-    };
-    CaTreeComponent.prototype._checkParents = function (node) {
-        //console.log('checking parents for node: {name: ' + node.name + ', id: ' + node.nr + '}');
-        var parentNr = node.parentNr;
-        node.childSelected = !node.childSelected;
-        while (parentNr) {
-            var parentNode = this.model.resources.filter(function (res) { return res.nr === parentNr; })[0];
-            //console.log('parent: {name: ' + parentNode.name + ', id: ' + parentNode.nr + '}');
-            if (node.selected && !parentNode.childSelected) {
-                parentNode.childSelected = true;
-            }
-            else if (!node.selected && !(this._areChildrenSelected(parentNode))) {
-                parentNode.childSelected = false;
-            }
-            //parentNode.childSelected = !parentNode.childSelected;
-            parentNr = parentNode.parentNr;
-        }
-    };
-    CaTreeComponent.prototype._areChildrenSelected = function (node) {
-        if (node === null) {
-            return;
-        }
-        //Pre-order through node-numbers
-        var nodes = new Array();
-        nodes.push(node);
-        while (nodes.length > 0) {
-            node = nodes.pop();
-            var children = this.model.resources.filter(function (res) { return res.parentNr === node.nr; });
-            for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
-                var child = children_1[_i];
-                if (child.selected) {
-                    return true;
-                }
-                nodes.push(child);
-            }
-        }
-        return false;
+    CaTreeComponent.prototype.onNodeSelected = function (node) {
+        this.model.checkChildren(node);
     };
     CaTreeComponent = __decorate([
         core_1.Component({
@@ -90,7 +31,8 @@ var CaTreeComponent = (function () {
             directives: [ca_tree_node_component_1.CaTreeNodeComponent],
             providers: [ca_tree_service_1.CaTreeService],
             styles: ["\n    div {\n      padding-left: 10px;\n    }\n  "],
-            pipes: [ca_tree_model_1.NodeFilter]
+            pipes: [ca_tree_model_1.NodeFilter],
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush
         })
     ], CaTreeComponent);
     return CaTreeComponent;
