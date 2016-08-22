@@ -51,7 +51,7 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   node: BasicTreeNode;
 
   @Input()
-  classStringClose: String = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
+  classStringClose: String = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
   classStringOpen: String = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
 
   @Output()

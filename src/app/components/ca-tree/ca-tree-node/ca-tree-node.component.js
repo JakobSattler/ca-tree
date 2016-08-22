@@ -36,7 +36,7 @@ var CaTreeNodeComponent = (function () {
         this.extended = false;
         this.paddingPerLevel = 10;
         this.changing = false;
-        this.classStringClose = 'http://www.iconarchive.com/download/i83780/pelfusion/flat-folder/Close-Folder.ico';
+        this.classStringClose = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
         this.classStringOpen = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
         this.nodeSelected = new core_1.EventEmitter();
     }
