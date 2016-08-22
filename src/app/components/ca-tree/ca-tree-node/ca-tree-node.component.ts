@@ -37,7 +37,6 @@ import {CaTreeComponent} from '../ca-tree.component';
 })
 export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
-  extended: boolean = false;
   paddingPerLevel: number = 10;
   changing: boolean = false;
 
@@ -68,7 +67,6 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
 
   ngOnInit(): void {
     this.changing = false;
-    this.extended = false;
   }
 
   ngAfterViewChecked(): void {
