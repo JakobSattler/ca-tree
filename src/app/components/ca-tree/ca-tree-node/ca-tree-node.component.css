@@ -4,7 +4,6 @@
   /*-ms-user-select: none;*/
   /*user-select: none;*/
 /*}*/
-
 .dropdown:hover .dropdown-menu {
   display: inherit;
 }
@@ -75,6 +74,8 @@
 .hvr-sweep-to-right > input[type=text] {
   z-index: 1000000;
 }
+
+
 
 .control-group {
   display: inline-block;
