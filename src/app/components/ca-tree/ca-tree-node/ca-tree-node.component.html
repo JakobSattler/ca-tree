@@ -1,6 +1,6 @@
 <div *ngIf="node" [style.padding-left]="getPadding()">
   <span class=" hvr-sweep-to-right " style="color:#00A2E8;padding: 5px;float:auto; width:80%;">
-      <span (click)="onNodeExtended()"
+      <span (click)="onNodeExtended()" style="padding-top: 6px"
             [class]="model.isNodeLeaf(node) ? 'glyphicon glyphicon-minus grow' :
             node.extended ? 'glyphicon glyphicon-menu-down grow' : 'glyphicon glyphicon-menu-right grow'">
       </span>
@@ -12,20 +12,20 @@
             [(ngModel)]="node.childSelected">
             -->
 
-      <div class="control-group">
+      <div class="control-group" style="padding-bottom: 4px">
         <label class="control control--checkbox">
 		          <input type="checkbox" (click)="onNodeSelected()"
                      [(ngModel)]="node.selected"/>
 		          <div class="control__indicator"></div>
 	      </label>
         </div>
-       <div class="control-group">
+       <div class="control-group" style="padding-bottom: 4px">
 	      <label class="control control--checkbox" [style.visibility]="model.isNodeLeaf(node) ? 'hidden' : ''">
 		          <input type="checkbox" [(ngModel)]="node.childSelected" disabled/>
 		          <div class="control__indicator"></div>
 	      </label>
         </div>
-    <span>
+    <span style="padding-bottom: 6px">
       <img *ngIf="node.extended" src="{{imgURLOpen}}" width='20' height='20'>
       <img *ngIf="!node.extended" src="{{imgURLClose}}" width='20' height='20'>
      </span>
