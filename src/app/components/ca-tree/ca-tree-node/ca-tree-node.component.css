@@ -1,13 +1,14 @@
 /*span, div {*/
-/*-webkit-user-select: none;*/
-/*-moz-user-select: none;*/
-/*-ms-user-select: none;*/
-/*user-select: none;*/
+  /*-webkit-user-select: none;*/
+  /*-moz-user-select: none;*/
+  /*-ms-user-select: none;*/
+  /*user-select: none;*/
 /*}*/
 
 .dropdown:hover .dropdown-menu {
   display: inherit;
 }
+
 
 /* Sweep To Right */
 .hvr-sweep-to-right {

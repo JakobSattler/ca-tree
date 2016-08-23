@@ -70,16 +70,17 @@ var CaTreeNodeComponent = (function () {
         this.model.addNode(node);
     };
     CaTreeNodeComponent.prototype.onKeyDown = function (event) {
-        //handle text change if source of event is nodeTextInput-element
-        if (event.srcElement === this.nodeTextInput.nativeElement) {
-            if (event.keyCode === 13) {
-                this.saveNodeChange();
-            }
-        }
+        ////handle text change if source of event is nodeTextInput-element
+        //if (event.srcElement === this.nodeTextInput.nativeElement) {
+        //  if (event.keyCode === 13) {
+        //    this.saveNodeChange();
+        //  }
+        //}
     };
     CaTreeNodeComponent.prototype.saveNodeChange = function () {
         this.nodeTextInput.nativeElement.blur();
         this.node.changing = false;
+        console.log('saving ' + this.node.name);
         if (this.nodeTextInput.nativeElement.value !== '') {
             this.node.name = this.nodeTextInput.nativeElement.value;
         }
