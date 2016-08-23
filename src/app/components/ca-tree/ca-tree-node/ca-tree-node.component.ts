@@ -6,24 +6,7 @@ import {CaTreeService} from '../../../services/ca-tree.service';
 import {BasicTreeNode, CaTreeModel, NodeFilter} from './ca-tree-model';
 import {CaTreeComponent} from '../ca-tree.component';
 
-//
-//export class TreeNode {
-//  name: String;
-//  nr: number;
-//  children: Array<TreeNode>;
-//  selected: boolean;
-//  childSelected: boolean = false;
-//
-//  constructor(name: String, nr: number, children: Array<TreeNode>) {
-//    this.name = name;
-//    this.nr = nr;
-//    if (children == null) {
-//      this.children = new Array<TreeNode>();
-//    } else {
-//      this.children = children;
-//    }
-//  }
-//}
+
 
 @Component({
   moduleId: module.id,

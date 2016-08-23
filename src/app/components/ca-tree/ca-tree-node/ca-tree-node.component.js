@@ -12,24 +12,6 @@ var core_1 = require('@angular/core');
 var ca_tree_service_1 = require('../../../services/ca-tree.service');
 var ca_tree_model_1 = require('./ca-tree-model');
 var ca_tree_component_1 = require('../ca-tree.component');
-//
-//export class TreeNode {
-//  name: String;
-//  nr: number;
-//  children: Array<TreeNode>;
-//  selected: boolean;
-//  childSelected: boolean = false;
-//
-//  constructor(name: String, nr: number, children: Array<TreeNode>) {
-//    this.name = name;
-//    this.nr = nr;
-//    if (children == null) {
-//      this.children = new Array<TreeNode>();
-//    } else {
-//      this.children = children;
-//    }
-//  }
-//}
 var CaTreeNodeComponent = (function () {
     function CaTreeNodeComponent(_caTreeComponent) {
         this._caTreeComponent = _caTreeComponent;

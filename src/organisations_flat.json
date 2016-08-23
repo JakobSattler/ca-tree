@@ -4,17 +4,17 @@
 	"parentNr": ""
 },
 {
-	"name": "a1",
+	"name": "background-color",
 	"nr": "832490",
 	"parentNr": "100"
 },
 {
-	"name": "b121",
+	"name": "Für Team sichtbar",
 	"nr": "694801",
 	"parentNr": "832490"
 },
 {
-	"name": "c12141",
+	"name": "dropdown-menu sub-menu",
 	"nr": "731958",
 	"parentNr": "694801"
 },
