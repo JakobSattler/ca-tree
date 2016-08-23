@@ -1,15 +1,33 @@
 <div *ngIf="node" [style.padding-left]="getPadding()">
-  <span class="hvr-fade">
+  <!--#00A2E8-->
+  <span class="hvr-fade" style="color:#00A2E8;padding: 5px;float:auto; width:95%;">
+  <!--<span class="panel panel-info">
+    <div class="panel-heading">-->
     <span class="UISpan ">
       <span (click)="onNodeExtended()"
             [class]="model.isNodeLeaf(node) ? 'glyphicon glyphicon-minus' :
             node.extended ? 'glyphicon glyphicon-menu-down' : 'glyphicon glyphicon-menu-right'">
       </span>
-      <input type="checkbox"
-             (click)="onNodeSelected()"
-             [(ngModel)]="node.selected"/>
-      <input type="checkbox"
-             [(ngModel)]="node.childSelected">
+      <!-- <input type="checkbox"
+              (click)="onNodeSelected()"
+              [(ngModel)]="node.selected"/>
+       <input type="checkbox"
+              [(ngModel)]="node.childSelected">
+              -->
+
+      <div class="control-group">
+        <label class="control control--checkbox">
+		          <input type="checkbox" (click)="onNodeSelected()"
+                     [(ngModel)]="node.selected"/>
+		          <div class="control__indicator"></div>
+	      </label>
+        </div>
+       <div class="control-group">
+	      <label class="control control--checkbox">
+		          <input type="checkbox" [(ngModel)]="node.childSelected"/>
+		          <div class="control__indicator"></div>
+	      </label>
+        </div>
     </span>
     <span>
       <img *ngIf="node.extended" src="{{imgURLOpen}}" width='20' height='20'>
@@ -51,7 +69,7 @@
   </span>
 </div>
 
-<template [ngIf]="node.extended">
+<template [ngIf]="node.extended" style="color:blue;">
   <co-tree-node *ngFor="let res of model.resources | nodefilter : 'parentNr' : node.nr"
                 [node]="res"
                 [level]="level + 1"
