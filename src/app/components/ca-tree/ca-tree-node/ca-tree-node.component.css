@@ -4,10 +4,6 @@
   /*-ms-user-select: none;*/
   /*user-select: none;*/
 /*}*/
-
-
-
-
 .dropdown:hover .dropdown-menu {
   display: inherit;
 }

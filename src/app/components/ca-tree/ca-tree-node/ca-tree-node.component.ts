@@ -104,18 +104,18 @@ export class CaTreeNodeComponent implements AfterViewChecked {
   }
 
   onKeyDown(event): void {
-    //handle text change if source of event is nodeTextInput-element
-    if (event.srcElement === this.nodeTextInput.nativeElement) {
-      if (event.keyCode === 13) {
-        this.saveNodeChange();
-      }
-    }
+    ////handle text change if source of event is nodeTextInput-element
+    //if (event.srcElement === this.nodeTextInput.nativeElement) {
+    //  if (event.keyCode === 13) {
+    //    this.saveNodeChange();
+    //  }
+    //}
   }
 
   saveNodeChange(): void {
     this.nodeTextInput.nativeElement.blur();
     this.node.changing = false;
-
+    console.log('saving ' + this.node.name);
     if (this.nodeTextInput.nativeElement.value !== '') {
       this.node.name = this.nodeTextInput.nativeElement.value;
     } else if (this.node.name === '') {
