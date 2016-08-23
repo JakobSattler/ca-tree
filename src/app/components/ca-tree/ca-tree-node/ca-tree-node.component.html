@@ -1,16 +1,16 @@
 <div *ngIf="node" [style.padding-left]="getPadding()">
   <span class=" hvr-sweep-to-right " style="color:#00A2E8;padding: 5px;float:auto; width:80%;">
       <span (click)="onNodeExtended()"
-            [class]="model.isNodeLeaf(node) ? 'glyphicon glyphicon-minus' :
-            node.extended ? 'glyphicon glyphicon-menu-down' : 'glyphicon glyphicon-menu-right'">
+            [class]="model.isNodeLeaf(node) ? 'glyphicon glyphicon-minus grow' :
+            node.extended ? 'glyphicon glyphicon-menu-down grow' : 'glyphicon glyphicon-menu-right grow'">
       </span>
 
-      <!-- <input type="checkbox"
-              (click)="onNodeSelected()"
-              [(ngModel)]="node.selected"/>
-       <input type="checkbox"
-              [(ngModel)]="node.childSelected">
-              -->
+    <!-- <input type="checkbox"
+            (click)="onNodeSelected()"
+            [(ngModel)]="node.selected"/>
+     <input type="checkbox"
+            [(ngModel)]="node.childSelected">
+            -->
 
       <div class="control-group">
         <label class="control control--checkbox">
@@ -39,8 +39,9 @@
              [hidden]="!node.changing"
              [value]="node.name"
              (keydown)="onKeyDown($event)"
+             style="color:black;"
              (blur)="saveNodeChange()" #nodeTextInput/>
-    <span class="dropdown">
+    <span class="btn-group">
       <span class="glyphicon glyphicon-triangle-bottom dropdown-toggle"
             data-toggle="dropdown"
             aria-haspopup="true"
