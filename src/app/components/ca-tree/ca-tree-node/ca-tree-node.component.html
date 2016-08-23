@@ -1,6 +1,6 @@
 <div *ngIf="node" [style.padding-left]="getPadding()">
-  <span class="nodeSpan">
-    <span class="UISpan">
+  <span class="hvr-fade">
+    <span class="UISpan ">
       <span (click)="onNodeExtended()"
             [class]="model.isNodeLeaf(node) ? 'glyphicon glyphicon-minus' :
             node.extended ? 'glyphicon glyphicon-menu-down' : 'glyphicon glyphicon-menu-right'">
