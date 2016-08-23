@@ -20,8 +20,8 @@
 	      </label>
         </div>
        <div class="control-group">
-	      <label class="control control--checkbox">
-		          <input type="checkbox" [(ngModel)]="node.childSelected"/>
+	      <label class="control control--checkbox" [style.visibility]="model.isNodeLeaf(node) ? 'hidden' : ''">
+		          <input type="checkbox" [(ngModel)]="node.childSelected" disabled/>
 		          <div class="control__indicator"></div>
 	      </label>
         </div>
@@ -40,7 +40,7 @@
              [value]="node.name"
              (keydown)="onKeyDown($event)"
              (blur)="saveNodeChange()" #nodeTextInput/>
-    <span class="dropdown">
+    <span class="btn-group">
       <span class="glyphicon glyphicon-triangle-bottom dropdown-toggle"
             data-toggle="dropdown"
             aria-haspopup="true"
