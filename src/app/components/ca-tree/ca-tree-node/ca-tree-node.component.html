@@ -25,9 +25,9 @@
 		          <div class="control__indicator"></div>
 	      </label>
         </div>
-    <span style="padding-bottom: 6px">
-      <img *ngIf="node.extended" src="{{imgURLOpen}}" width='20' height='20'>
-      <img *ngIf="!node.extended" src="{{imgURLClose}}" width='20' height='20'>
+    <span>
+      <img style="padding-bottom: 5px" *ngIf="node.extended" src="{{imgURLOpen}}" width='20' height='25'>
+      <img style="padding-bottom: 5px" *ngIf="!node.extended" src="{{imgURLClose}}" width='20' height='25'>
      </span>
       <a *ngIf="!node.changing"
          href="#"
