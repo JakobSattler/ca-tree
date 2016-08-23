@@ -16,7 +16,6 @@ import {CaTreeComponent} from '../ca-tree.component';
   directives: [CaTreeNodeComponent],
   providers: [CaTreeService],
   pipes: [NodeFilter]
-
 })
 export class CaTreeNodeComponent implements AfterViewChecked {
 
