@@ -1,7 +1,7 @@
 <div *ngIf="node" [style.padding-left]="getPadding()">
   <span class="nodeSpan">
     <span class="UISpan">
-      <span (click)="extend()"
+      <span (click)="onNodeExtended()"
             [class]="model.isNodeLeaf(node) ? 'glyphicon glyphicon-minus' :
             node.extended ? 'glyphicon glyphicon-menu-down' : 'glyphicon glyphicon-menu-right'">
       </span>
@@ -12,17 +12,17 @@
              [(ngModel)]="node.childSelected">
     </span>
     <span>
-      <img *ngIf="node.extended" src={{classStringOpen}} width='20' height='20'>
-      <img *ngIf="!node.extended" src={{classStringClose}} width='20' height='20'>
+      <img *ngIf="node.extended" src="{{imgURLOpen}}" width='20' height='20'>
+      <img *ngIf="!node.extended" src="{{imgURLClose}}" width='20' height='20'>
      </span>
-      <a *ngIf="!changing"
+      <a *ngIf="!node.changing"
          href="#"
          [innerHTML]="node.name"
          onclick="return false"
          class="nodeText" #nodeText>
       </a>
       <input type="text"
-             [hidden]="!changing"
+             [hidden]="!node.changing"
              class="nodeTextInput"
              [value]="node.name"
              (keydown)="onKeyDown($event)"
@@ -34,7 +34,7 @@
             aria-expanded="false">
       </span>&nbsp;&nbsp;&nbsp;&nbsp;
       <ul class="dropdown-menu">
-        <li (click)="deleteNode(node)">
+        <li (click)="removeNode()">
           <a>Eintrag löschen</a>
         </li>
         <li (click)="editNode()">

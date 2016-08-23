@@ -6,6 +6,7 @@ export interface BasicTreeNode {
   nr: number;
   parentNr: number;
   extended: boolean;
+  changing: boolean;
 }
 
 export interface SelectableTreeNode extends BasicTreeNode {
@@ -14,7 +15,7 @@ export interface SelectableTreeNode extends BasicTreeNode {
 }
 
 export class CaTreeModel {
-  resources: Array<SelectableTreeNode>;
+  resources: Array<BasicTreeNode>;
 
   constructor() {
   }
@@ -28,34 +29,42 @@ export class CaTreeModel {
     }
   }
 
-  removeNode(nr: number): void {
-    let deleteIndex = this.resources.indexOf(this.getNode(nr) as SelectableTreeNode);
-    this.resources.splice(deleteIndex, 1);
+  removeNode(node: BasicTreeNode): void {
+    //Pre-order through node-numbers
+    let nrs: Array<number> = new Array<number>();
+    nrs.push(node.nr);
+
+    let nr;
+    while (nrs.length > 0) {
+      nr = nrs.pop();
+
+      let deleteIndex = this.resources.indexOf(this.getNode(nr));
+      this.resources.splice(deleteIndex, 1);
+      let children = this.resources.filter(res => res.parentNr === nr);
+      for (let child of children) {
+        nrs.push(child.nr);
+      }
+    }
   }
 
   isNodeLeaf(node: BasicTreeNode): boolean {
     return this.resources.filter(res => res.parentNr === node.nr).length === 0;
   }
 
-  deleteNode(node: BasicTreeNode): void {
-    let delIndex: number;
-    delIndex = this.resources.indexOf(this.resources.filter(res => res.nr === node.nr)[0]);
-    this.resources.splice(delIndex, 1);
-  }
-
-  addNode(res: SelectableTreeNode): void {
+  addNode(res: BasicTreeNode): void {
     this.resources.push(res);
   }
 
   getNewID(): number {
-    var max = Math.max.apply(Math, this.resources.map(function (res) {
+    let max = Math.max.apply(Math, this.resources.map(function (res) {
       return res.nr;
     }));
     return max + 1;
   }
 
   public checkChildren(node: SelectableTreeNode): void {
-    let showedNodes = this.resources.filter(res => res.extended || (this.getNode(res.parentNr) != null && this.getNode(res.parentNr).extended));
+    let showedNodes =
+      this.resources.filter(res => res.extended || (this.getNode(res.parentNr) != null && this.getNode(res.parentNr).extended)) as SelectableTreeNode[];
     let selected: boolean = node.selected;
 
     //Pre-order through node-numbers
@@ -89,8 +98,7 @@ export class CaTreeModel {
           parentNode.childSelected = false;
         }
         parentNr = parentNode.parentNr;
-      }
-      else{
+      } else {
         parentNr = null;
       }
     }

@@ -25,7 +25,6 @@ var CaTreeComponent = (function () {
         this.model.checkChildren(node);
     };
     CaTreeComponent.prototype.onNodeExtended = function (node) {
-        //console.log("extended");
         this.model.checkChildren(node);
     };
     CaTreeComponent = __decorate([

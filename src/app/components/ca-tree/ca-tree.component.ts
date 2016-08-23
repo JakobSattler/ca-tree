@@ -22,7 +22,7 @@ export class CaTreeComponent implements OnInit {
   constructor(private caTreeService: CaTreeService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.model = new CaTreeModel();
     this.caTreeService.getNodes().subscribe(
       (data: any) => {
@@ -37,7 +37,6 @@ export class CaTreeComponent implements OnInit {
   }
 
   public onNodeExtended(node: SelectableTreeNode): void {
-    //console.log("extended");
     this.model.checkChildren(node);
   }
 }

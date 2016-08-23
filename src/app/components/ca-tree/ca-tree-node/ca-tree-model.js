@@ -19,17 +19,24 @@ var CaTreeModel = (function () {
             return null;
         }
     };
-    CaTreeModel.prototype.removeNode = function (nr) {
-        var deleteIndex = this.resources.indexOf(this.getNode(nr));
-        this.resources.splice(deleteIndex, 1);
+    CaTreeModel.prototype.removeNode = function (node) {
+        //Pre-order through node-numbers
+        var nrs = new Array();
+        nrs.push(node.nr);
+        var nr;
+        while (nrs.length > 0) {
+            nr = nrs.pop();
+            var deleteIndex = this.resources.indexOf(this.getNode(nr));
+            this.resources.splice(deleteIndex, 1);
+            var children = this.resources.filter(function (res) { return res.parentNr === nr; });
+            for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
+                var child = children_1[_i];
+                nrs.push(child.nr);
+            }
+        }
     };
     CaTreeModel.prototype.isNodeLeaf = function (node) {
         return this.resources.filter(function (res) { return res.parentNr === node.nr; }).length === 0;
-    };
-    CaTreeModel.prototype.deleteNode = function (node) {
-        var delIndex;
-        delIndex = this.resources.indexOf(this.resources.filter(function (res) { return res.nr === node.nr; })[0]);
-        this.resources.splice(delIndex, 1);
     };
     CaTreeModel.prototype.addNode = function (res) {
         this.resources.push(res);
@@ -53,8 +60,8 @@ var CaTreeModel = (function () {
             this.getNode(nr).selected = selected;
             this.checkParents(this.getNode(nr), showedNodes);
             var children = showedNodes.filter(function (res) { return res.parentNr === nr; });
-            for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
-                var child = children_1[_i];
+            for (var _i = 0, children_2 = children; _i < children_2.length; _i++) {
+                var child = children_2[_i];
                 nrs.push(child.nr);
             }
         }
@@ -89,8 +96,8 @@ var CaTreeModel = (function () {
         while (nodes.length > 0) {
             node = nodes.pop();
             var children = showedNodes.filter(function (res) { return res.parentNr === node.nr; });
-            for (var _i = 0, children_2 = children; _i < children_2.length; _i++) {
-                var child = children_2[_i];
+            for (var _i = 0, children_3 = children; _i < children_3.length; _i++) {
+                var child = children_3[_i];
                 if (child.selected) {
                     return true;
                 }

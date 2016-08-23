@@ -35,20 +35,17 @@ var CaTreeNodeComponent = (function () {
         this._caTreeComponent = _caTreeComponent;
         this.paddingPerLevel = 10;
         this.changing = false;
-        this.classStringClose = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
-        this.classStringOpen = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
+        this.imgURLClose = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
+        this.imgURLOpen = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
         this.nodeSelected = new core_1.EventEmitter();
         this.nodeExtended = new core_1.EventEmitter();
     }
-    CaTreeNodeComponent.prototype.ngOnInit = function () {
-        this.changing = false;
-    };
     CaTreeNodeComponent.prototype.ngAfterViewChecked = function () {
-        if (this.changing) {
+        if (this.node.changing) {
             this.nodeTextInput.nativeElement.focus();
         }
     };
-    CaTreeNodeComponent.prototype.extend = function () {
+    CaTreeNodeComponent.prototype.onNodeExtended = function () {
         this.node.extended = !this.node.extended;
         this.nodeExtended.emit(this.node);
     };
@@ -63,23 +60,28 @@ var CaTreeNodeComponent = (function () {
         var newPic = prompt("Change Pic for Open", "");
         console.log(newPic);
         if (newPic) {
-            this.classStringOpen = newPic;
+            this.imgURLClose = newPic;
         }
         newPic = prompt("Change Pic for Close", "");
         console.log(newPic);
         if (newPic) {
-            this.classStringClose = newPic;
+            this.imgURLOpen = newPic;
         }
     };
     CaTreeNodeComponent.prototype.editNode = function () {
-        this.changing = true;
+        //this.changing = true;
+        this.node.changing = true;
     };
     CaTreeNodeComponent.prototype.addNode = function () {
+        if (!this.node.extended) {
+            this.node.extended = true;
+        }
         var node = {
-            name: "Neuer Child",
+            name: '',
             nr: this.model.getNewID(),
             parentNr: this.node.nr,
             extended: false,
+            changing: true,
             selected: false,
             childSelected: false
         };
@@ -95,33 +97,16 @@ var CaTreeNodeComponent = (function () {
     };
     CaTreeNodeComponent.prototype.saveNodeChange = function () {
         this.nodeTextInput.nativeElement.blur();
-        this.node.name = this.nodeTextInput.nativeElement.value;
-        this.changing = false;
+        this.node.changing = false;
+        if (this.nodeTextInput.nativeElement.value !== '') {
+            this.node.name = this.nodeTextInput.nativeElement.value;
+        }
+        else if (this.node.name === '') {
+            this.model.removeNode(this.node);
+        }
     };
-    CaTreeNodeComponent.prototype.deleteNode = function (node) {
-        var _this = this;
-        if (node === null) {
-            return;
-        }
-        //Pre-order through node-numbers
-        var nrs = new Array();
-        nrs.push(node.nr);
-        var nr;
-        var _loop_1 = function() {
-            nr = nrs.pop();
-            var children = this_1.model.resources.filter(function (res) { return res.parentNr === nr; });
-            children.forEach(function (child, index) {
-                var deleteIndex = children.indexOf(child);
-                _this.model.resources.splice(deleteIndex, 1);
-                nrs.push(child.nr);
-            });
-            this_1.model.removeNode(nr);
-        };
-        var this_1 = this;
-        while (nrs.length > 0) {
-            _loop_1();
-        }
-        console.log(this.model.resources);
+    CaTreeNodeComponent.prototype.removeNode = function () {
+        this.model.removeNode(this.node);
     };
     __decorate([
         core_1.Input()
@@ -134,7 +119,7 @@ var CaTreeNodeComponent = (function () {
     ], CaTreeNodeComponent.prototype, "node");
     __decorate([
         core_1.Input()
-    ], CaTreeNodeComponent.prototype, "classStringClose");
+    ], CaTreeNodeComponent.prototype, "imgURLClose");
     __decorate([
         core_1.Output()
     ], CaTreeNodeComponent.prototype, "nodeSelected");

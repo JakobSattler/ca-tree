@@ -35,7 +35,7 @@ import {CaTreeComponent} from '../ca-tree.component';
   pipes: [NodeFilter]
 
 })
-export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
+export class CaTreeNodeComponent implements AfterViewChecked {
 
   paddingPerLevel: number = 10;
   changing: boolean = false;
@@ -50,8 +50,8 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   node: BasicTreeNode;
 
   @Input()
-  classStringClose: String = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
-  classStringOpen: String = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
+  imgURLClose: String = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
+  imgURLOpen: String = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
 
   @Output()
   nodeSelected: EventEmitter<BasicTreeNode> = new EventEmitter<BasicTreeNode>();
@@ -65,17 +65,13 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   constructor(@Inject(forwardRef(() => CaTreeComponent)) private _caTreeComponent: CaTreeComponent) {
   }
 
-  ngOnInit(): void {
-    this.changing = false;
-  }
-
   ngAfterViewChecked(): void {
-    if (this.changing) {
+    if (this.node.changing) {
       this.nodeTextInput.nativeElement.focus();
     }
   }
 
-  extend(): void {
+  onNodeExtended(): void {
     this.node.extended = !this.node.extended;
     this.nodeExtended.emit(this.node);
   }
@@ -92,35 +88,38 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
   changePic(): void {
     let newPic = prompt("Change Pic for Open", "");
     console.log(newPic);
-    if(newPic) {
-      this.classStringOpen = newPic;
+    if (newPic) {
+      this.imgURLClose = newPic;
     }
-      newPic = prompt("Change Pic for Close", "");
-      console.log(newPic);
-      if(newPic){
-        this.classStringClose = newPic;
-      }
+    newPic = prompt("Change Pic for Close", "");
+    console.log(newPic);
+    if (newPic) {
+      this.imgURLOpen = newPic;
     }
+  }
 
   editNode(): void {
-    this.changing = true;
+    //this.changing = true;
+    this.node.changing = true;
   }
 
   addNode(): void {
+    if (!this.node.extended) {
+      this.node.extended = true;
+    }
 
     let node = {
-      name: "Neuer Child",
+      name: '',
       nr: this.model.getNewID(),
       parentNr: this.node.nr,
       extended: false,
+      changing: true,
       selected: false,
       childSelected: false
     };
 
     this.model.addNode(node);
   }
-
-
 
   onKeyDown(event): void {
     //handle text change if source of event is nodeTextInput-element
@@ -129,36 +128,20 @@ export class CaTreeNodeComponent implements OnInit, AfterViewChecked {
         this.saveNodeChange();
       }
     }
-
   }
 
   saveNodeChange(): void {
     this.nodeTextInput.nativeElement.blur();
-    this.node.name = this.nodeTextInput.nativeElement.value;
-    this.changing = false;
+    this.node.changing = false;
+
+    if (this.nodeTextInput.nativeElement.value !== '') {
+      this.node.name = this.nodeTextInput.nativeElement.value;
+    } else if (this.node.name === '') {
+      this.model.removeNode(this.node);
+    }
   }
 
-  deleteNode(node: BasicTreeNode): void {
-    if (node === null) {
-      return;
-    }
-    //Pre-order through node-numbers
-    let nrs: Array<number> = new Array<number>();
-    nrs.push(node.nr);
-
-    let nr;
-    while (nrs.length > 0) {
-      nr = nrs.pop();
-
-      let children = this.model.resources.filter(res => res.parentNr === nr);
-      children.forEach((child, index) => {
-        let deleteIndex = children.indexOf(child);
-        this.model.resources.splice(deleteIndex, 1);
-        nrs.push(child.nr);
-      });
-      this.model.removeNode(nr);
-    }
-    console.log(this.model.resources);
+  removeNode(): void {
+    this.model.removeNode(this.node);
   }
-
 }

@@ -642,7 +642,7 @@ declare namespace protractor {
     *
     * The ElementFinder can be treated as a WebElement for most purposes, in
     * particular, you may perform actions (i.e. click, getText) on them as you
-    * would a WebElement. ElementFinders extend Promise, and once an action
+    * would a WebElement. ElementFinders onNodeExtended Promise, and once an action
     * is performed on an ElementFinder, the latest result from the chain can be
     * accessed using then. Unlike a WebElement, an ElementFinder will wait for
     * angular to settle before performing finds or actions.
