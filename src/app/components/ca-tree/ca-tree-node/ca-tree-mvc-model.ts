@@ -17,6 +17,10 @@ export interface SelectableTreeNode extends BasicTreeNode {
 export class CaTreeMvcModel {
   resources: Array<BasicTreeNode>;
 
+  constructor() {
+    this.resources = new Array<BasicTreeNode>();
+  }
+
   public getNode(nr: number): BasicTreeNode {
     let result = this.resources.filter(res => res.nr === nr);
     if (result.length === 1) {
@@ -44,6 +48,15 @@ export class CaTreeMvcModel {
     }
   }
 
+  public containsNode(node: BasicTreeNode): boolean {
+    for (let res of this.resources) {
+      if (res.nr === node.nr) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   public isNodeLeaf(node: BasicTreeNode): boolean {
     return this.resources.filter(res => res.parentNr === node.nr).length === 0;
   }
@@ -59,24 +72,30 @@ export class CaTreeMvcModel {
     return max + 1;
   }
 
+  private _allChildrenSelected(node: SelectableTreeNode): boolean {
+    for (let n of this.resources.filter(res => res.parentNr === node.nr) as SelectableTreeNode[]) {
+      if (!n.selected) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   public checkChildren(node: SelectableTreeNode): void {
-    let showedNodes =
-      this.resources.filter(res => res.extended || (this.getNode(res.parentNr) != null && this.getNode(res.parentNr).extended)) as SelectableTreeNode[];
     let selected: boolean = node.selected;
 
     //Pre-order through node-numbers
-    let nrs: Array<number> = new Array<number>();
-    nrs.push(node.nr);
+    let nodes: Array<SelectableTreeNode> = new Array<SelectableTreeNode>();
+    nodes.push(node);
 
-    let nr;
-    while (nrs.length > 0) {
-      nr = nrs.pop();
+    while (nodes.length > 0) {
+      node = nodes.pop();
 
-      (this.getNode(nr) as SelectableTreeNode).selected = selected;
-      this.checkParents(this.getNode(nr) as SelectableTreeNode, showedNodes);
-      let children = showedNodes.filter(res => res.parentNr === nr);
+      node.selected = selected;
+      this.checkParents(node as SelectableTreeNode, this.resources as SelectableTreeNode[]);
+      let children = this.resources.filter(res => res.parentNr === node.nr);
       for (let child of children) {
-        nrs.push(child.nr);
+        nodes.push(child as SelectableTreeNode);
       }
     }
   }
@@ -85,7 +104,6 @@ export class CaTreeMvcModel {
     let parentNr = node.nr;
 
     node.childSelected = !node.childSelected;
-    console.log(parentNr);
     while (parentNr) {
       let parentNode: SelectableTreeNode = this.getNode(parentNr) as SelectableTreeNode;
       if (parentNode != null) {
@@ -93,6 +111,11 @@ export class CaTreeMvcModel {
           parentNode.childSelected = true;
         } else if (!node.selected && !(this.areChildrenSelected(parentNode, showedNodes))) {
           parentNode.childSelected = false;
+        }
+        if (!node.selected) {
+          parentNode.selected = false;
+        } else if (this._allChildrenSelected(parentNode)) {
+          parentNode.selected = true;
         }
         parentNr = parentNode.parentNr;
       } else {

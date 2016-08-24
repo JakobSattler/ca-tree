@@ -15,7 +15,6 @@ var ca_tree_component_1 = require('../ca-tree.component');
 var CaTreeNodeComponent = (function () {
     function CaTreeNodeComponent(_caTreeComponent) {
         this.paddingPerLevel = 10;
-        this.changing = false;
         this.imgURLClose = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
         this.imgURLOpen = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
         this.nodeSelected = new core_1.EventEmitter();
@@ -28,7 +27,6 @@ var CaTreeNodeComponent = (function () {
         }
     };
     CaTreeNodeComponent.prototype.onNodeExtended = function () {
-        this.node.extended = !this.node.extended;
         this.nodeExtended.emit(this.node);
     };
     CaTreeNodeComponent.prototype.getPadding = function () {
@@ -36,28 +34,22 @@ var CaTreeNodeComponent = (function () {
     };
     CaTreeNodeComponent.prototype.onNodeSelected = function () {
         this.nodeSelected.emit(this.node);
-        console.log('selected ' + this.node.name);
     };
     CaTreeNodeComponent.prototype.changePic = function () {
         var newPic = prompt("Change Pic for Open", "");
-        console.log(newPic);
         if (newPic) {
             this.imgURLClose = newPic;
         }
         newPic = prompt("Change Pic for Close", "");
-        console.log(newPic);
         if (newPic) {
             this.imgURLOpen = newPic;
         }
     };
     CaTreeNodeComponent.prototype.editNode = function () {
-        //this.changing = true;
         this.node.changing = true;
     };
     CaTreeNodeComponent.prototype.addNode = function () {
-        if (!this.node.extended) {
-            this.node.extended = true;
-        }
+        this.node.extended = true;
         var node = {
             name: '',
             nr: this.model.getNewID(),
@@ -69,10 +61,9 @@ var CaTreeNodeComponent = (function () {
         };
         this.model.addNode(node);
     };
-    CaTreeNodeComponent.prototype.saveNodeChange = function () {
+    CaTreeNodeComponent.prototype.finishNodeChange = function () {
         this.nodeTextInput.nativeElement.blur();
         this.node.changing = false;
-        console.log('saving ' + this.node.name);
         if (this.nodeTextInput.nativeElement.value !== '') {
             this.node.name = this.nodeTextInput.nativeElement.value;
         }

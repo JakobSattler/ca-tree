@@ -6,8 +6,6 @@ import {CaTreeService} from '../../../services/ca-tree.service';
 import {BasicTreeNode, CaTreeMvcModel, NodeFilter} from './ca-tree-mvc-model';
 import {CaTreeComponent} from '../ca-tree.component';
 
-
-
 @Component({
   moduleId: module.id,
   selector: 'co-tree-node',
@@ -20,7 +18,6 @@ import {CaTreeComponent} from '../ca-tree.component';
 export class CaTreeNodeComponent implements AfterViewChecked {
 
   paddingPerLevel: number = 10;
-  changing: boolean = false;
 
   @Input()
   model: CaTreeMvcModel;
@@ -57,7 +54,6 @@ export class CaTreeNodeComponent implements AfterViewChecked {
   }
 
   onNodeExtended(): void {
-    this.node.extended = !this.node.extended;
     this.nodeExtended.emit(this.node);
   }
 
@@ -67,31 +63,25 @@ export class CaTreeNodeComponent implements AfterViewChecked {
 
   onNodeSelected(): void {
     this.nodeSelected.emit(this.node);
-    console.log('selected ' + this.node.name);
   }
 
   changePic(): void {
     let newPic = prompt("Change Pic for Open", "");
-    console.log(newPic);
     if (newPic) {
       this.imgURLClose = newPic;
     }
     newPic = prompt("Change Pic for Close", "");
-    console.log(newPic);
     if (newPic) {
       this.imgURLOpen = newPic;
     }
   }
 
   editNode(): void {
-    //this.changing = true;
     this.node.changing = true;
   }
 
   addNode(): void {
-    if (!this.node.extended) {
-      this.node.extended = true;
-    }
+    this.node.extended = true;
 
     let node = {
       name: '',
@@ -106,10 +96,9 @@ export class CaTreeNodeComponent implements AfterViewChecked {
     this.model.addNode(node);
   }
 
-  saveNodeChange(): void {
+  finishNodeChange(): void {
     this.nodeTextInput.nativeElement.blur();
     this.node.changing = false;
-    console.log('saving ' + this.node.name);
     if (this.nodeTextInput.nativeElement.value !== '') {
       this.node.name = this.nodeTextInput.nativeElement.value;
     } else if (this.node.name === '') {

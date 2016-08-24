@@ -16,8 +16,19 @@ var CaTreeComponent = (function () {
     CaTreeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.model = new ca_tree_mvc_model_1.CaTreeMvcModel();
+        //load root + next level to show proper icon
         this.caTreeService.getNodes().subscribe(function (data) {
-            _this.model.resources = data;
+            var _loop_1 = function(d1) {
+                _this.model.resources.push(d1);
+                for (var _i = 0, _a = data.filter(function (res) { return res.parentNr === d1.nr; }); _i < _a.length; _i++) {
+                    var d2 = _a[_i];
+                    _this.model.resources.push(d2);
+                }
+            };
+            for (var _b = 0, _c = data.filter(function (res) { return !res.parentNr; }); _b < _c.length; _b++) {
+                var d1 = _c[_b];
+                _loop_1(d1);
+            }
         });
     };
     CaTreeComponent.prototype.onNodeSelected = function (node) {
@@ -25,9 +36,29 @@ var CaTreeComponent = (function () {
         this.model.checkChildren(node);
     };
     CaTreeComponent.prototype.onNodeExtended = function (node) {
-        console.log(node.extended);
-        console.log(node.selected);
-        this.model.checkChildren(node);
+        this.loadChildren(node);
+        node.extended = !node.extended;
+    };
+    CaTreeComponent.prototype.loadChildren = function (node) {
+        var _this = this;
+        //load children + next level to load proper icon
+        this.caTreeService.getNodes().subscribe(function (data) {
+            var _loop_2 = function(d1) {
+                if (!_this.model.containsNode(d1)) {
+                    _this.model.resources.push(d1);
+                }
+                for (var _i = 0, _a = data.filter(function (res) { return res.parentNr === d1.nr; }); _i < _a.length; _i++) {
+                    var d2 = _a[_i];
+                    if (!_this.model.containsNode(d2)) {
+                        _this.model.resources.push(d2);
+                    }
+                }
+            };
+            for (var _b = 0, _c = data.filter(function (res) { return res.parentNr === node.nr; }); _b < _c.length; _b++) {
+                var d1 = _c[_b];
+                _loop_2(d1);
+            }
+        });
     };
     CaTreeComponent = __decorate([
         core_1.Component({

@@ -2,6 +2,7 @@ import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {CaTreeService} from '../../services/ca-tree.service';
 import {CaTreeNodeComponent} from './ca-tree-node/ca-tree-node.component';
 import {CaTreeMvcModel, BasicTreeNode, NodeFilter, SelectableTreeNode} from './ca-tree-node/ca-tree-mvc-model';
+import * as _ from 'lodash';
 
 @Component({
   moduleId: module.id,
@@ -24,9 +25,15 @@ export class CaTreeComponent implements OnInit {
 
   ngOnInit(): void {
     this.model = new CaTreeMvcModel();
+    //load root + next level to show proper icon
     this.caTreeService.getNodes().subscribe(
       (data: any) => {
-        this.model.resources = data;
+        for (let d1 of data.filter(res => !res.parentNr)) {
+          this.model.resources.push(d1);
+          for (let d2 of data.filter(res => res.parentNr === d1.nr)) {
+            this.model.resources.push(d2);
+          }
+        }
       }
     );
   }
@@ -37,10 +44,26 @@ export class CaTreeComponent implements OnInit {
   }
 
   public onNodeExtended(node: SelectableTreeNode): void {
-    console.log(node.extended);
-    console.log(node.selected);
-    this.model.checkChildren(node);
+    this.loadChildren(node);
+    node.extended = !node.extended;
   }
 
+  loadChildren(node: BasicTreeNode) {
+    //load children + next level to load proper icon
+    this.caTreeService.getNodes().subscribe(
+      (data: any) => {
+        for (let d1 of data.filter(res => res.parentNr === node.nr)) {
+          if (!this.model.containsNode(d1)) {
+            this.model.resources.push(d1);
+          }
+          for (let d2 of data.filter(res => res.parentNr === d1.nr)) {
+            if (!this.model.containsNode(d2)) {
+              this.model.resources.push(d2);
+            }
+          }
+        }
+      }
+    )
+  }
 
 }

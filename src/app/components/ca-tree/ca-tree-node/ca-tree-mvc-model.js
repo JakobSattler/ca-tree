@@ -9,6 +9,7 @@ require('rxjs/add/operator/map');
 var core_1 = require('@angular/core');
 var CaTreeMvcModel = (function () {
     function CaTreeMvcModel() {
+        this.resources = new Array();
     }
     CaTreeMvcModel.prototype.getNode = function (nr) {
         var result = this.resources.filter(function (res) { return res.nr === nr; });
@@ -35,6 +36,15 @@ var CaTreeMvcModel = (function () {
             }
         }
     };
+    CaTreeMvcModel.prototype.containsNode = function (node) {
+        for (var _i = 0, _a = this.resources; _i < _a.length; _i++) {
+            var res = _a[_i];
+            if (res.nr === node.nr) {
+                return true;
+            }
+        }
+        return false;
+    };
     CaTreeMvcModel.prototype.isNodeLeaf = function (node) {
         return this.resources.filter(function (res) { return res.parentNr === node.nr; }).length === 0;
     };
@@ -47,29 +57,34 @@ var CaTreeMvcModel = (function () {
         }));
         return max + 1;
     };
+    CaTreeMvcModel.prototype._allChildrenSelected = function (node) {
+        for (var _i = 0, _a = this.resources.filter(function (res) { return res.parentNr === node.nr; }); _i < _a.length; _i++) {
+            var n = _a[_i];
+            if (!n.selected) {
+                return false;
+            }
+        }
+        return true;
+    };
     CaTreeMvcModel.prototype.checkChildren = function (node) {
-        var _this = this;
-        var showedNodes = this.resources.filter(function (res) { return res.extended || (_this.getNode(res.parentNr) != null && _this.getNode(res.parentNr).extended); });
         var selected = node.selected;
         //Pre-order through node-numbers
-        var nrs = new Array();
-        nrs.push(node.nr);
-        var nr;
-        while (nrs.length > 0) {
-            nr = nrs.pop();
-            this.getNode(nr).selected = selected;
-            this.checkParents(this.getNode(nr), showedNodes);
-            var children = showedNodes.filter(function (res) { return res.parentNr === nr; });
+        var nodes = new Array();
+        nodes.push(node);
+        while (nodes.length > 0) {
+            node = nodes.pop();
+            node.selected = selected;
+            this.checkParents(node, this.resources);
+            var children = this.resources.filter(function (res) { return res.parentNr === node.nr; });
             for (var _i = 0, children_2 = children; _i < children_2.length; _i++) {
                 var child = children_2[_i];
-                nrs.push(child.nr);
+                nodes.push(child);
             }
         }
     };
     CaTreeMvcModel.prototype.checkParents = function (node, showedNodes) {
         var parentNr = node.nr;
         node.childSelected = !node.childSelected;
-        console.log(parentNr);
         while (parentNr) {
             var parentNode = this.getNode(parentNr);
             if (parentNode != null) {
@@ -78,6 +93,12 @@ var CaTreeMvcModel = (function () {
                 }
                 else if (!node.selected && !(this.areChildrenSelected(parentNode, showedNodes))) {
                     parentNode.childSelected = false;
+                }
+                if (!node.selected) {
+                    parentNode.selected = false;
+                }
+                else if (this._allChildrenSelected(parentNode)) {
+                    parentNode.selected = true;
                 }
                 parentNr = parentNode.parentNr;
             }

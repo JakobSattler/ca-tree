@@ -31,7 +31,7 @@
              [hidden]="!node.changing"
              [value]="node.name"
              style="color:black;"
-             (blur)="saveNodeChange()" #nodeTextInput/>
+             (blur)="finishNodeChange()" #nodeTextInput/>
     <span class="btn-group">
       <span class="glyphicon glyphicon-triangle-bottom dropdown-toggle"
             data-toggle="dropdown"
