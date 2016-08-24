@@ -4,14 +4,6 @@
             [class]="model.isNodeLeaf(node) ? 'glyphicon glyphicon-minus grow' :
             node.extended ? 'glyphicon glyphicon-menu-down grow' : 'glyphicon glyphicon-menu-right grow'">
       </span>
-
-    <!-- <input type="checkbox"
-            (click)="onNodeSelected()"
-            [(ngModel)]="node.selected"/>
-     <input type="checkbox"
-            [(ngModel)]="node.childSelected">
-            -->
-
       <div class="control-group" style="padding-bottom: 4px">
         <label class="control control--checkbox">
 		          <input type="checkbox" (click)="onNodeSelected()"
@@ -38,7 +30,6 @@
       <input type="text"
              [hidden]="!node.changing"
              [value]="node.name"
-             (keydown)="onKeyDown($event)"
              style="color:black;"
              (blur)="saveNodeChange()" #nodeTextInput/>
     <span class="btn-group">
@@ -70,7 +61,7 @@
                 [node]="res"
                 [level]="level + 1"
                 [model]="model"
-                (nodeSelected)="_caTreeComponent.onNodeSelected($event)"
-                (nodeExtended)="_caTreeComponent.onNodeExtended($event)">
+                (nodeSelected)="caTreeComponent.onNodeSelected($event)"
+                (nodeExtended)="caTreeComponent.onNodeExtended($event)">
   </co-tree-node>
 </template>

@@ -1,7 +1,7 @@
 import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {CaTreeService} from '../../services/ca-tree.service';
 import {CaTreeNodeComponent} from './ca-tree-node/ca-tree-node.component';
-import {CaTreeModel, BasicTreeNode, NodeFilter, SelectableTreeNode} from './ca-tree-node/ca-tree-model';
+import {CaTreeMvcModel, BasicTreeNode, NodeFilter, SelectableTreeNode} from './ca-tree-node/ca-tree-mvc-model';
 
 @Component({
   moduleId: module.id,
@@ -17,13 +17,13 @@ import {CaTreeModel, BasicTreeNode, NodeFilter, SelectableTreeNode} from './ca-t
   pipes: [NodeFilter]
 })
 export class CaTreeComponent implements OnInit {
-  model: CaTreeModel;
+  model: CaTreeMvcModel;
 
   constructor(private caTreeService: CaTreeService) {
   }
 
   ngOnInit(): void {
-    this.model = new CaTreeModel();
+    this.model = new CaTreeMvcModel();
     this.caTreeService.getNodes().subscribe(
       (data: any) => {
         this.model.resources = data;
@@ -37,6 +37,8 @@ export class CaTreeComponent implements OnInit {
   }
 
   public onNodeExtended(node: SelectableTreeNode): void {
+    console.log(node.extended);
+    console.log(node.selected);
     this.model.checkChildren(node);
   }
 

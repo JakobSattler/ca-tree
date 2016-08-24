@@ -3,7 +3,7 @@ import {
   Inject, forwardRef
 } from '@angular/core';
 import {CaTreeService} from '../../../services/ca-tree.service';
-import {BasicTreeNode, CaTreeModel, NodeFilter} from './ca-tree-model';
+import {BasicTreeNode, CaTreeMvcModel, NodeFilter} from './ca-tree-mvc-model';
 import {CaTreeComponent} from '../ca-tree.component';
 
 
@@ -23,7 +23,7 @@ export class CaTreeNodeComponent implements AfterViewChecked {
   changing: boolean = false;
 
   @Input()
-  model: CaTreeModel;
+  model: CaTreeMvcModel;
 
   @Input()
   level: number;
@@ -44,7 +44,10 @@ export class CaTreeNodeComponent implements AfterViewChecked {
   @ViewChild('nodeTextInput')
   nodeTextInput: ElementRef;
 
-  constructor(@Inject(forwardRef(() => CaTreeComponent)) private _caTreeComponent: CaTreeComponent) {
+  public caTreeComponent: CaTreeComponent;
+
+  constructor(@Inject(forwardRef(() => CaTreeComponent)) _caTreeComponent: CaTreeComponent) {
+    this.caTreeComponent = _caTreeComponent;
   }
 
   ngAfterViewChecked(): void {
@@ -101,15 +104,6 @@ export class CaTreeNodeComponent implements AfterViewChecked {
     };
 
     this.model.addNode(node);
-  }
-
-  onKeyDown(event): void {
-    ////handle text change if source of event is nodeTextInput-element
-    //if (event.srcElement === this.nodeTextInput.nativeElement) {
-    //  if (event.keyCode === 13) {
-    //    this.saveNodeChange();
-    //  }
-    //}
   }
 
   saveNodeChange(): void {

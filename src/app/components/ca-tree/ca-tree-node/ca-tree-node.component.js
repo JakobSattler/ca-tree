@@ -10,17 +10,17 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 var core_1 = require('@angular/core');
 var ca_tree_service_1 = require('../../../services/ca-tree.service');
-var ca_tree_model_1 = require('./ca-tree-model');
+var ca_tree_mvc_model_1 = require('./ca-tree-mvc-model');
 var ca_tree_component_1 = require('../ca-tree.component');
 var CaTreeNodeComponent = (function () {
     function CaTreeNodeComponent(_caTreeComponent) {
-        this._caTreeComponent = _caTreeComponent;
         this.paddingPerLevel = 10;
         this.changing = false;
         this.imgURLClose = 'http://plainicon.com/dboard/userprod/2800_a1826/prod_thumb/plainicon.com-44945-128px.png';
         this.imgURLOpen = 'https://freeiconshop.com/files/edd/folder-open-solid.png';
         this.nodeSelected = new core_1.EventEmitter();
         this.nodeExtended = new core_1.EventEmitter();
+        this.caTreeComponent = _caTreeComponent;
     }
     CaTreeNodeComponent.prototype.ngAfterViewChecked = function () {
         if (this.node.changing) {
@@ -69,14 +69,6 @@ var CaTreeNodeComponent = (function () {
         };
         this.model.addNode(node);
     };
-    CaTreeNodeComponent.prototype.onKeyDown = function (event) {
-        ////handle text change if source of event is nodeTextInput-element
-        //if (event.srcElement === this.nodeTextInput.nativeElement) {
-        //  if (event.keyCode === 13) {
-        //    this.saveNodeChange();
-        //  }
-        //}
-    };
     CaTreeNodeComponent.prototype.saveNodeChange = function () {
         this.nodeTextInput.nativeElement.blur();
         this.node.changing = false;
@@ -120,7 +112,7 @@ var CaTreeNodeComponent = (function () {
             styleUrls: ['ca-tree-node.component.css'],
             directives: [CaTreeNodeComponent],
             providers: [ca_tree_service_1.CaTreeService],
-            pipes: [ca_tree_model_1.NodeFilter]
+            pipes: [ca_tree_mvc_model_1.NodeFilter]
         }),
         __param(0, core_1.Inject(core_1.forwardRef(function () { return ca_tree_component_1.CaTreeComponent; })))
     ], CaTreeNodeComponent);

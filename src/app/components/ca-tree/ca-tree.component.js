@@ -8,14 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require('@angular/core');
 var ca_tree_service_1 = require('../../services/ca-tree.service');
 var ca_tree_node_component_1 = require('./ca-tree-node/ca-tree-node.component');
-var ca_tree_model_1 = require('./ca-tree-node/ca-tree-model');
+var ca_tree_mvc_model_1 = require('./ca-tree-node/ca-tree-mvc-model');
 var CaTreeComponent = (function () {
     function CaTreeComponent(caTreeService) {
         this.caTreeService = caTreeService;
     }
     CaTreeComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.model = new ca_tree_model_1.CaTreeModel();
+        this.model = new ca_tree_mvc_model_1.CaTreeMvcModel();
         this.caTreeService.getNodes().subscribe(function (data) {
             _this.model.resources = data;
         });
@@ -25,6 +25,8 @@ var CaTreeComponent = (function () {
         this.model.checkChildren(node);
     };
     CaTreeComponent.prototype.onNodeExtended = function (node) {
+        console.log(node.extended);
+        console.log(node.selected);
         this.model.checkChildren(node);
     };
     CaTreeComponent = __decorate([
@@ -35,7 +37,7 @@ var CaTreeComponent = (function () {
             directives: [ca_tree_node_component_1.CaTreeNodeComponent],
             providers: [ca_tree_service_1.CaTreeService],
             styles: ["\n    div {\n      padding-left: 10px;\n    }\n  "],
-            pipes: [ca_tree_model_1.NodeFilter]
+            pipes: [ca_tree_mvc_model_1.NodeFilter]
         })
     ], CaTreeComponent);
     return CaTreeComponent;
