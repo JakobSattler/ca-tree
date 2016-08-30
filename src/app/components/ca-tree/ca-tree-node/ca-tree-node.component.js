@@ -45,6 +45,11 @@ var CaTreeNodeComponent = (function () {
             this.imgURLOpen = newPic;
         }
     };
+    //
+    // changePic(): void {
+    //
+    //
+    // }
     CaTreeNodeComponent.prototype.editNode = function () {
         this.node.changing = true;
     };

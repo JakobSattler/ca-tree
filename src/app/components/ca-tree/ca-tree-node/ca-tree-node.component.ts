@@ -65,7 +65,9 @@ export class CaTreeNodeComponent implements AfterViewChecked {
     this.nodeSelected.emit(this.node);
   }
 
+
   changePic(): void {
+
     let newPic = prompt("Change Pic for Open", "");
     if (newPic) {
       this.imgURLClose = newPic;
@@ -75,6 +77,12 @@ export class CaTreeNodeComponent implements AfterViewChecked {
       this.imgURLOpen = newPic;
     }
   }
+
+  //
+  // changePic(): void {
+  //
+  //
+  // }
 
   editNode(): void {
     this.node.changing = true;

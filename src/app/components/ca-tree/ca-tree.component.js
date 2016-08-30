@@ -9,6 +9,7 @@ var core_1 = require('@angular/core');
 var ca_tree_service_1 = require('../../services/ca-tree.service');
 var ca_tree_node_component_1 = require('./ca-tree-node/ca-tree-node.component');
 var ca_tree_mvc_model_1 = require('./ca-tree-node/ca-tree-mvc-model');
+//import * as _ from 'lodash';
 var CaTreeComponent = (function () {
     function CaTreeComponent(caTreeService) {
         this.caTreeService = caTreeService;
