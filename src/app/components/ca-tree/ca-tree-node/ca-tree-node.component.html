@@ -38,7 +38,7 @@
             aria-haspopup="true"
             aria-expanded="false">
       </span>&nbsp;&nbsp;&nbsp;&nbsp;
-      <ul class="dropdown-menu" style="position: absolute;     margin-left: 20px; margin-top: -20px;">
+      <ul class="dropdown-menu" style="position: absolute;margin-left: 20px; margin-top: -20px;" >
         <li (click)="removeNode()">
           <a>Eintrag löschen</a>
         </li>
@@ -48,13 +48,20 @@
         <li (click)="addNode()">
           <a>Eintrag hinzufügen</a>
         </li>
+        <!--  <li (click)="changePic()">-->
         <li (click)="changePic()">
-          <a>Symbol ändern</a>
+          <a>
+           <span>
+             <input type="file" name="file" id="file" class="inputfile"/>
+             <label for="file">Symbol ändern</label>
+           </span>
+            </a>
         </li>
       </ul>
     </span>
   </span>
 </div>
+
 
 <template [ngIf]="node.extended">
   <co-tree-node *ngFor="let res of model.resources | nodefilter : 'parentNr' : node.nr"

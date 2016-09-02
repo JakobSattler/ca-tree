@@ -2,7 +2,7 @@ import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {CaTreeService} from '../../services/ca-tree.service';
 import {CaTreeNodeComponent} from './ca-tree-node/ca-tree-node.component';
 import {CaTreeMvcModel, BasicTreeNode, NodeFilter, SelectableTreeNode} from './ca-tree-node/ca-tree-mvc-model';
-import * as _ from 'lodash';
+//import * as _ from 'lodash';
 
 @Component({
   moduleId: module.id,
