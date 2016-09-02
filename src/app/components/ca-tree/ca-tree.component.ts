@@ -20,13 +20,13 @@ import * as _ from 'lodash';
 export class CaTreeComponent implements OnInit {
   model: CaTreeMvcModel;
 
-  constructor(private caTreeService: CaTreeService) {
+  constructor(private _caTreeService: CaTreeService) {
   }
 
   ngOnInit(): void {
     this.model = new CaTreeMvcModel();
     //load root + next level to show proper icon
-    this.caTreeService.getNodes().subscribe(
+    this._caTreeService.getNodes().subscribe(
       (data: any) => {
         for (let d1 of data.filter(res => !res.parentNr)) {
           this.model.resources.push(d1);
@@ -45,12 +45,14 @@ export class CaTreeComponent implements OnInit {
 
   public onNodeExtended(node: SelectableTreeNode): void {
     this.loadChildren(node);
-    node.extended = !node.extended;
+    if (!this.model.isNodeLeaf(node)) {
+      node.extended = !node.extended;
+    }
   }
 
   loadChildren(node: BasicTreeNode) {
     //load children + next level to load proper icon
-    this.caTreeService.getNodes().subscribe(
+    this._caTreeService.getNodes().subscribe(
       (data: any) => {
         for (let d1 of data.filter(res => res.parentNr === node.nr)) {
           if (!this.model.containsNode(d1)) {

@@ -10,14 +10,14 @@ var ca_tree_service_1 = require('../../services/ca-tree.service');
 var ca_tree_node_component_1 = require('./ca-tree-node/ca-tree-node.component');
 var ca_tree_mvc_model_1 = require('./ca-tree-node/ca-tree-mvc-model');
 var CaTreeComponent = (function () {
-    function CaTreeComponent(caTreeService) {
-        this.caTreeService = caTreeService;
+    function CaTreeComponent(_caTreeService) {
+        this._caTreeService = _caTreeService;
     }
     CaTreeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.model = new ca_tree_mvc_model_1.CaTreeMvcModel();
         //load root + next level to show proper icon
-        this.caTreeService.getNodes().subscribe(function (data) {
+        this._caTreeService.getNodes().subscribe(function (data) {
             var _loop_1 = function(d1) {
                 _this.model.resources.push(d1);
                 for (var _i = 0, _a = data.filter(function (res) { return res.parentNr === d1.nr; }); _i < _a.length; _i++) {
@@ -37,12 +37,14 @@ var CaTreeComponent = (function () {
     };
     CaTreeComponent.prototype.onNodeExtended = function (node) {
         this.loadChildren(node);
-        node.extended = !node.extended;
+        if (!this.model.isNodeLeaf(node)) {
+            node.extended = !node.extended;
+        }
     };
     CaTreeComponent.prototype.loadChildren = function (node) {
         var _this = this;
         //load children + next level to load proper icon
-        this.caTreeService.getNodes().subscribe(function (data) {
+        this._caTreeService.getNodes().subscribe(function (data) {
             var _loop_2 = function(d1) {
                 if (!_this.model.containsNode(d1)) {
                     _this.model.resources.push(d1);
